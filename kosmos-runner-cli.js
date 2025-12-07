@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
 /**
- * kosmos-runner-cli.js v1.0
- * Интерактивный исполнитель .kosmos.md файлов
+ * kosmos-runner-cli.js v2.0
+ * Упрощённый исполнитель .kosmos.md файлов
  *
  * Использование:
- *   node kosmos-runner-cli.js my-project.kosmos.md
+ *   node kosmos-runner-cli.js <файл.kosmos.md> [--no_validate]
  */
 
 const fs = require('fs');
 const vm = require('vm');
 const readline = require('readline');
 
-// Парсинг аргументов
+// ======================== ПАРСИНГ АРГУМЕНТОВ ========================
 const args = process.argv.slice(2);
 const noValidate = args.includes('--no_validate');
 const filePath = args.find(arg => !arg.startsWith('--'));
@@ -25,48 +25,23 @@ if (!filePath || !fs.existsSync(filePath)) {
 
 let content = fs.readFileSync(filePath, 'utf-8');
 
-// ======================== ВАЛИДАЦИЯ (как в v0.7) ========================
+// ======================== ВАЛИДАЦИЯ ========================
 function validateKosmosFile(content) {
     const errors = [];
-    const lines = content.split('\n');
 
-    //if (!lines[0]?.trim().endsWith('.kosmos.md')) errors.push('Заголовок # должен заканчиваться на " .kosmos.md"');
-    if (!/\*\*Статус:\*\*\s+(in progress|done|blocked)/.test(content)) errors.push('Отсутствует или неверная строка **Статус:**');
-    if (!/\*\*Прогресс:\*\*\s+\d+%/.test(content)) errors.push('Отсутствует или неверная строка **Прогресс:**');
-    if (!/\*\*Последнее обновление:\*\*\s+\d{4}-\d{2}-\d{2}/.test(content)) errors.push('Отсутствует или неверная строка **Последнее обновление:** (формат YYYY-MM-DD)');
+    if (!/\*\*Статус:\*\*\s+(in progress|done|blocked)/i.test(content)) {
+        errors.push('Отсутствует или неверная строка **Статус:**');
+    }
+    if (!/\*\*Прогресс:\*\*\s+\d+%/.test(content)) {
+        errors.push('Отсутствует или неверная строка **Прогресс:**');
+    }
+    if (!/\*\*Последнее обновление:\*\*\s+\d{4}-\d{2}-\d{2}/.test(content)) {
+        errors.push('Отсутствует строка **Последнее обновление:** (формат YYYY-MM-DD)');
+    }
 
-    let inTask = false;
-    lines.forEach((line, i) => {
-        const lineNum = i + 1;
-        if (/^### Задача \d+:/.test(line.trim())) inTask = true;
-        if (/^\s*- $$ [ x] $$\s/.test(line)) {
-            const indent = line.match(/^\s*/)[0].length;
-            if (indent !== 2 && indent !== 4) errors.push(`Строка ${lineNum}: неверный отступ у чекбокса шага (должно быть 2 или 4 пробела)`);
-        }
-        if (/^\s*- $$ [ x] $$ Шаг:/.test(line)) {
-            let foundExpected = false;
-            for (let j = i + 1; j < lines.length && j < i + 15; j++) {
-                if (lines[j].includes('Ожидаемый результат:')) { foundExpected = true; break; }
-                if (/^\s*- $$ [ x] $$/.test(lines[j])) break;
-            }
-            if (!foundExpected) errors.push(`Строка ${lineNum}: у шага отсутствует строка "Ожидаемый результат:"`);
-        }
-        if (/```(?:js|javascript|ts|bash|python)?\s+executable/.test(line)) {
-            let codeLine = '';
-            for (let j = i + 1; j < lines.length; j++) {
-                if (lines[j].trim() === '```') break;
-                codeLine += lines[j] + '\n';
-            }
-            if (codeLine.includes('fs.write') || codeLine.includes('fs.read') || codeLine.includes('child_process')) {
-                // errors.push(`Строка ${lineNum}: executable-блок содержит запрещённые операции (fs, child_process и т.д.)`);
-                console.log(`ВНИМАНИЕ! Строка ${lineNum}: executable-блок содержит запрещённые операции (fs, child_process и т.д.)`);
-            }
-        }
-    });
     return errors;
 }
 
-// Валидация (пропускается с флагом --no_validate)
 if (noValidate) {
     console.log('Валидация пропущена (--no_validate)\n');
 } else {
@@ -81,149 +56,216 @@ if (noValidate) {
 }
 
 // ======================== ПАРСИНГ ШАГОВ ========================
-// Находим все шаги с [ ] (todo)
-//const stepRegex = /(- \[ \] Шаг: .+?)\n\s*Ожидаемый результат: (.+?)\n\s*(```(?:js|ts|python|bash)? executable(?: optional)?\n([\s\S]*?)\n```)?\s*Верификация:/gs;
+/**
+ * Формат шага:
+ * ### Шаг <N>: <Title>
+ * - [ ] Выполнено
+ *  ```<lang> executable
+ *       <code>
+ * ```
+ * Ожидаемый результат: <text>
+ * 
+ * Результат:
+ * (пусто)
+ * 
+ * Верификация:
+ * - [ ] пройдена.
+ */
 
-const stepRegex = new RegExp(
-    '^(\\s*-\\s\\[\\s\\]\\sШаг:\\s.+?)' +                  // - [ ] Шаг: …
-    '(?:\\n|\\r\\n)' +                                    // перенос строки
-    '(?:\\s*\\n)*' +                                      // любые пустые строки
-    '\\s*Ожидаемый\\s+результат:\\s*(.+?)' +              // Ожидаемый результат: …
-    '(?:\\n|\\r\\n)' +
-    '(?:\\s*\\n)*' +
-    '(\\s*```(?:js|ts|python|bash)?\\s+executable(?:\\s+optional)?\\n([\\s\\S]*?)\\n\\s*```)?' +
-    '(?:\\s*\\n)*' +
-    '\\s*Верификация:',
-    'gms'  // g=global, m=multiline (^ матчит начало каждой строки), s=dotAll
-);
+function parseSteps(content) {
+    const steps = [];
 
-const steps = [];
-let match;
-while ((match = stepRegex.exec(content)) !== null) {
-    steps.push({
-        pos: match.index,
-        name: match[1].trim(),
-        expected: match[2].trim(),
-        codeBlock: match[3] || null,
-        code: match[4] ? match[4].trim() : null,
-        fullMatch: match[0]
-    });
+    // Ищем все шаги, которые ещё не выполнены (- [ ] Выполнено)
+    const stepHeaderRegex = /^### Шаг (\d+):\s*(.+)$/gm;
+    let headerMatch;
+
+    while ((headerMatch = stepHeaderRegex.exec(content)) !== null) {
+        const stepNum = headerMatch[1];
+        const stepTitle = headerMatch[2].trim();
+        const stepStartPos = headerMatch.index;
+
+        // Находим конец этого шага (начало следующего ### или ## или конец файла)
+        const restContent = content.slice(stepStartPos);
+        const nextSectionMatch = restContent.match(/\n(?=### Шаг \d+:|## Задача \d+:)/);
+        const stepEndPos = nextSectionMatch
+            ? stepStartPos + nextSectionMatch.index
+            : content.length;
+
+        const stepContent = content.slice(stepStartPos, stepEndPos);
+
+        // Проверяем, выполнен ли шаг
+        const isCompleted = /- \[x\] Выполнено/i.test(stepContent);
+        if (isCompleted) continue; // Пропускаем выполненные шаги
+
+        // Извлекаем код
+        const codeMatch = stepContent.match(/```(\w*)\s+executable\r?\n([\s\S]*?)\r?\n\s*```/);
+        const codeLang = codeMatch ? codeMatch[1] : null;
+        const code = codeMatch ? codeMatch[2].trim() : null;
+
+        // Извлекаем ожидаемый результат
+        const expectedMatch = stepContent.match(/Ожидаемый результат:\s*([\s\S]*?)(?=\r?\n\s*Результат:|$)/);
+        const expected = expectedMatch ? expectedMatch[1].trim() : '';
+
+        steps.push({
+            num: stepNum,
+            title: stepTitle,
+            startPos: stepStartPos,
+            endPos: stepEndPos,
+            stepContent: stepContent,
+            codeLang: codeLang,
+            code: code,
+            expected: expected
+        });
+    }
+
+    return steps;
 }
 
-// Отладочный вывод
-console.log(`[DEBUG] Найдено шагов: ${steps.length}`);
-if (steps.length === 0) {
-    // Попробуем найти хоть что-то похожее на шаг для диагностики
-    const simpleStepMatch = content.match(/- \[ \] Шаг:/g);
-    console.log(`[DEBUG] Простой поиск "- [ ] Шаг:": ${simpleStepMatch ? simpleStepMatch.length : 0} совпадений`);
-    const hasExpected = content.includes('Ожидаемый результат:');
-    const hasVerification = content.includes('Верификация:');
-    console.log(`[DEBUG] Есть "Ожидаемый результат:": ${hasExpected}`);
-    console.log(`[DEBUG] Есть "Верификация:": ${hasVerification}`);
-}
+const steps = parseSteps(content);
+
+console.log(`Найдено невыполненных шагов: ${steps.length}`);
 
 if (steps.length === 0) {
-    console.log('Все шаги выполнены! ✓');
+    console.log('\nВсе шаги выполнены! ✓');
     process.exit(0);
 }
 
-// Начинаем с первого невыполненного (первого в списке)
-let currentStep = 0;
-
+// ======================== ИНТЕРАКТИВНОЕ ВЫПОЛНЕНИЕ ========================
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
+let currentStepIdx = 0;
+
 async function processStep() {
-    if (currentStep >= steps.length) {
-        updateProgress();
-        console.log('\nВсе шаги выполнены! ✓');
+    if (currentStepIdx >= steps.length) {
+        updateFileAndProgress();
+        console.log('\n✅ Все шаги выполнены!');
         rl.close();
         return;
     }
 
-    const step = steps[currentStep];
-    console.log(`\n=== Шаг ${currentStep + 1}/${steps.length} ===`);
-    console.log(step.name);
-    console.log('Ожидаемый результат:', step.expected);
+    const step = steps[currentStepIdx];
+    console.log(`\n${'='.repeat(60)}`);
+    console.log(`Шаг ${step.num}: ${step.title}`);
+    console.log('='.repeat(60));
+
     if (step.code) {
-        console.log('\nКод для выполнения:');
+        console.log(`\n📋 Код (${step.codeLang || 'unknown'}):`);
+        console.log('---');
         console.log(step.code);
+        console.log('---');
     } else {
         console.log('\n(Ручной шаг, без кода)');
     }
 
-    rl.question('\nВыполнить? [Y/n]: ', async (answer) => {
-        if (answer.toLowerCase() === 'n') {
-            console.log('Шаг пропущен.');
-            currentStep++;
+    console.log(`\n🎯 Ожидаемый результат: ${step.expected}`);
+
+    rl.question('\n▶ Выполнить? [Y/n/q]: ', async (answer) => {
+        const ans = answer.toLowerCase().trim();
+
+        if (ans === 'q') {
+            console.log('\nВыход без сохранения.');
+            rl.close();
+            return;
+        }
+
+        if (ans === 'n') {
+            console.log('⏭ Шаг пропущен.');
+            currentStepIdx++;
             processStep();
             return;
         }
 
+        // Выполняем код
         let output = '';
         let execError = null;
 
-        if (step.code) {
+        if (step.code && (step.codeLang === 'js' || step.codeLang === 'javascript')) {
             try {
                 const script = new vm.Script(step.code);
+                const logs = [];
                 const sandbox = {
-                    console: { log: (...args) => { output += args.join(' ') + '\n'; }, error: (...args) => { output += 'ERROR: ' + args.join(' ') + '\n'; } },
-                    require, process, setTimeout, setInterval, clearTimeout, clearInterval
+                    console: {
+                        log: (...args) => { logs.push(args.join(' ')); },
+                        error: (...args) => { logs.push('ERROR: ' + args.join(' ')); }
+                    },
+                    require,
+                    process,
+                    setTimeout,
+                    setInterval,
+                    clearTimeout,
+                    clearInterval
                 };
                 const context = vm.createContext(sandbox);
                 script.runInContext(context, { timeout: 5000 });
+                output = logs.join('\n');
             } catch (err) {
                 execError = err;
-                output += `ИСКЛЮЧЕНИЕ: ${err.message}\n`;
+                output = `ИСКЛЮЧЕНИЕ: ${err.message}`;
             }
+        } else if (step.code) {
+            output = `(Код на ${step.codeLang || 'unknown'} — требует ручного выполнения)`;
         } else {
-            output = '(Ручной шаг — отметьте результат вручную)';
+            output = '(Ручной шаг — отметьте результат)';
         }
 
-        const resultBlock = [
-            '',
-            '  Actual result:',
-            '  ```',
-            output.trim() || '(нет вывода)',
-            '  ```',
-            ''
-        ].join('\n');
-
-        // Обновляем чекбокс на [x] и добавляем actual
-        let newStep = step.fullMatch.replace('- [ ]', '- [x]');
-        const veriPos = newStep.lastIndexOf('Верификация:');
-        if (veriPos > -1) {
-            newStep = newStep.slice(0, veriPos) + resultBlock + newStep.slice(veriPos);
-        }
-
-        content = content.replace(step.fullMatch, newStep);
-        console.log('\nРезультат:');
+        console.log('\n📤 Результат выполнения:');
         console.log(output || '(нет вывода)');
-        if (execError) console.error(execError);
+        if (execError) {
+            console.error('⚠️', execError.message);
+        }
 
-        currentStep++;
+        // Обновляем контент шага
+        let newStepContent = step.stepContent;
+
+        // Отмечаем как выполненный
+        newStepContent = newStepContent.replace(/- \[ \] Выполнено/i, '- [x] Выполнено');
+
+        // Заполняем результат
+        const resultSection = `Результат:\n${output || '(нет вывода)'}\n`;
+        newStepContent = newStepContent.replace(
+            /Результат:\s*\r?\n\(пусто\)/i,
+            resultSection
+        );
+
+        // Заменяем в общем контенте
+        content = content.slice(0, step.startPos) + newStepContent + content.slice(step.endPos);
+
+        // Пересчитываем позиции для следующих шагов
+        const diff = newStepContent.length - step.stepContent.length;
+        for (let i = currentStepIdx + 1; i < steps.length; i++) {
+            steps[i].startPos += diff;
+            steps[i].endPos += diff;
+        }
+
+        currentStepIdx++;
         processStep();
     });
 }
 
-// ======================== ОБНОВЛЕНИЕ ПРОГРЕССА ========================
-function updateProgress() {
-    const done = (content.match(/-\s\[x\]/g) || []).length;
-    const total = (content.match(/-\s\[.\]/g) || []).length;
-    const progress = total > 0 ? Math.round((done / total) * 100) : 0;
+// ======================== ОБНОВЛЕНИЕ ФАЙЛА ========================
+function updateFileAndProgress() {
+    // Считаем прогресс
+    const doneSteps = (content.match(/- \[x\] Выполнено/gi) || []).length;
+    const totalSteps = (content.match(/- \[.\] Выполнено/gi) || []).length;
+    const progress = totalSteps > 0 ? Math.round((doneSteps / totalSteps) * 100) : 0;
 
+    // Обновляем прогресс
     content = content.replace(/(\*\*Прогресс:\*\*\s*)\d+%/, `$1${progress}%`);
-    const today = '2025-12-07';  // Используем текущую дату из промпта
+
+    // Обновляем дату
+    const today = new Date().toISOString().split('T')[0];
     content = content.replace(/(\*\*Последнее обновление:\*\*\s*)\d{4}-\d{2}-\d{2}/, `$1${today}`);
 
+    // Бэкап и сохранение
     const backupPath = `${filePath}.backup.${Date.now()}`;
     fs.copyFileSync(filePath, backupPath);
-    console.log(`\nБэкап сохранён: ${backupPath}`);
+    console.log(`\n💾 Бэкап: ${backupPath}`);
 
     fs.writeFileSync(filePath, content);
-    console.log(`Файл обновлён! Прогресс: ${progress}%`);
+    console.log(`📊 Прогресс: ${progress}% (${doneSteps}/${totalSteps} шагов)`);
 }
 
 // Старт
