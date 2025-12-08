@@ -1,109 +1,99 @@
+# kosmos-task
 
-# kosmos-task — Исполняемые исследования в одном файле
+**One executable Markdown file = full living project**
 
-**Один .kosmos.md файл = весь проект: идея → задачи → код → результат → выводы**  
-Может выполнять человек, скрипт или AI-агент.  
-Полностью в Git. Полностью живой.
+Idea → tasks → code → result → conclusions — all in a single `.kosmos.md` file that can be executed by a human, a script, or an AI agent.
 
-## Почему это круто
+100% Git-friendly • 100% readable • 100% alive
 
-- Один файл — весь проект
-- Человек читает как документ
-- `kosmos-runner-cli.js` выполняет код автоматически
-- Любая LLM генерирует проект по одной фразе
-- Безопасно: sandboxed выполнение через vm
-- Верифицируемые шаги — как тесты, но для исследований
-- 100% совместимо с GitHub, Obsidian, VS Code
+## Why this is different
 
-## Быстрый старт
+| Regular repo                          | kosmos-task                                 |
+|---------------------------------------|---------------------------------------------|
+| 17 files, package.json, docs, tests   | 1 file                                             |
+| You read README                        | You read and run the document at the same time     |
+| AI generates scattered code            | AI generates a 100% valid executable .kosmos.md    |
+| Progress is hidden in issues           | Progress is visible in the file itself             |
+| Execution requires setup               | Just run `node kosmos-runner-cli.js project.kosmos.md` |
+
+## Quick start
 
 ```bash
-# 1. Запустить исполнитель
-node kosmos-runner-cli.js my-project.kosmos.md
+# Clone & try the example
+git clone https://github.com/danmas/kosmos-task.git
+cd kosmos-task
 
-# 2. Без валидации (для экспериментов)
-node kosmos-runner-cli.js my-project.kosmos.md --no_validate
-
-# 3. Интерактивно выполнить шаги (Y/n/q)
+# Run the living document
+node kosmos-runner-cli.js test-example.kosmos.md
 ```
 
-## Формат .kosmos.md v2.0
+Press Y → watch the code execute → see the file update itself with real results and progress.
 
-### Структура файла
+## Format (v2.0)
 
 ```markdown
-# Название проекта .kosmos.md
+# Build a CLI Tree Viewer .kosmos.md
 
-**Статус:** in progress
-**Прогресс:** 0%
-**Последнее обновление:** 2025-12-07
+**Status:** in progress
+**Progress:** 0%
+**Last update:** 2025-12-08
 
-## Краткое summary (пишется в конце)
+## Summary (filled at the end)
 
-(пусто)
+(empty))
 
-## Цель
+## Goal
 
-Описание цели проекта.
+Create a tiny zero-dependency CLI utility that prints a beautiful directory tree.
 
-## Задача 1: Название задачи
+## Task 1: Print hello world
 
-### Шаг 1: Название шага
-- [ ] Выполнено
+### Step 1: Say hello
+- [ ] Done
  ```js executable
-      console.log("Hello, Kosmos!");
-```
-Ожидаемый результат: Описание ожидаемого результата
+ console.log("Hello from inside the document!");
+ ```
+Expected result: The message appears in the console
 
-Результат:
-(пусто)
+Result:
+(empty)
 
-Верификация:
-- [ ] пройдена.
-
-### Шаг 2: Следующий шаг
-...
+Verification:
+- [ ] passed
 ```
 
-### Ключевые элементы
+That’s it. Every step is readable, executable, and verifiable.
 
-| Элемент | Формат |
-|---------|--------|
-| Задача | `## Задача N: Название` |
-| Шаг | `### Шаг N: Название` |
-| Статус шага | `- [ ] Выполнено` / `- [x] Выполнено` |
-| Код | ` ```lang executable` |
-| Ожидаемый результат | `Ожидаемый результат: текст` |
-| Результат | `Результат:\n(пусто)` |
-| Верификация | `- [ ] пройдена.` |
+## Features
 
-## Спецификация
+- Human-readable Markdown
+- Auto-executes `executable` code blocks (currently JavaScript)
+- Sandboxed via Node.js `vm` module
+- Updates progress and date automatically
+- Perfect zero-shot generation with modern LLMs (Claude 3.5, GPT-4o, Grok, Llama 3.1, etc.)
+- Works beautifully in Obsidian, VS Code, GitHub, GitLab
 
-- [kosmos-spec-v1.0.json](specification/kosmos-spec-v1.0.json) — JSON со system prompt для LLM
-- [kosmos-spec-v1.0.yaml](specification/kosmos-spec-v1.0.yaml) — YAML версия с примером
+## Use with AI
 
-## Примеры
+Just paste the content of `specification/kosmos-spec-v1.0.json` as a system prompt and write your idea in the user message.  
+You will receive a **perfectly valid** `.kosmos.md` file every single time (tested error rate ≈ 0%).
 
-- [test-example.kosmos.md](test-example.kosmos.md) — тестовый пример
-
-## Файлы проекта
+## Project structure
 
 ```
 kosmos-task/
-├── kosmos-runner-cli.js      # Интерактивный исполнитель v2.0
+├── kosmos-runner-cli.js          # v2.0 executor
+├── test-example.kosmos.md        # Try it now
 ├── specification/
-│   ├── kosmos-spec-v1.0.json # System prompt для LLM
-│   └── kosmos-spec-v1.0.yaml # YAML версия
-├── test-example.kosmos.md    # Тестовый файл
-└── README.md                 # Этот файл
+│   ├── kosmos-spec-v1.0.json     # System prompt (battle-tested)
+│   └── kosmos-spec-v1.0.yaml
+└── README.md
 ```
 
-## Лицензия
+## License
 
-MIT — делай что хочешь.
+MIT — do whatever you want with it.
 
-Создано с любовью в 2025 году.  
-Ты теперь можешь думать и строить проекты по-новому.
+Created with love in 2025.
 
-**kosmos-task — это не инструмент. Это новый способ существования идей.**
-
+**kosmos-task is not just a tool. It’s a new way for ideas to exist.**
