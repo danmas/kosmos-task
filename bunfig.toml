@@ -1,0 +1,14 @@
+# Bun configuration for kosmos-task
+
+[install]
+# Use exact versions for reproducibility
+exact = true
+
+[run]
+# Silent mode for cleaner output
+silent = false
+
+# Runtime compatibility
+[run.compat]
+# Enable Node.js compatibility mode
+node = true

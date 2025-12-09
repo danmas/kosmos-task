@@ -4,8 +4,12 @@
     "description": "Исполняемые исследования в одном файле — REST API сервер",
     "main": "server/index.js",
     "scripts": {
-        "start": "node kosmos-runner-cli.js",
-        "server": "node server/index.js"
+        "start": "bun kosmos-runner-cli.js",
+        "server": "bun run server/index.js",
+        "dev": "bun run --watch server/index.js",
+        "start:node": "node kosmos-runner-cli.js",
+        "server:node": "node server/index.js",
+        "factory": "bun run src/task-factory.ts"
     },
     "keywords": [
         "kosmos",

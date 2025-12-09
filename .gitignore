@@ -2,6 +2,7 @@
 node_modules/
 test/AGI-Tasks/
 package-lock.json
+bun.lock
 config.yaml
 config.yaml.bak
 data/

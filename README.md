@@ -14,18 +14,27 @@ Idea → tasks → code → result → conclusions — all in a single `.kosmos.
 | You read README                        | You read and run the document at the same time     |
 | AI generates scattered code            | AI generates a 100% valid executable .kosmos.md    |
 | Progress is hidden in issues           | Progress is visible in the file itself             |
-| Execution requires setup               | Just run `node kosmos-runner-cli.js project.kosmos.md` |
+| Execution requires setup               | Just run `bun kosmos-runner-cli.js project.kosmos.md` |
 
 ## Quick start
 
 ```bash
-# Clone & try the example
+# Clone & install
 git clone https://github.com/danmas/kosmos-task.git
 cd kosmos-task
+bun install
 
 # Run the living document
-node kosmos-runner-cli.js test-example.kosmos.md
+bun kosmos-runner-cli.js test-example.kosmos.md
+
+# Or start the REST API server
+bun run server
+
+# Development mode with hot-reload
+bun run dev
 ```
+
+> 💡 Node.js is also supported: `bun run start:node` / `bun run server:node`
 
 Press Y → watch the code execute → see the file update itself with real results and progress.
 
@@ -83,12 +92,22 @@ You will receive a **perfectly valid** `.kosmos.md` file every single time (test
 ```
 kosmos-task/
 ├── kosmos-runner-cli.js          # v2.0 executor
-├── test-example.kosmos.md        # Try it now
+├── server/                       # REST API server
+│   ├── index.js                  # Entry point
+│   ├── routes/                   # API routes
+│   ├── services/                 # Business logic
+│   └── utils/                    # Utilities
 ├── specification/
 │   ├── kosmos-spec-v1.0.json     # System prompt (battle-tested)
 │   └── kosmos-spec-v1.0.yaml
+├── bunfig.toml                   # Bun configuration
+├── test-example.kosmos.md        # Try it now
 └── README.md
 ```
+
+## Requirements
+
+- [Bun](https://bun.sh) v1.0+ (recommended) or Node.js 18+
 
 ## License
 

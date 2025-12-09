@@ -18,14 +18,23 @@
 ## Быстрый старт
 
 ```bash
+# Установка зависимостей
+bun install
+
 # 1. Запустить исполнитель
-node kosmos-runner-cli.js my-project.kosmos.md
+bun run start my-project.kosmos.md
 
 # 2. Без валидации (для экспериментов)
-node kosmos-runner-cli.js my-project.kosmos.md --no_validate
+bun kosmos-runner-cli.js my-project.kosmos.md --no_validate
 
-# 3. Интерактивно выполнить шаги (Y/n/q)
+# 3. Запустить REST API сервер
+bun run server
+
+# 4. Сервер с hot-reload (режим разработки)
+bun run dev
 ```
+
+> 💡 Также поддерживается Node.js: `bun run start:node` / `bun run server:node`
 
 ## Формат .kosmos.md v2.0
 
@@ -91,12 +100,22 @@ node kosmos-runner-cli.js my-project.kosmos.md --no_validate
 ```
 kosmos-task/
 ├── kosmos-runner-cli.js      # Интерактивный исполнитель v2.0
+├── server/                   # REST API сервер
+│   ├── index.js              # Точка входа
+│   ├── routes/               # API роуты
+│   ├── services/             # Бизнес-логика
+│   └── utils/                # Утилиты
 ├── specification/
 │   ├── kosmos-spec-v1.0.json # System prompt для LLM
 │   └── kosmos-spec-v1.0.yaml # YAML версия
+├── bunfig.toml               # Конфигурация Bun
 ├── test-example.kosmos.md    # Тестовый файл
 └── README.md                 # Этот файл
 ```
+
+## Требования
+
+- [Bun](https://bun.sh) v1.0+ (рекомендуется) или Node.js 18+
 
 ## Лицензия
 
