@@ -5,6 +5,84 @@
 
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
+const path = require('path');
+
+// === ЗАГРУЗКА ПРОМПТОВ ===
+const PROMPTS_DIR = path.join(__dirname, '..', '..', 'prompts');
+const QUESTIONS_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, 'task-factory-questions.md'), 'utf-8');
+const GENERATOR_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, 'task-factory-generator.md'), 'utf-8');
+
+// === LLM HELPER ===
+async function callLLM(messages, model) {
+    const baseUrl = process.env.LLM_SERVER_URL;
+    if (!baseUrl) throw new Error('LLM_SERVER_URL не настроен в .env');
+
+    const timeoutMs = parseInt(process.env.LLM_REQUEST_TIMEOUT || '120000', 10);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+    try {
+        const headers = { 'Content-Type': 'application/json' };
+        if (process.env.LLM_API_KEY) {
+            headers['Authorization'] = `Bearer ${process.env.LLM_API_KEY}`;
+        }
+
+        const response = await fetch(`${baseUrl}/chat/completions`, {
+            method: 'POST',
+            headers,
+            body: JSON.stringify({
+                model: model || process.env.LLM_MODEL || 'RICH',
+                messages,
+                temperature: 0.3,
+                max_tokens: 4000
+            }),
+            signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+            throw new Error(`LLM сервер вернул HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        const content = data.choices?.[0]?.message?.content || '';
+        if (!content.trim()) {
+            throw new Error('Пустой ответ от LLM');
+        }
+
+        return content.trim();
+    } catch (err) {
+        clearTimeout(timeoutId);
+        if (err.name === 'AbortError') {
+            throw new Error(`Таймаут запроса к LLM (${Math.round(timeoutMs / 1000)}с)`);
+        }
+        throw err;
+    }
+}
+
+// === ПАРСИНГ ВОПРОСОВ ===
+function parseQuestions(response) {
+    const lines = response.split('\n');
+    const questions = [];
+    for (const line of lines) {
+        const match = line.match(/^\d+\.\s*(.+)$/);
+        if (match) {
+            questions.push(match[1].trim());
+        }
+    }
+    return questions;
+}
+
+// === ИЗВЛЕЧЕНИЕ НАЗВАНИЯ ИЗ .kosmos.md ===
+function extractFilename(content) {
+    const titleMatch = content.match(/^#\s*(.+?)\s*\.kosmos\.md/m);
+    const slug = titleMatch
+        ? titleMatch[1].toLowerCase().replace(/[^a-zа-яё0-9]+/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
+        : `task-${Date.now()}`;
+    return `${slug}.kosmos.md`;
+}
 
 // === AI HEALTH CHECK ===
 
@@ -115,30 +193,126 @@ router.post('/ai-test', async (req, res) => {
     }
 });
 
-/**
- * POST /api/generate
- * Сгенерировать .kosmos.md файл по описанию
- * Body: { prompt: string, model?: string }
- */
-router.post('/generate', (req, res) => {
-    const { prompt, model } = req.body;
+// === TASK FACTORY: ДВУХПРОХОДНАЯ ГЕНЕРАЦИЯ ===
 
-    if (!prompt) {
+/**
+ * POST /api/generate/questions
+ * Первый проход: LLM генерирует уточняющие вопросы по цели
+ * Body: { goal: string, model?: string }
+ */
+router.post('/generate/questions', async (req, res) => {
+    const { goal, model } = req.body;
+
+    if (!goal) {
         return res.status(400).json({
             success: false,
-            error: 'Требуется параметр prompt'
+            error: 'Требуется параметр goal'
         });
     }
 
-    // TODO: Реализовать интеграцию с LLM сервером
-    res.status(501).json({
-        success: false,
-        error: 'LLM интеграция пока не реализована',
-        config: {
-            serverUrl: process.env.LLM_SERVER_URL || 'not configured',
-            model: model || process.env.LLM_MODEL || 'not configured'
+    try {
+        const response = await callLLM([
+            { role: 'system', content: QUESTIONS_PROMPT },
+            { role: 'user', content: goal }
+        ], model);
+
+        const questions = parseQuestions(response);
+
+        if (questions.length === 0) {
+            return res.status(500).json({
+                success: false,
+                error: 'LLM не сгенерировал вопросы',
+                raw: response
+            });
         }
-    });
+
+        return res.json({
+            success: true,
+            questions
+        });
+
+    } catch (err) {
+        return res.status(502).json({
+            success: false,
+            error: `Ошибка LLM: ${err.message}`
+        });
+    }
+});
+
+/**
+ * POST /api/generate
+ * Второй проход: LLM генерирует .kosmos.md по цели + ответам + подсказкам
+ * Body: { goal: string, answers?: [{question, answer}], hints?: {taskCount, stepsPerTask}, model?: string }
+ */
+router.post('/generate', async (req, res) => {
+    const { goal, answers, hints, model } = req.body;
+
+    if (!goal) {
+        return res.status(400).json({
+            success: false,
+            error: 'Требуется параметр goal'
+        });
+    }
+
+    try {
+        // Формируем контекст из ответов пользователя
+        let userContent = `Цель: ${goal}`;
+
+        if (answers && Array.isArray(answers) && answers.length > 0) {
+            const validAnswers = answers.filter(a => a.answer && a.answer.trim());
+            if (validAnswers.length > 0) {
+                userContent += '\n\nУточнения от пользователя:\n';
+                validAnswers.forEach((a, i) => {
+                    userContent += `${i + 1}. ${a.question}: ${a.answer}\n`;
+                });
+            }
+        }
+
+        // Подсказки из UI-селектов
+        if (hints) {
+            const hintParts = [];
+            if (hints.taskCount) hintParts.push(`задач: ${hints.taskCount}`);
+            if (hints.stepsPerTask) hintParts.push(`шагов на задачу: ${hints.stepsPerTask}`);
+            if (hintParts.length > 0) {
+                userContent += `\n\nПредпочтения по структуре (${hintParts.join(', ')}). Определяй количество задач и шагов по смыслу задачи, используй эти числа как ориентир.`;
+            }
+        }
+
+        const today = new Date().toISOString().split('T')[0];
+        userContent += `\n\nТекущая дата: ${today}\n\nСгенерируй .kosmos.md файл.`;
+
+        const content = await callLLM([
+            { role: 'system', content: GENERATOR_PROMPT },
+            { role: 'user', content: userContent }
+        ], model);
+
+        // Извлекаем имя файла из заголовка
+        const filename = extractFilename(content);
+
+        // Сохраняем в data/ через fileUtils
+        const fileUtils = require('../utils/file-utils');
+        let saveFilename = filename;
+
+        // Если файл уже существует — добавляем суффикс
+        if (fileUtils.fileExists(saveFilename)) {
+            const base = saveFilename.replace(/\.kosmos\.md$/, '');
+            saveFilename = `${base}-${Date.now()}.kosmos.md`;
+        }
+
+        fileUtils.writeFile(saveFilename, content);
+
+        return res.json({
+            success: true,
+            filename: saveFilename,
+            content
+        });
+
+    } catch (err) {
+        return res.status(502).json({
+            success: false,
+            error: `Ошибка генерации: ${err.message}`
+        });
+    }
 });
 
 /**
@@ -174,6 +348,34 @@ router.get('/llm/models', (req, res) => {
         ],
         current: process.env.LLM_MODEL || 'RICH',
         note: 'Это заглушка. Реальный список будет получен с LLM сервера.'
+    });
+});
+
+/**
+ * GET /api/llm/prompts/:name
+ * Отдать содержимое промпта по имени
+ * :name = 'questions' | 'generator'
+ */
+router.get('/llm/prompts/:name', (req, res) => {
+    const name = req.params.name;
+    const prompts = {
+        questions: { filename: 'task-factory-questions.md', content: QUESTIONS_PROMPT },
+        generator: { filename: 'task-factory-generator.md', content: GENERATOR_PROMPT }
+    };
+
+    const prompt = prompts[name];
+    if (!prompt) {
+        return res.status(404).json({
+            success: false,
+            error: `Промпт "${name}" не найден. Доступные: ${Object.keys(prompts).join(', ')}`
+        });
+    }
+
+    res.json({
+        success: true,
+        name,
+        filename: prompt.filename,
+        content: prompt.content
     });
 });
 

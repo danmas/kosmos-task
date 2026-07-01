@@ -74,8 +74,9 @@ app.get('/api', (req, res) => {
                 'PATCH /api/files/:filename/steps/:stepNum/skip': 'Пропустить шаг'
             },
             llm: {
-                'POST /api/generate': 'Генерация файла (TODO)',
-                'GET /api/llm/health': 'Проверка LLM сервера',
+                'POST /api/generate/questions': 'Генерация уточняющих вопросов (проход 1)',
+                'POST /api/generate': 'Генерация .kosmos.md файла (проход 2)',
+                'GET /api/llm/health': 'Проверка LLM конфигурации',
                 'GET /api/llm/models': 'Список моделей'
             },
             other: {
