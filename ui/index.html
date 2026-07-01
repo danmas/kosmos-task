@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosmos-task UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <h1><span>kosmos</span>-task</h1>
+        <div class="version">v2.0 • UI Panel</div>
+    </div>
+    <nav class="nav" id="nav">
+        <div class="nav-item active" data-page="dashboard" onclick="app.navigate('dashboard')">
+            <span class="icon">📋</span> Задачи
+        </div>
+        <div class="nav-item" data-page="factory" onclick="app.navigate('factory')">
+            <span class="icon">🏭</span> Фабрика
+        </div>
+        <div class="nav-item" data-page="editor" onclick="app.navigate('editor')">
+            <span class="icon">✏️</span> Редактор
+        </div>
+        <div class="nav-item" data-page="history" onclick="app.navigate('history')">
+            <span class="icon">📦</span> История
+        </div>
+    </nav>
+    <div class="sidebar-footer">
+        <div id="wsStatus">⚪ WS: не подключён</div>
+        <div id="aiStatus" style="margin-top:4px;">⚪ AI: не проверен</div>
+        <button class="btn btn-secondary" style="margin-top:8px;width:100%;font-size:13px;padding:6px;" onclick="app.checkAiHealth()">Проверить AI</button>
+    </div>
+</aside>
+
+<!-- Main -->
+<main class="main-content" id="mainContent">
+    <!-- Pages render here -->
+</main>
+
+<!-- Toast container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="app.js"></script>
+<script src="pages/dashboard.js"></script>
+<script src="pages/task.js"></script>
+<script src="pages/history.js"></script>
+<script src="pages/factory.js"></script>
+<script src="pages/editor.js"></script>
+<script>
+    app.init();
+</script>
+</body>
+</html>

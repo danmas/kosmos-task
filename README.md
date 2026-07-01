@@ -32,6 +32,9 @@ bun run server
 
 # Development mode with hot-reload
 bun run dev
+
+# Generate a new project using AI (Task Factory)
+bun run factory
 ```
 
 > 💡 Node.js is also supported: `bun run start:node` / `bun run server:node`
@@ -80,6 +83,7 @@ That’s it. Every step is readable, executable, and verifiable.
 - Sandboxed via Node.js `vm` module
 - Updates progress and date automatically
 - Perfect zero-shot generation with modern LLMs (Claude 3.5, GPT-4o, Grok, Llama 3.1, etc.)
+- **Task Factory included**: Interactive CLI to generate detailed project plans using AI (Questions -> Plan)
 - Works beautifully in Obsidian, VS Code, GitHub, GitLab
 
 ## Use with AI

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosmos-task — Интерактивное демо</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg2: #161b22;
+            --bg3: #21262d;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text2: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --red: #f85149;
+            --yellow: #d29922;
+            --purple: #bc8cff;
+            --highlight: rgba(56, 139, 253, 0.15);
+            --highlight-green: rgba(63, 185, 80, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* === HEADER === */
+        .header {
+            background: var(--bg2);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .header h1 span { color: var(--accent); }
+        .header .subtitle {
+            color: var(--text2);
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        .header .badge {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 13px;
+            color: var(--green);
+        }
+
+        /* === TABS === */
+        .tabs {
+            display: flex;
+            gap: 0;
+            background: var(--bg2);
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+        }
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            color: var(--text2);
+            border-bottom: 2px solid transparent;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tab:hover { color: var(--text); }
+        .tab.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+        .tab .complexity {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+        }
+        .tab.active .complexity {
+            background: rgba(56, 139, 253, 0.2);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* === MAIN LAYOUT === */
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            height: calc(100vh - 120px);
+        }
+
+        /* === LEFT: FILE VIEW === */
+        .file-panel {
+            overflow-y: auto;
+            padding: 24px 32px;
+            position: relative;
+        }
+        .file-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        .file-name {
+            font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
+            font-size: 14px;
+            color: var(--text2);
+            background: var(--bg3);
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+        .file-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .meta-item .label { color: var(--text2); }
+        .meta-item .value { font-weight: 600; }
+        .meta-item .value.green { color: var(--green); }
+        .meta-item .value.yellow { color: var(--yellow); }
+
+        /* File content rendering */
+        .file-content {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .file-line {
+            display: flex;
+            font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            border-left: 3px solid transparent;
+            transition: all 0.4s ease;
+        }
+        .file-line .line-num {
+            width: 48px;
+            text-align: right;
+            padding-right: 12px;
+            color: var(--text2);
+            opacity: 0.4;
+            flex-shrink: 0;
+            user-select: none;
+        }
+        .file-line .line-text {
+            padding: 1px 16px 1px 0;
+            white-space: pre;
+            flex: 1;
+            overflow-x: auto;
+        }
+
+        /* Syntax colors */
+        .s-heading { color: var(--accent); font-weight: 700; }
+        .s-bold { color: var(--text); font-weight: 600; }
+        .s-meta { color: var(--yellow); }
+        .s-checkbox { color: var(--text2); }
+        .s-checkbox-done { color: var(--green); font-weight: 600; }
+        .s-code-fence { color: var(--purple); }
+        .s-code { color: var(--text2); background: rgba(110, 118, 129, 0.1); }
+        .s-keyword { color: #ff7b72; }
+        .s-string { color: #a5d6ff; }
+        .s-func { color: #d2a8ff; }
+        .s-comment { color: #8b949e; font-style: italic; }
+        .s-result { color: var(--green); }
+        .s-empty { color: var(--text2); opacity: 0.5; }
+
+        /* Highlighted/changed lines */
+        .file-line.changed {
+            background: var(--highlight-green);
+            border-left-color: var(--green);
+        }
+        .file-line.changed-bad {
+            background: rgba(248, 81, 73, 0.1);
+            border-left-color: var(--red);
+        }
+
+        /* === RIGHT: EXECUTION PANEL === */
+        .exec-panel {
+            background: var(--bg2);
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .exec-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .exec-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 20px;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--bg3);
+            border-radius: 4px;
+            margin: 12px 0 16px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--green));
+            border-radius: 4px;
+            transition: width 0.6s ease;
+            width: 0%;
+        }
+
+        /* Step cards */
+        .step-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .step-card.active {
+            border-color: var(--accent);
+            box-shadow: 0 0 12px rgba(56, 139, 253, 0.2);
+        }
+        .step-card.done {
+            border-color: var(--green);
+        }
+        .step-card-header {
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .step-card-header .step-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            color: var(--text2);
+        }
+        .step-card.done .step-icon {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff;
+        }
+        .step-card.active .step-icon {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(56, 139, 253, 0.4); }
+            50% { box-shadow: 0 0 0 6px rgba(56, 139, 253, 0); }
+        }
+
+        .step-card-body {
+            padding: 0 14px 12px;
+        }
+        .step-output {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 8px 10px;
+            font-family: 'SF Mono', 'Cascadia Code', monospace;
+            font-size: 12px;
+            color: var(--green);
+            white-space: pre-wrap;
+            margin-top: 6px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+            padding: 0 10px;
+            margin-top: 0;
+        }
+        .step-card.done .step-output,
+        .step-card.active .step-output {
+            max-height: 200px;
+            padding: 8px 10px;
+            margin-top: 6px;
+        }
+
+        /* Annotation */
+        .annotation {
+            font-size: 12px;
+            color: var(--text2);
+            margin-top: 6px;
+            padding: 6px 10px;
+            background: rgba(56, 139, 253, 0.08);
+            border-radius: 4px;
+            border-left: 2px solid var(--accent);
+            display: none;
+        }
+        .step-card.done .annotation,
+        .step-card.active .annotation {
+            display: block;
+        }
+
+        /* === CONTROLS === */
+        .controls {
+            padding: 16px 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 8px;
+        }
+        .btn {
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        .btn-primary:hover { background: #4090e0; }
+        .btn-primary:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .btn-secondary {
+            background: var(--bg3);
+            color: var(--text);
+        }
+        .btn-secondary:hover { background: var(--border); }
+        .btn-auto {
+            background: var(--purple);
+            color: #fff;
+            border-color: var(--purple);
+        }
+        .btn-auto:hover { opacity: 0.85; }
+        .btn-auto:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* === BENEFITS BAR === */
+        .benefits {
+            display: flex;
+            gap: 20px;
+            padding: 12px 32px;
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text2);
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .benefit-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+
+        /* === INTRO OVERLAY === */
+        .intro-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            backdrop-filter: blur(4px);
+        }
+        .intro-overlay.hidden { display: none; }
+        .intro-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            max-width: 560px;
+            padding: 32px;
+            text-align: center;
+        }
+        .intro-card h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        .intro-card h2 span { color: var(--accent); }
+        .intro-card p {
+            color: var(--text2);
+            font-size: 14px;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+        .intro-card .stages {
+            text-align: left;
+            margin: 20px 0;
+            display: grid;
+            gap: 10px;
+        }
+        .intro-card .stage {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 10px 14px;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        .stage-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .stage-text {
+            font-size: 13px;
+        }
+        .stage-text strong { color: var(--text); }
+        .stage-text span { color: var(--text2); }
+        .intro-card .btn { margin-top: 16px; font-size: 15px; padding: 10px 32px; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border); }
+    </style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div class="intro-overlay" id="introOverlay">
+    <div class="intro-card">
+        <h2>Добро пожаловать в <span>kosmos-task</span></h2>
+        <p>Один исполняемый Markdown-файл = полный живой проект.<br>
+        Идея → задачи → код → результат → выводы.</p>
+        <div class="stages">
+            <div class="stage">
+                <div class="stage-num">1</div>
+                <div class="stage-text">
+                    <strong>Генерация</strong><br>
+                    <span>AI (Task Factory) или вручную создаёт .kosmos.md файл с задачами и шагами</span>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="stage-num">2</div>
+                <div class="stage-text">
+                    <strong>Выполнение</strong><br>
+                    <span>Runner парсит файл, находит невыполненные шаги и запускает executable-блоки в sandbox (vm)</span>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="stage-num">3</div>
+                <div class="stage-text">
+                    <strong>Самообновление</strong><br>
+                    <span>Runner автоматически обновляет чекбоксы [x], результаты, прогресс и дату прямо в файле</span>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="stage-num">4</div>
+                <div class="stage-text">
+                    <strong>Живой документ</strong><br>
+                    <span>Файл становится отчётом: с результатами, прогрессом 100% и статусом done. 100% Git-friendly.</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="closeIntro()">Начать демо →</button>
+    </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+    <div>
+        <h1><span>kosmos</span>-task — Демо</h1>
+        <div class="subtitle">Интерактивная визуализация жизненного цикла .kosmos.md</div>
+    </div>
+    <div class="badge">v2.0 • Один файл = весь проект</div>
+</div>
+
+<!-- TABS -->
+<div class="tabs" id="tabs">
+    <div class="tab active" data-scenario="0" onclick="switchTab(0)">
+        1. Привет, Kosmos!
+        <span class="complexity">Простой</span>
+    </div>
+    <div class="tab" data-scenario="1" onclick="switchTab(1)">
+        2. Калькулятор Fibonacci
+        <span class="complexity">Средний</span>
+    </div>
+    <div class="tab" data-scenario="2" onclick="switchTab(2)">
+        3. Анализ данных
+        <span class="complexity">Сложный</span>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+    <!-- LEFT: File view -->
+    <div class="file-panel" id="filePanel">
+        <div class="file-header">
+            <div class="file-name" id="fileName">1-hello.kosmos.md</div>
+            <div class="file-meta">
+                <div class="meta-item">
+                    <span class="label">Прогресс:</span>
+                    <span class="value yellow" id="metaProgress">0%</span>
+                </div>
+                <div class="meta-item">
+                    <span class="label">Шагов:</span>
+                    <span class="value" id="metaSteps">—</span>
+                </div>
+                <div class="meta-item">
+                    <span class="label">Статус:</span>
+                    <span class="value yellow" id="metaStatus">in progress</span>
+                </div>
+            </div>
+        </div>
+        <div class="file-content" id="fileContent">
+            <!-- Rendered dynamically -->
+        </div>
+    </div>
+
+    <!-- RIGHT: Execution panel -->
+    <div class="exec-panel">
+        <div class="exec-header">
+            ⚡ Выполнение runner'ом
+        </div>
+        <div class="exec-body" id="execBody">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <!-- Step cards rendered dynamically -->
+        </div>
+        <div class="controls">
+            <button class="btn btn-primary" id="btnStep" onclick="executeNextStep()">▶ Следующий шаг</button>
+            <button class="btn btn-auto" id="btnAuto" onclick="autoRun()">⚡ Авто-запуск</button>
+            <button class="btn btn-secondary" onclick="resetScenario()">↺ Сброс</button>
+        </div>
+    </div>
+</div>
+
+<!-- BENEFITS -->
+<div class="benefits">
+    <div class="benefit-item">
+        <div class="benefit-icon" style="background:var(--highlight-green);color:var(--green);">✓</div>
+        <span>1 файл = весь проект (не 17 файлов + package.json + docs)</span>
+    </div>
+    <div class="benefit-item">
+        <div class="benefit-icon" style="background:var(--highlight);color:var(--accent);">📄</div>
+        <span>100% читаемый Markdown (Obsidian, VS Code, GitHub)</span>
+    </div>
+    <div class="benefit-item">
+        <div class="benefit-icon" style="background:rgba(210,169,34,0.15);color:var(--yellow);">🔄</div>
+        <span>Самообновляющийся документ (прогресс, результаты, дата)</span>
+    </div>
+    <div class="benefit-item">
+        <div class="benefit-icon" style="background:rgba(188,140,255,0.15);color:var(--purple);">🤖</div>
+        <span>AI-генерация с ~0% ошибок (system prompt включён)</span>
+    </div>
+</div>
+
+<script>
+// ============================================================
+//  СЦЕНАРИИ — данные для 3 демо-файлов
+// ============================================================
+
+const SCENARIOS = [
+    {
+        name: "1-hello.kosmos.md",
+        title: "Привет, Kosmos!",
+        complexity: "Простой",
+        goal: "Создать простейшую демонстрацию формата .kosmos.md — вывести приветственное сообщение и показать, как runner автоматически обновляет файл.",
+        tasks: [
+            {
+                title: "Вывести приветствие",
+                steps: [
+                    {
+                        title: 'Вывести "Привет, Kosmos!"',
+                        code: `const greeting = "Привет, Kosmos!";\nconst timestamp = new Date().toLocaleString("ru-RU");\nconsole.log(greeting + " (" + timestamp + ")");\nconsole.log("Формат .kosmos.md — это живой документ!");`,
+                        expected: "Появится приветственное сообщение с датой и описанием формата",
+                        output: null,
+                        annotation: "Runner выполняет JS-код в sandbox (vm.createContext). Вывод console.log перехватывается и записывается в поле «Результат:» файла."
+                    },
+                    {
+                        title: "Показать математику",
+                        code: `const numbers = [1, 2, 3, 4, 5];\nconst sum = numbers.reduce((a, b) => a + b, 0);\nconst avg = sum / numbers.length;\nconsole.log("Числа: " + numbers.join(", "));\nconsole.log("Сумма: " + sum);\nconsole.log("Среднее: " + avg);`,
+                        expected: "Будут выведены числа, их сумма и среднее значение",
+                        output: null,
+                        annotation: "После выполнения runner ставит [x] в чекбоксе, заполняет «Результат:» и пересчитывает «Прогресс:» автоматически."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "2-fibonacci.kosmos.md",
+        title: "Калькулятор Fibonacci",
+        complexity: "Средний",
+        goal: "Создать утилиту для вычисления чисел Фибоначчи с проверкой чётности и статистикой. Демонстрирует среднюю сложность — несколько задач с взаимосвязанными шагами.",
+        tasks: [
+            {
+                title: "Генерация последовательности",
+                steps: [
+                    {
+                        title: "Функция генерации Fibonacci",
+                        code: `function fibonacci(n) {\n    const seq = [0, 1];\n    for (let i = 2; i < n; i++) seq.push(seq[i-1] + seq[i-2]);\n    return seq.slice(0, n);\n}\nconst result = fibonacci(10);\nconsole.log("Fibonacci(10): " + result.join(", "));\nconsole.log("Последний элемент: " + result[result.length - 1]);`,
+                        expected: "Последовательность из 10 чисел Фибоначчи и последний элемент (34)",
+                        output: null,
+                        annotation: "Каждая функция определена внутри executable-блока. Sandbox изолирует выполнение — нет доступа к файловой системе."
+                    },
+                    {
+                        title: "Фильтрация чётных чисел",
+                        code: `function fibonacci(n) {\n    const seq = [0, 1];\n    for (let i = 2; i < n; i++) seq.push(seq[i-1] + seq[i-2]);\n    return seq.slice(0, n);\n}\nconst fib = fibonacci(15);\nconst even = fib.filter(n => n % 2 === 0);\nconst odd = fib.filter(n => n % 2 !== 0);\nconsole.log("Fibonacci(15): " + fib.join(", "));\nconsole.log("Чётных: " + even.length + " → [" + even.join(", ") + "]");\nconsole.log("Нечётных: " + odd.length + " → [" + odd.join(", ") + "]");`,
+                        expected: "15 чисел Фибоначчи, разделённых на чётные и нечётные",
+                        output: null,
+                        annotation: "Прогресс обновляется после каждого шага: было 0% → 33% → 66%. Дата обновится при финальном сохранении."
+                    }
+                ]
+            },
+            {
+                title: "Статистика и анализ",
+                steps: [
+                    {
+                        title: "Статистика последовательности",
+                        code: `function fibonacci(n) {\n    const seq = [0, 1];\n    for (let i = 2; i < n; i++) seq.push(seq[i-1] + seq[i-2]);\n    return seq.slice(0, n);\n}\nconst fib = fibonacci(20);\nconst sum = fib.reduce((a, b) => a + b, 0);\nconst max = Math.max(...fib);\nconst goldenRatio = fib[fib.length-1] / fib[fib.length-2];\nconsole.log("Fibonacci(20) статистика:");\nconsole.log("  Сумма: " + sum);\nconsole.log("  Макс: " + max);\nconsole.log("  Золотое сечение ≈ " + goldenRatio.toFixed(6));\nconsole.log("  Реальное φ = 1.618034");`,
+                        expected: "Сумма, максимум и приближение золотого сечения",
+                        output: null,
+                        annotation: "После последнего шага runner ставит Прогресс: 100%. При повторном запуске — все шаги уже [x], runner скажет «Все шаги выполнены!»"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "3-data-report.kosmos.md",
+        title: "Анализ данных и отчёт",
+        complexity: "Сложный",
+        goal: "Создать мини-приложение для анализа данных: генерация датасета, вычисление статистик, поиск аномалий и формирование текстового отчёта. Мульти-задачный .kosmos.md с 3 задачами и 5 шагами.",
+        tasks: [
+            {
+                title: "Генерация данных",
+                steps: [
+                    {
+                        title: "Создать набор данных",
+                        code: `function generateData(count) {\n    const data = [];\n    for (let i = 0; i < count; i++) {\n        const base = 50 + Math.sin(i * 0.3) * 20;\n        const noise = (Math.random() - 0.5) * 15;\n        data.push({ id: i + 1, value: Math.round((base + noise) * 100) / 100, category: i % 3 === 0 ? "A" : i % 3 === 1 ? "B" : "C" });\n    }\n    return data;\n}\nconst dataset = generateData(20);\nconsole.log("Сгенерировано записей: " + dataset.length);\nconsole.log("Первые 5:", JSON.stringify(dataset.slice(0, 5)));\nconsole.log("Категории: A=" + dataset.filter(d=>d.category==="A").length + ", B=" + dataset.filter(d=>d.category==="B").length + ", C=" + dataset.filter(d=>d.category==="C").length);`,
+                        expected: "20 записей с id, value, category. Первые 5 и распределение.",
+                        output: null,
+                        annotation: "Задача 1, Шаг 1. Runner парсит заголовки «### Шаг N:» для навигации по файлу."
+                    },
+                    {
+                        title: "Валидация данных",
+                        code: `function generateData(count) {\n    const data = [];\n    for (let i = 0; i < count; i++) {\n        const base = 50 + Math.sin(i * 0.3) * 20;\n        const noise = (Math.random() - 0.5) * 15;\n        data.push({ id: i + 1, value: Math.round((base + noise) * 100) / 100, category: i % 3 === 0 ? "A" : i % 3 === 1 ? "B" : "C" });\n    }\n    return data;\n}\nconst dataset = generateData(20);\nconst errors = [];\ndataset.forEach(d => {\n    if (!d.id || !d.value || !d.category) errors.push("Запись " + d.id + ": пропущены поля");\n    if (d.value < 0 || d.value > 200) errors.push("Запись " + d.id + ": value вне диапазона");\n});\nconsole.log("Проверено записей: " + dataset.length);\nconsole.log("Ошибок: " + errors.length);\nif (errors.length > 0) errors.forEach(e => console.log("  ✖ " + e));\nelse console.log("  ✓ Все записи валидны");`,
+                        expected: "Проверка 20 записей, вывод количества ошибок",
+                        output: null,
+                        annotation: "Runner проверяет формат файла (валидация) перед выполнением. Если структура нарушена — выполнение не начнётся."
+                    }
+                ]
+            },
+            {
+                title: "Статистический анализ",
+                steps: [
+                    {
+                        title: "Базовая статистика",
+                        code: `function generateData(count) {\n    const data = [];\n    for (let i = 0; i < count; i++) {\n        const base = 50 + Math.sin(i * 0.3) * 20;\n        const noise = (Math.random() - 0.5) * 15;\n        data.push({ id: i + 1, value: Math.round((base + noise) * 100) / 100, category: i % 3 === 0 ? "A" : i % 3 === 1 ? "B" : "C" });\n    }\n    return data;\n}\nconst data = generateData(20);\nconst values = data.map(d => d.value);\nconst mean = values.reduce((a, b) => a + b, 0) / values.length;\nconst min = Math.min(...values);\nconst max = Math.max(...values);\nconst sorted = [...values].sort((a,b) => a-b);\nconst median = sorted[Math.floor(values.length / 2)];\nconst variance = values.reduce((sum, v) => sum + Math.pow(v - mean, 2), 0) / values.length;\nconsole.log("=== Статистика ===");\nconsole.log("Среднее:  " + mean.toFixed(2));\nconsole.log("Медиана:  " + median.toFixed(2));\nconsole.log("Мин/Макс: " + min.toFixed(2) + " / " + max.toFixed(2));\nconsole.log("Ст.откл:  " + Math.sqrt(variance).toFixed(2));`,
+                        expected: "Среднее, медиана, мин/макс и стандартное отклонение",
+                        output: null,
+                        annotation: "Задача 2 — статистический анализ. Каждый шаг может содержать любую JS-логику, включая Math, Array методы и т.д."
+                    },
+                    {
+                        title: "Поиск аномалий (метод IQR)",
+                        code: `function generateData(count) {\n    const data = [];\n    for (let i = 0; i < count; i++) {\n        const base = 50 + Math.sin(i * 0.3) * 20;\n        const noise = (Math.random() - 0.5) * 15;\n        data.push({ id: i + 1, value: Math.round((base + noise) * 100) / 100, category: i % 3 === 0 ? "A" : i % 3 === 1 ? "B" : "C" });\n    }\n    return data;\n}\nconst data = generateData(20);\nconst values = data.map(d => d.value).sort((a, b) => a - b);\nconst q1 = values[Math.floor(values.length * 0.25)];\nconst q3 = values[Math.floor(values.length * 0.75)];\nconst iqr = q3 - q1;\nconst lower = q1 - 1.5 * iqr;\nconst upper = q3 + 1.5 * iqr;\nconst anomalies = data.filter(d => d.value < lower || d.value > upper);\nconsole.log("IQR метод:");\nconsole.log("  Q1=" + q1.toFixed(2) + ", Q3=" + q3.toFixed(2) + ", IQR=" + iqr.toFixed(2));\nconsole.log("  Границы: [" + lower.toFixed(2) + ", " + upper.toFixed(2) + "]");\nconsole.log("  Аномалий найдено: " + anomalies.length);\nanomalies.forEach(a => console.log("    → id=" + a.id + ", value=" + a.value + ", cat=" + a.category));`,
+                        expected: "IQR-анализ с квартилями, границами и списком аномалий",
+                        output: null,
+                        annotation: "Runner выполняет код с таймаутом 5 секунд. Если код зависнет — будет ошибка, и шаг не отметится как выполненный."
+                    }
+                ]
+            },
+            {
+                title: "Формирование отчёта",
+                steps: [
+                    {
+                        title: "Генерация текстового отчёта",
+                        code: `function generateData(count) {\n    const data = [];\n    for (let i = 0; i < count; i++) {\n        const base = 50 + Math.sin(i * 0.3) * 20;\n        const noise = (Math.random() - 0.5) * 15;\n        data.push({ id: i + 1, value: Math.round((base + noise) * 100) / 100, category: i % 3 === 0 ? "A" : i % 3 === 1 ? "B" : "C" });\n    }\n    return data;\n}\nconst data = generateData(20);\nconst values = data.map(d => d.value);\nconst mean = values.reduce((a, b) => a + b, 0) / values.length;\nconst min = Math.min(...values);\nconst max = Math.max(...values);\nconst report = [\n    "╔══════════════════════════════════════╗",\n    "║       ОТЧЁТ: Анализ данных v1.0     ║",\n    "╚══════════════════════════════════════╝",\n    "",\n    "Дата: " + new Date().toLocaleDateString("ru-RU"),\n    "Объём: " + data.length + " записей",\n    "",\n    "--- Статистика ---",\n    "Среднее: " + mean.toFixed(2),\n    "Мин/Макс: " + min.toFixed(2) + " / " + max.toFixed(2),\n    "",\n    "--- По категориям ---",\n    ...["A","B","C"].map(cat => {\n        const items = data.filter(d => d.category === cat);\n        const avg = items.reduce((s,d) => s + d.value, 0) / items.length;\n        return cat + ": " + items.length + " записей, среднее " + avg.toFixed(2);\n    }),\n    "",\n    "--- Итог ---",\n    "✓ Данные сгенерированы",\n    "✓ Валидация пройдена",\n    "✓ Статистика вычислена",\n    "✓ Аномалии проверены"\n];\nconsole.log(report.join("\\n"));`,
+                        expected: "Полный текстовый отчёт с шапкой, статистикой и итогом",
+                        output: null,
+                        annotation: "Финальный шаг! После него runner обновит Прогресс до 100%, статус → done, и создаст бэкап файла (.backup.TIMESTAMP)."
+                    }
+                ]
+            }
+        ]
+    }
+];
+
+// ============================================================
+//  СОСТОЯНИЕ
+// ============================================================
+let currentScenario = 0;
+let currentStepIdx = 0;
+let allSteps = [];
+let executedSteps = new Set();
+let isAutoRunning = false;
+
+// ============================================================
+//  РЕНДЕРИНГ ФАЙЛА
+// ============================================================
+
+function getAllSteps(scenarioIdx) {
+    const s = SCENARIOS[scenarioIdx];
+    const steps = [];
+    s.tasks.forEach((task, ti) => {
+        task.steps.forEach((step, si) => {
+            steps.push({ ...step, taskIdx: ti, taskTitle: task.title, globalIdx: steps.length });
+        });
+    });
+    return steps;
+}
+
+function renderFile() {
+    const s = SCENARIOS[currentScenario];
+    const container = document.getElementById('fileContent');
+    const lines = [];
+    let lineNum = 0;
+
+    function addLine(text, cssClass, isChanged) {
+        lineNum++;
+        const changedClass = isChanged ? ' changed' : '';
+        lines.push(`<div class="file-line${changedClass}" data-line="${lineNum}"><span class="line-num">${lineNum}</span><span class="line-text ${cssClass || ''}">${escapeHtml(text)}</span></div>`);
+    }
+
+    // Title
+    addLine(`# ${s.title} .kosmos.md`, 's-heading');
+    addLine('');
+
+    // Metadata
+    const doneCount = executedSteps.size;
+    const totalCount = allSteps.length;
+    const progress = totalCount > 0 ? Math.round((doneCount / totalCount) * 100) : 0;
+    const isDone = doneCount === totalCount && totalCount > 0;
+    const status = isDone ? 'done' : 'in progress';
+    const today = new Date().toISOString().split('T')[0];
+
+    const progressChanged = doneCount > 0;
+    const statusChanged = isDone;
+
+    addLine(`**Статус:** ${status}`, statusChanged ? 's-meta' : 's-bold', statusChanged);
+    addLine(`**Прогресс:** ${progress}%`, 's-bold', progressChanged);
+    addLine(`**Последнее обновление:** ${progressChanged ? today : '2026-06-30'}`, 's-bold', progressChanged);
+    addLine('');
+    addLine('## Краткое summary (пишется в конце)', 's-heading');
+    addLine('');
+    addLine('(пусто)', 's-empty');
+    addLine('');
+    addLine('## Цель', 's-heading');
+    addLine('');
+    addLine(s.goal);
+    addLine('');
+
+    // Tasks & Steps
+    s.tasks.forEach((task, ti) => {
+        addLine(`## Задача ${ti + 1}: ${task.title}`, 's-heading');
+        addLine('');
+
+        task.steps.forEach((step, si) => {
+            const globalIdx = allSteps.findIndex(st => st.taskIdx === ti && st.taskTitle === task.title && st.title === step.title);
+            const isExecuted = executedSteps.has(globalIdx);
+            const justExecuted = isExecuted && step._justExecuted;
+
+            addLine(`### Шаг ${ti * 100 + si + 1}: ${step.title}`, 's-heading');
+            addLine(isExecuted ? '- [x] Выполнено' : '- [ ] Выполнено',
+                isExecuted ? 's-checkbox-done' : 's-checkbox',
+                justExecuted);
+
+            // Code block
+            addLine(' ```js executable', 's-code-fence');
+            step.code.split('\n').forEach(codeLine => {
+                addLine('      ' + codeLine, 's-code');
+            });
+            addLine(' ```', 's-code-fence');
+
+            addLine(`Ожидаемый результат: ${step.expected}`);
+            addLine('');
+
+            if (isExecuted) {
+                addLine('Результат:', '', justExecuted);
+                const output = step.output || '(нет вывода)';
+                output.split('\n').forEach(outLine => {
+                    addLine(outLine, 's-result', justExecuted);
+                });
+            } else {
+                addLine('Результат:');
+                addLine('(пусто)', 's-empty');
+            }
+            addLine('');
+            addLine('Верификация:', '', justExecuted);
+            addLine(isExecuted ? '- [x] пройдена.' : '- [ ] пройдена.',
+                isExecuted ? 's-checkbox-done' : 's-checkbox',
+                justExecuted);
+            addLine('');
+        });
+    });
+
+    container.innerHTML = lines.join('\n');
+
+    // Update meta
+    document.getElementById('fileName').textContent = s.name;
+    document.getElementById('metaProgress').textContent = progress + '%';
+    document.getElementById('metaProgress').className = 'value ' + (isDone ? 'green' : 'yellow');
+    document.getElementById('metaSteps').textContent = `${doneCount}/${totalCount}`;
+    document.getElementById('metaStatus').textContent = status;
+    document.getElementById('metaStatus').className = 'value ' + (isDone ? 'green' : 'yellow');
+
+    // Update progress bar
+    document.getElementById('progressFill').style.width = progress + '%';
+
+    // Scroll to latest changed line
+    if (doneCount > 0) {
+        const changedLines = container.querySelectorAll('.file-line.changed');
+        if (changedLines.length > 0) {
+            changedLines[changedLines.length - 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+}
+
+// ============================================================
+//  РЕНДЕРИНГ ПАНЕЛИ ВЫПОЛНЕНИЯ
+// ============================================================
+
+function renderExecPanel() {
+    const body = document.getElementById('execBody');
+    const progressHtml = `<div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:${getProgress()}%"></div></div>`;
+
+    let cardsHtml = '';
+    allSteps.forEach((step, idx) => {
+        const isExecuted = executedSteps.has(idx);
+        const isCurrent = idx === currentStepIdx && !isExecuted;
+        const stateClass = isExecuted ? 'done' : isCurrent ? 'active' : '';
+        const icon = isExecuted ? '✓' : isCurrent ? '▶' : (idx + 1);
+
+        cardsHtml += `
+        <div class="step-card ${stateClass}" id="stepCard${idx}">
+            <div class="step-card-header">
+                <div class="step-icon">${icon}</div>
+                <span>Шаг ${idx + 1}: ${step.title}</span>
+            </div>
+            <div class="step-card-body">
+                ${isExecuted || isCurrent ? `
+                <div class="step-output">${isExecuted ? escapeHtml(step.output || '(нет вывода)') : '<span style="color:var(--yellow)">Ожидание выполнения...</span>'}</div>
+                <div class="annotation">${step.annotation}</div>
+                ` : ''}
+            </div>
+        </div>`;
+    });
+
+    body.innerHTML = progressHtml + cardsHtml;
+}
+
+function getProgress() {
+    const total = allSteps.length;
+    return total > 0 ? Math.round((executedSteps.size / total) * 100) : 0;
+}
+
+// ============================================================
+//  ВЫПОЛНЕНИЕ ШАГА
+// ============================================================
+
+function simulateExecution(code) {
+    try {
+        const logs = [];
+        const mockConsole = {
+            log: (...args) => logs.push(args.map(a => typeof a === 'object' ? JSON.stringify(a) : String(a)).join(' ')),
+            error: (...args) => logs.push('ERROR: ' + args.join(' ')),
+            warn: (...args) => logs.push('WARN: ' + args.join(' '))
+        };
+        // Use Function constructor as a lightweight sandbox
+        const fn = new Function('console', code);
+        fn(mockConsole);
+        return logs.join('\n') || '(нет вывода)';
+    } catch (e) {
+        return `ИСКЛЮЧЕНИЕ: ${e.message}`;
+    }
+}
+
+function executeNextStep() {
+    if (currentStepIdx >= allSteps.length) return;
+
+    const step = allSteps[currentStepIdx];
+
+    // Mark as just executed for highlighting
+    step._justExecuted = true;
+
+    // Simulate code execution
+    step.output = simulateExecution(step.code);
+
+    // Add to executed set
+    executedSteps.add(currentStepIdx);
+    currentStepIdx++;
+
+    // Clear previous justExecuted flags after a delay
+    setTimeout(() => {
+        allSteps.forEach(s => { if (s !== step) s._justExecuted = false; });
+    }, 2000);
+
+    // Re-render
+    renderFile();
+    renderExecPanel();
+
+    // Update buttons
+    if (currentStepIdx >= allSteps.length) {
+        document.getElementById('btnStep').disabled = true;
+        document.getElementById('btnStep').textContent = '✓ Все шаги выполнены';
+        document.getElementById('btnAuto').disabled = true;
+    }
+
+    // Scroll to step card
+    const card = document.getElementById(`stepCard${currentStepIdx - 1}`);
+    if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+async function autoRun() {
+    if (isAutoRunning) return;
+    isAutoRunning = true;
+    document.getElementById('btnStep').disabled = true;
+    document.getElementById('btnAuto').disabled = true;
+    document.getElementById('btnAuto').textContent = '⏳ Выполняется...';
+
+    while (currentStepIdx < allSteps.length) {
+        executeNextStep();
+        await new Promise(r => setTimeout(r, 1200));
+    }
+
+    document.getElementById('btnAuto').textContent = '✓ Завершено';
+    isAutoRunning = false;
+}
+
+// ============================================================
+//  ПЕРЕКЛЮЧЕНИЕ СЦЕНАРИЕВ
+// ============================================================
+
+function switchTab(idx) {
+    currentScenario = idx;
+    currentStepIdx = 0;
+    executedSteps = new Set();
+    allSteps = getAllSteps(idx);
+    isAutoRunning = false;
+
+    // Reset justExecuted flags
+    allSteps.forEach(s => s._justExecuted = false);
+
+    // Reset outputs
+    allSteps.forEach(s => s.output = null);
+
+    // Update tabs
+    document.querySelectorAll('.tab').forEach((t, i) => {
+        t.classList.toggle('active', i === idx);
+    });
+
+    // Reset buttons
+    document.getElementById('btnStep').disabled = false;
+    document.getElementById('btnStep').textContent = '▶ Следующий шаг';
+    document.getElementById('btnAuto').disabled = false;
+    document.getElementById('btnAuto').textContent = '⚡ Авто-запуск';
+
+    renderFile();
+    renderExecPanel();
+}
+
+function resetScenario() {
+    switchTab(currentScenario);
+}
+
+// ============================================================
+//  УТИЛИТЫ
+// ============================================================
+
+function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function closeIntro() {
+    document.getElementById('introOverlay').classList.add('hidden');
+}
+
+// ============================================================
+//  ИНИЦИАЛИЗАЦИЯ
+// ============================================================
+switchTab(0);
+</script>
+
+</body>
+</html>

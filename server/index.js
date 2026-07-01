@@ -9,6 +9,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const http = require('http');
 
 // Роуты
 const filesRouter = require('./routes/files');
@@ -28,6 +29,9 @@ app.use((req, res, next) => {
     next();
 });
 
+// UI статика
+app.use('/ui', express.static(path.join(__dirname, '..', 'ui')));
+
 // Роуты
 app.use('/api/files', filesRouter);
 app.use('/api/files', executeRouter);
@@ -41,6 +45,11 @@ app.get('/api/health', (req, res) => {
         version: '2.0.0',
         dataDir: process.env.MYDATA || './data'
     });
+});
+
+// UI redirect
+app.get('/', (req, res) => {
+    res.redirect('/ui/');
 });
 
 // Информация о сервере
@@ -93,10 +102,15 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Запуск сервера
-app.listen(PORT, () => {
+// Запуск сервера с WebSocket
+const server = http.createServer(app);
+const { setupWebSocket } = require('./ws-handler');
+setupWebSocket(server);
+
+server.listen(PORT, () => {
     console.log(`\n🚀 kosmos-task API Server запущен`);
     console.log(`   URL: http://localhost:${PORT}`);
+    console.log(`   UI:  http://localhost:${PORT}/ui/`);
     console.log(`   Data: ${path.resolve(process.env.MYDATA || './data')}`);
     console.log(`\n📚 Документация: http://localhost:${PORT}/api`);
     console.log(`❤️  Health check: http://localhost:${PORT}/api/health\n`);
