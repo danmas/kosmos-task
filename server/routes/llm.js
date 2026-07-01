@@ -10,8 +10,19 @@ const path = require('path');
 
 // === ЗАГРУЗКА ПРОМПТОВ ===
 const PROMPTS_DIR = path.join(__dirname, '..', '..', 'prompts');
-const QUESTIONS_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, 'task-factory-questions.md'), 'utf-8');
-const GENERATOR_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, 'task-factory-generator.md'), 'utf-8');
+const PROMPT_FILES = {
+    questions: 'task-factory-questions.md',
+    generator: 'task-factory-generator.md'
+};
+
+let QUESTIONS_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, PROMPT_FILES.questions), 'utf-8');
+let GENERATOR_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, PROMPT_FILES.generator), 'utf-8');
+
+/** Перечитать промпты с диска */
+function reloadPrompts() {
+    QUESTIONS_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, PROMPT_FILES.questions), 'utf-8');
+    GENERATOR_PROMPT = fs.readFileSync(path.join(PROMPTS_DIR, PROMPT_FILES.generator), 'utf-8');
+}
 
 // === LLM HELPER ===
 async function callLLM(messages, model) {
@@ -358,25 +369,71 @@ router.get('/llm/models', (req, res) => {
  */
 router.get('/llm/prompts/:name', (req, res) => {
     const name = req.params.name;
-    const prompts = {
-        questions: { filename: 'task-factory-questions.md', content: QUESTIONS_PROMPT },
-        generator: { filename: 'task-factory-generator.md', content: GENERATOR_PROMPT }
-    };
 
-    const prompt = prompts[name];
-    if (!prompt) {
+    // Читаем свежее содержимое с диска
+    const filename = PROMPT_FILES[name];
+    if (!filename) {
         return res.status(404).json({
             success: false,
-            error: `Промпт "${name}" не найден. Доступные: ${Object.keys(prompts).join(', ')}`
+            error: `Промпт "${name}" не найден. Доступные: ${Object.keys(PROMPT_FILES).join(', ')}`
         });
     }
+
+    const content = fs.readFileSync(path.join(PROMPTS_DIR, filename), 'utf-8');
 
     res.json({
         success: true,
         name,
-        filename: prompt.filename,
-        content: prompt.content
+        filename,
+        content
     });
+});
+
+/**
+ * PUT /api/llm/prompts/:name
+ * Сохранить отредактированный промпт
+ * Body: { content: string }
+ */
+router.put('/llm/prompts/:name', (req, res) => {
+    const name = req.params.name;
+    const { content } = req.body;
+
+    if (!content && content !== '') {
+        return res.status(400).json({
+            success: false,
+            error: 'Требуется параметр content'
+        });
+    }
+
+    const filename = PROMPT_FILES[name];
+    if (!filename) {
+        return res.status(404).json({
+            success: false,
+            error: `Промпт "${name}" не найден. Доступные: ${Object.keys(PROMPT_FILES).join(', ')}`
+        });
+    }
+
+    try {
+        const filePath = path.join(PROMPTS_DIR, filename);
+        fs.writeFileSync(filePath, content, 'utf-8');
+
+        // Обновляем кэш в памяти
+        reloadPrompts();
+
+        console.log(`📝 Промпт обновлён: ${filename} (${content.length} символов)`);
+
+        res.json({
+            success: true,
+            name,
+            filename,
+            length: content.length
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            error: `Ошибка записи: ${err.message}`
+        });
+    }
 });
 
 module.exports = router;

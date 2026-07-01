@@ -316,52 +316,159 @@ const FactoryPage = {
     },
 
     // ================================================================
-    // МОДАЛКА ПРОМПТОВ
+    // МОДАЛКА ПРОМПТОВ (view / edit)
     // ================================================================
-    async showPrompt(type) {
-        // type = 'questions' | 'generator'
-        let promptData = this.promptsCache[type];
+    _promptEditMode: false,
+    _promptType: null,
+    _promptOriginal: {},  // {type: originalContent} — для кнопки «Сбросить»
 
-        if (!promptData) {
-            try {
-                const res = await app.api(`/llm/prompts/${type}`);
-                if (res.success) {
-                    promptData = { filename: res.filename, content: res.content };
-                    this.promptsCache[type] = promptData;
-                } else {
-                    app.toast('Не удалось загрузить промпт: ' + res.error, 'error');
-                    return;
+    async showPrompt(type) {
+        this._promptType = type;
+        this._promptEditMode = false;
+
+        // Инвалидируем кэш — читаем свежее с сервера
+        delete this.promptsCache[type];
+
+        let promptData;
+        try {
+            const res = await app.api(`/llm/prompts/${type}`);
+            if (res.success) {
+                promptData = { filename: res.filename, content: res.content };
+                this.promptsCache[type] = promptData;
+                // Сохраняем оригинал для кнопки «Сбросить» (только при первой загрузке)
+                if (!this._promptOriginal[type]) {
+                    this._promptOriginal[type] = res.content;
                 }
-            } catch (err) {
-                app.toast('Ошибка загрузки промпта: ' + err.message, 'error');
+            } else {
+                app.toast('Не удалось загрузить промпт: ' + res.error, 'error');
                 return;
             }
+        } catch (err) {
+            app.toast('Ошибка загрузки промпта: ' + err.message, 'error');
+            return;
         }
 
+        this._renderPromptModal(promptData);
+    },
+
+    _renderPromptModal(promptData) {
+        const type = this._promptType;
+        const editMode = this._promptEditMode; // сохраняем флаг до closeModal
         const title = type === 'questions' ? 'Промпт: Уточняющие вопросы' : 'Промпт: Генерация .kosmos.md';
 
-        // Создаём overlay
+        // Удаляем старую модалку если есть
+        this.closeModal();
+        this._promptEditMode = editMode; // восстанавливаем флаг после closeModal
+
         const overlay = document.createElement('div');
         overlay.className = 'modal-overlay';
         overlay.id = 'promptModal';
         overlay.onclick = (e) => { if (e.target === overlay) FactoryPage.closeModal(); };
 
+        const bodyContent = this._promptEditMode
+            ? `<textarea id="promptEditor" class="form-textarea" style="min-height:400px;font-size:12px;line-height:1.6;resize:vertical;">${app.escapeHtml(promptData.content)}</textarea>`
+            : `<div class="modal-body">${app.escapeHtml(promptData.content)}</div>`;
+
+        const buttonsHtml = this._promptEditMode
+            ? `<div style="display:flex;gap:8px;align-items:center;">
+                    <button class="btn btn-success" onclick="FactoryPage.savePrompt()" style="font-size:12px;padding:5px 12px;">💾 Сохранить</button>
+                    <button class="btn btn-secondary" onclick="FactoryPage.cancelEdit()" style="font-size:12px;padding:5px 12px;">Отмена</button>
+                    <button class="btn btn-danger" onclick="FactoryPage.resetPrompt()" style="font-size:12px;padding:5px 12px;">↺ Сбросить</button>
+                </div>`
+            : `<div style="display:flex;gap:8px;align-items:center;">
+                    <button class="btn btn-primary" onclick="FactoryPage.editPrompt()" style="font-size:12px;padding:5px 12px;">✏️ Редактировать</button>
+                    <button class="btn btn-danger" onclick="FactoryPage.resetPrompt()" style="font-size:12px;padding:5px 12px;">↺ Сбросить</button>
+                </div>`;
+
         overlay.innerHTML = `
-            <div class="modal">
+            <div class="modal" style="width:780px;">
                 <div class="modal-header">
                     <h3>📄 ${title} <span style="color:var(--text2);font-weight:400;font-size:12px;">(${promptData.filename})</span></h3>
-                    <button class="modal-close" onclick="FactoryPage.closeModal()">×</button>
+                    <div style="display:flex;gap:8px;align-items:center;">
+                        ${buttonsHtml}
+                        <button class="modal-close" onclick="FactoryPage.closeModal()" style="margin-left:8px;">×</button>
+                    </div>
                 </div>
-                <div class="modal-body">${app.escapeHtml(promptData.content)}</div>
+                ${bodyContent}
             </div>
         `;
 
         document.body.appendChild(overlay);
     },
 
+    editPrompt() {
+        // Сохраняем флаг, т.к. closeModal() внутри _renderPromptModal сбросит его
+        const type = this._promptType;
+        const cached = this.promptsCache[type];
+        this._promptEditMode = true;
+        if (cached) this._renderPromptModal(cached);
+    },
+
+    cancelEdit() {
+        this._promptEditMode = false;
+        const cached = this.promptsCache[this._promptType];
+        if (cached) this._renderPromptModal(cached);
+    },
+
+    async savePrompt() {
+        const editor = document.getElementById('promptEditor');
+        if (!editor) return;
+
+        const content = editor.value;
+        const type = this._promptType;
+
+        try {
+            const res = await fetch(`/api/llm/prompts/${type}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content })
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                // Обновляем кэш
+                this.promptsCache[type] = { filename: data.filename, content };
+                this._promptEditMode = false;
+                this._renderPromptModal(this.promptsCache[type]);
+                app.toast('Промпт сохранён', 'success');
+            } else {
+                app.toast('Ошибка сохранения: ' + data.error, 'error');
+            }
+        } catch (err) {
+            app.toast('Ошибка сохранения: ' + err.message, 'error');
+        }
+    },
+
+    async resetPrompt() {
+        const type = this._promptType;
+        const original = this._promptOriginal[type];
+
+        if (original !== undefined) {
+            // Восстанавливаем из сохранённого оригинала (снимок при первой загрузке)
+            this.promptsCache[type] = { filename: this.promptsCache[type]?.filename || '?', content: original };
+            this._promptEditMode = false;
+            this._renderPromptModal(this.promptsCache[type]);
+            app.toast('Промпт сброшен к оригиналу', 'info');
+        } else {
+            // Оригинала нет — перечитываем с диска
+            try {
+                const res = await app.api(`/llm/prompts/${type}`);
+                if (res.success) {
+                    this.promptsCache[type] = { filename: res.filename, content: res.content };
+                    this._promptEditMode = false;
+                    this._renderPromptModal(this.promptsCache[type]);
+                    app.toast('Промпт перечитан с диска', 'info');
+                }
+            } catch (err) {
+                app.toast('Ошибка сброса: ' + err.message, 'error');
+            }
+        }
+    },
+
     closeModal() {
         const modal = document.getElementById('promptModal');
         if (modal) modal.remove();
+        this._promptEditMode = false;
     },
 
     // ================================================================
