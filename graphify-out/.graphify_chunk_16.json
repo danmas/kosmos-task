@@ -1,0 +1,478 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-test-2-prompt-view_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами. На данном скриншоте — страница Фабрики задач с открытой модалкой просмотра промпта",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи, 🏭 Фабрика (активен), ✏️ Редактор, 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI, кнопка 'Проверить AI'",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "factory (Фабрика)"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_factory_nav_item",
+      "name": "Nav Item: 🏭 Фабрика (активен)",
+      "type": "concept",
+      "description": "Пункт навигации 'Фабрика' в сайдбаре — подсвечен как активный (data-page='factory'), так как пользователь открыл страницу Фабрики задач",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_factory_page",
+      "name": "Factory Page (Фабрика задач)",
+      "type": "page",
+      "description": "Страница Фабрики задач (FactoryPage). Содержит два таба: ❓ Вопросы и 🏭 Генерация. На фоне открыта модалка просмотра промпта. Страница включает поле ввода цели задачи, селекты подсказок (количество задач/шагов) и кнопки",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "tabs": "questions, generation",
+        "implementation": "FactoryPage object"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_modal",
+      "name": "Prompt Modal (Просмотр промпта)",
+      "type": "ui_element",
+      "description": "Модальное окно просмотра системного промпта для LLM. Заголовок: '📄 Промпт: Уточняющие вопросы' или '📄 Промпт: Генерация .kosmos.md' с указанием имени файла. Содержит тело модалки с полным текстом промпта в режиме чтения. Кнопки: ✏️ Редактировать (переключает в режим редактирования), ↺ Сбросить (восстанавливает оригинал), × (закрыть)",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "modal_id": "promptModal",
+        "mode": "view",
+        "view_button": "✏️ Редактировать",
+        "reset_button": "↺ Сбросить",
+        "close_button": "×"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_header",
+      "name": "Prompt Modal Header",
+      "type": "ui_element",
+      "description": "Заголовок модального окна промпта. Содержит иконку 📄, название промпта ('Промпт: Уточняющие вопросы' или 'Промпт: Генерация .kosmos.md') и имя файла промпта (например, 'task-factory-questions.md' или 'task-factory-generator.md') в скобках",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "title_questions": "📄 Промпт: Уточняющие вопросы",
+        "title_generator": "📄 Промпт: Генерация .kosmos.md",
+        "filename_questions": "task-factory-questions.md",
+        "filename_generator": "task-factory-generator.md"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_content",
+      "name": "Prompt Content Area (тело модалки)",
+      "type": "ui_element",
+      "description": "Тело модального окна (div.modal-body) с полным текстом системного промпта в режиме только для чтения. Отображает содержимое файла промпта (вопросного или генераторного) с escapeHtml экранированием",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "display_mode": "readonly",
+        "content_type": "system_prompt_markdown"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_edit_button",
+      "name": "Button: ✏️ Редактировать (промпт)",
+      "type": "ui_element",
+      "description": "Кнопка '✏️ Редактировать' (btn-primary) в хедере модалки промпта. Вызывает FactoryPage.editPrompt() — переключает режим отображения с readonly на textarea для редактирования содержимого промпта",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "action": "FactoryPage.editPrompt()",
+        "button_style": "btn-primary"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_reset_button",
+      "name": "Button: ↺ Сбросить (промпт)",
+      "type": "ui_element",
+      "description": "Кнопка '↺ Сбросить' (btn-danger) в хедере модалки промпта. Вызывает FactoryPage.resetPrompt() — восстанавливает оригинальное содержимое промпта из сохранённого снимка (_promptOriginal) или перечитывает с диска через /llm/prompts/:type",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "action": "FactoryPage.resetPrompt()",
+        "button_style": "btn-danger"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_close_button",
+      "name": "Modal Close Button (×)",
+      "type": "ui_element",
+      "description": "Кнопка закрытия модального окна (×) с классом modal-close. Вызывает FactoryPage.closeModal() — удаляет элемент #promptModal из DOM",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "action": "FactoryPage.closeModal()"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_modal_overlay",
+      "name": "Modal Overlay (затемнение фона)",
+      "type": "ui_element",
+      "description": "Полупрозрачный затемняющий оверлей (modal-overlay) на весь экран позади модального окна промпта. Клик по оверлею также закрывает модалку (FactoryPage.closeModal()). Фоновая страница Фабрики просвечивает сквозь затемнение",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "close_on_click": true
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_type_questions",
+      "name": "Prompt Type: Questions (Уточняющие вопросы)",
+      "type": "concept",
+      "description": "Системный промпт для модуля уточнения задач (тип 'questions'). Заставляет LLM задать 3-5 точных уточняющих вопроса по цели пользователя. Хранится в файле prompts/task-factory-questions.md",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\task-factory-questions.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "prompt_file": "prompts/task-factory-questions.md",
+        "api_endpoint": "/llm/prompts/questions",
+        "purpose": "LLM generates clarifying questions from user goal"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_prompt_type_generator",
+      "name": "Prompt Type: Generator (Генерация .kosmos.md)",
+      "type": "concept",
+      "description": "Системный промпт для генерации файла .kosmos.md (тип 'generator'). Определяет строгую структуру .kosmos.md, правила форматирования и запреты. Хранится в файле prompts/task-factory-generator.md",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\task-factory-generator.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "prompt_file": "prompts/task-factory-generator.md",
+        "api_endpoint": "/llm/prompts/generator",
+        "purpose": "LLM generates complete .kosmos.md file"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён (неактивное состояние, сервер не запущен или соединение не установлено)",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — AI не инициализирован, не было проверок",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_check_ai_button",
+      "name": "Button: Проверить AI",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через /api/ai-test",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test"
+      }
+    },
+    {
+      "id": "screenshot-test-2-prompt-view_two_pass_scheme_visible",
+      "name": "Two-pass LLM Generation Scheme (визуализация)",
+      "type": "concept",
+      "description": "Двухпроходная схема LLM-генерации, отображаемая в UI Фабрики задач: (1) LLM генерирует уточняющие вопросы — промпт questions, (2) пользователь отвечает — LLM генерирует .kosmos.md — промпт generator. Текущий скриншот показывает просмотр одного из этих промптов",
+      "file_type": "concept",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\factory.js"
+      ],
+      "metadata": {
+        "pass_1": "questions_prompt",
+        "pass_2": "generator_prompt"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-2-prompt-view_app",
+      "to": "screenshot-test-2-prompt-view_factory_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Приложение kosmos-task содержит страницу Фабрики задач с открытой модалкой промпта"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_sidebar",
+      "to": "screenshot-test-2-prompt-view_factory_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Пункт '🏭 Фабрика' в сайдбаре активен и ведёт на страницу Фабрики задач"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_sidebar",
+      "to": "screenshot-test-2-prompt-view_factory_nav_item",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Сайдбар содержит активный пункт навигации 'Фабрика'"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_sidebar",
+      "to": "screenshot-test-2-prompt-view_ws_status",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Футер сайдбара содержит индикатор WS статуса"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_sidebar",
+      "to": "screenshot-test-2-prompt-view_ai_status",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Футер сайдбара содержит индикатор AI статуса"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_sidebar",
+      "to": "screenshot-test-2-prompt-view_check_ai_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Футер сайдбара содержит кнопку проверки AI"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_factory_page",
+      "to": "screenshot-test-2-prompt-view_prompt_modal",
+      "relation": "contains_overlay",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Модальное окно промпта открыто поверх страницы Фабрики задач"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_modal",
+      "to": "screenshot-test-2-prompt-view_prompt_header",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Модалка промпта содержит заголовок с названием и именем файла промпта"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_modal",
+      "to": "screenshot-test-2-prompt-view_prompt_content",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Модалка промпта содержит тело с полным текстом промпта"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_modal",
+      "to": "screenshot-test-2-prompt-view_prompt_edit_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Хедер модалки содержит кнопку '✏️ Редактировать' для переключения в режим редактирования"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_modal",
+      "to": "screenshot-test-2-prompt-view_prompt_reset_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Хедер модалки содержит кнопку '↺ Сбросить' для восстановления оригинального промпта"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_modal",
+      "to": "screenshot-test-2-prompt-view_prompt_close_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Хедер модалки содержит кнопку закрытия (×)"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_modal",
+      "to": "screenshot-test-2-prompt-view_modal_overlay",
+      "relation": "uses",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Модалка промпта использует затемняющий оверлей (modal-overlay) для блокировки фона"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_factory_page",
+      "to": "screenshot-test-2-prompt-view_two_pass_scheme_visible",
+      "relation": "implements",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Страница Фабрики задач реализует двухпроходную схему LLM-генерации, промпты которой можно просматривать"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_type_questions",
+      "to": "screenshot-test-2-prompt-view_prompt_modal",
+      "relation": "may_be_displayed_in",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Промпт уточняющих вопросов (questions) может отображаться в данной модалке при нажатии кнопки на вкладке Вопросы"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_type_generator",
+      "to": "screenshot-test-2-prompt-view_prompt_modal",
+      "relation": "may_be_displayed_in",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Промпт генерации .kosmos.md (generator) может отображаться в данной модалке при нажатии кнопки на вкладке Генерация"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_edit_button",
+      "to": "screenshot-test-2-prompt-view_prompt_content",
+      "relation": "switches_mode_to_edit",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Нажатие '✏️ Редактировать' переключает отображение промпта из режима чтения в режим редактирования (textarea)"
+    },
+    {
+      "from": "screenshot-test-2-prompt-view_prompt_reset_button",
+      "to": "screenshot-test-2-prompt-view_prompt_content",
+      "relation": "resets_content",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.92,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png",
+      "description": "Нажатие '↺ Сбросить' восстанавливает оригинальное содержимое промпта"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_test_2_prompt_modal_ui",
+      "name": "Prompt Modal UI — View Mode Layout",
+      "type": "concept",
+      "description": "Раскладка модального окна просмотра промпта на странице Фабрики задач: заголовок с иконкой 📄, названием промпта и именем файла; тело с текстом промпта в режиме readonly; панель кнопок (✏️ Редактировать, ↺ Сбросить, ×); затемняющий оверлей на фоне страницы Фабрики",
+      "nodes": [
+        "screenshot-test-2-prompt-view_prompt_modal",
+        "screenshot-test-2-prompt-view_prompt_header",
+        "screenshot-test-2-prompt-view_prompt_content",
+        "screenshot-test-2-prompt-view_prompt_edit_button",
+        "screenshot-test-2-prompt-view_prompt_reset_button",
+        "screenshot-test-2-prompt-view_prompt_close_button",
+        "screenshot-test-2-prompt-view_modal_overlay",
+        "screenshot-test-2-prompt-view_factory_page"
+      ],
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png"
+    },
+    {
+      "id": "he_test_2_prompt_view_workflow",
+      "name": "Prompt View Workflow — Factory Prompt Inspection",
+      "type": "concept",
+      "description": "Сценарий просмотра промпта в Фабрике задач: пользователь находится на странице Фабрики (вкладка Вопросы или Генерация), нажимает '📄 Посмотреть промпт' → модалка загружает содержимое промпта с сервера через /llm/prompts/:type → отображает в режиме readonly. Доступные действия: редактировать (✏️), сбросить к оригиналу (↺), закрыть (×)",
+      "nodes": [
+        "screenshot-test-2-prompt-view_factory_page",
+        "screenshot-test-2-prompt-view_prompt_modal",
+        "screenshot-test-2-prompt-view_prompt_type_questions",
+        "screenshot-test-2-prompt-view_prompt_type_generator",
+        "screenshot-test-2-prompt-view_prompt_content",
+        "screenshot-test-2-prompt-view_prompt_edit_button",
+        "screenshot-test-2-prompt-view_prompt_reset_button"
+      ],
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png"
+    },
+    {
+      "id": "he_test_2_sidebar_and_factory_context",
+      "name": "Sidebar + Factory Navigation Context (Prompt View)",
+      "type": "concept",
+      "description": "Глобальная навигационная структура приложения при просмотре промпта на странице Фабрики: сайдбар с четырьмя пунктами (Задачи, Фабрика — активен, Редактор, История) и статус-индикаторами (WS отключён, AI не проверен) в футере; основной контент — страница Фабрики с модалкой промпта поверх",
+      "nodes": [
+        "screenshot-test-2-prompt-view_app",
+        "screenshot-test-2-prompt-view_sidebar",
+        "screenshot-test-2-prompt-view_factory_nav_item",
+        "screenshot-test-2-prompt-view_factory_page",
+        "screenshot-test-2-prompt-view_prompt_modal",
+        "screenshot-test-2-prompt-view_ws_status",
+        "screenshot-test-2-prompt-view_ai_status",
+        "screenshot-test-2-prompt-view_check_ai_button"
+      ],
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-2-prompt-view.png"
+    }
+  ]
+}

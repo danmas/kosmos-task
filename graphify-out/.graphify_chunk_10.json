@@ -1,0 +1,451 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-factory-4-questions-received_factory_page",
+      "label": "Фабрика задач (Task Factory Page) — Questions Received",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Главная страница фабрики задач kosmos-task UI в состоянии 'Вопросы получены' — LLM сгенерировал и вернул уточняющие вопросы по цели пользователя, они отображаются в интерфейсе"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_sidebar",
+      "label": "Sidebar Navigation",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Левая боковая панель навигации с пунктами: Задачи, Фабрика (подсвечен как активный), Редактор, История"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_page_header",
+      "label": "Page Header «🏭 Фабрика задач»",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Заголовок страницы с иконкой фабрики и текстом 'Фабрика задач'"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_tabs",
+      "label": "Factory Tabs: Вопросы / Генерация (questions received)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Два таба: '❓ Вопросы' (активный) и '🏭 Генерация' (теперь активен, с бейджем количества вопросов); после получения вопросов оба таба доступны"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_tab_questions_active",
+      "label": "Tab: ❓ Вопросы (активен)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Активный таб с вопросами — выделен акцентным цветом; на этой вкладке отображаются полученные от LLM уточняющие вопросы"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_tab_generation_active",
+      "label": "Tab: 🏭 Генерация (активен, с бейджем)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Таб генерации теперь активен (ранее был disabled); содержит бейдж с числом уточняющих вопросов, полученных от LLM"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_questions_list",
+      "label": "Questions List (вопросы от LLM)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Список уточняющих вопросов, сгенерированных LLM на основе введённой цели пользователя; от 3 до 5 вопросов, каждый с полем для ответа"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_answer_inputs",
+      "label": "Answer Input Fields (поля ответов)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Текстовые поля ввода под каждым вопросом для записи ответов пользователя; ответы будут отправлены в LLM на втором проходе для генерации .kosmos.md файла"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_goal_input_persisted",
+      "label": "Goal Input Field (заполнен, сохранён)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Поле ввода цели задачи, по-прежнему содержащее введённый пользователем текст; цель сохранена и использована для генерации вопросов"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_goal_text",
+      "label": "Введённая цель задачи (User Goal Text)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Текст цели задачи, который был отправлен в LLM для генерации уточняющих вопросов на первом проходе двухпроходной схемы"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_success_toast",
+      "label": "✅ Вопросы получены! Toast Notification",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Всплывающее toast-уведомление об успешном получении уточняющих вопросов от LLM; может отображаться как зелёный бейдж 'Вопросы получены!'"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_generate_button",
+      "label": "🏭 Сгенерировать .kosmos.md Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Кнопка запуска второго прохода LLM — генерации .kosmos.md файла на основе цели пользователя и ответов на уточняющие вопросы; может быть на вкладке Генерация"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_view_prompt_button",
+      "label": "📄 Посмотреть промпт Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Вторичная кнопка, открывающая модалку просмотра/редактирования системного промпта для генерации вопросов или генерации .kosmos.md"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_form_group_task_count",
+      "label": "Подсказка: задач Select (1-3)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Выпадающий список для выбора количества задач (1/2/3); значение сохранено и будет использовано при генерации .kosmos.md файла"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_form_group_steps_count",
+      "label": "Подсказка: шагов на задачу Select (1-3)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Выпадающий список для выбора количества шагов на задачу (1/2/3); значение сохранено и будет использовано при генерации"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_llm_api_response",
+      "label": "LLM API Response — Questions Generated",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Ответ LLM API на запрос /generate/questions: JSON с массивом уточняющих вопросов, сгенерированных на основе системного промпта и цели пользователя"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_llm_questions_prompt",
+      "label": "LLM System Prompt for Questions (использован)",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Системный промпт для первого прохода фабрики (файл prompts/task-factory-questions.md), который был отправлен в LLM вместе с целью пользователя для генерации 3-5 уточняющих вопросов"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_kosmos_task_app",
+      "label": "kosmos-task Application",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Веб-приложение kosmos-task v2.0 — UI панель для управления задачами; скриншот запечатлел этап получения уточняющих вопросов от LLM на странице фабрики"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_factory_workflow_pass1_complete",
+      "label": "Factory Workflow — Pass 1 Complete",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Первый проход двухпроходной схемы фабрики завершён: цель отправлена → LLM сгенерировал уточняющие вопросы → вопросы получены и отображаются в UI → система ожидает ответов пользователя для второго прохода"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_flow_state",
+      "label": "Factory Flow — Step 4: Questions Received",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Четвёртый и финальный шаг в последовательности Factory Flow (4 шага: initial → goal-filled → toast → questions-received): уточняющие вопросы от LLM получены, отображаются в UI, пользователь может дать ответы и перейти к генерации"
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_two_pass_llm_scheme",
+      "label": "Two-pass LLM Generation Scheme (complete pass 1)",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Двухпроходная схема генерации: Pass 1 (завершён) — LLM задал уточняющие вопросы; Pass 2 (ожидает) — после ответов пользователя LLM сгенерирует готовый .kosmos.md файл со структурой задач и шагов"
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-factory-4-questions-received_sidebar",
+      "to": "screenshot-factory-4-questions-received_factory_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Пункт навигации 'Фабрика' в сайдбаре активен и ведёт на эту страницу"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_factory_page",
+      "to": "screenshot-factory-4-questions-received_page_header",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Страница фабрики содержит заголовок '🏭 Фабрика задач'"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_factory_page",
+      "to": "screenshot-factory-4-questions-received_tabs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Страница фабрики содержит два таба: Вопросы и Генерация"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tabs",
+      "to": "screenshot-factory-4-questions-received_tab_questions_active",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Таб '❓ Вопросы' активен и является частью группы табов"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tabs",
+      "to": "screenshot-factory-4-questions-received_tab_generation_active",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Таб '🏭 Генерация' теперь активен (с бейджем) — часть группы табов"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tab_questions_active",
+      "to": "screenshot-factory-4-questions-received_questions_list",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "На вкладке 'Вопросы' отображается список уточняющих вопросов, полученных от LLM"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_questions_list",
+      "to": "screenshot-factory-4-questions-received_answer_inputs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Каждый вопрос сопровождается полем для ввода ответа пользователя"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tab_questions_active",
+      "to": "screenshot-factory-4-questions-received_goal_input_persisted",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Заполненное поле цели задачи сохраняется на вкладке 'Вопросы'"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_goal_input_persisted",
+      "to": "screenshot-factory-4-questions-received_goal_text",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Поле ввода цели содержит текст, который был отправлен в LLM для генерации вопросов"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tab_questions_active",
+      "to": "screenshot-factory-4-questions-received_view_prompt_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Кнопка 'Посмотреть промпт' находится на вкладке Вопросы"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tab_questions_active",
+      "to": "screenshot-factory-4-questions-received_form_group_task_count",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Селект количества задач расположен на вкладке Вопросы"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tab_questions_active",
+      "to": "screenshot-factory-4-questions-received_form_group_steps_count",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Селект количества шагов расположен на вкладке Вопросы"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tab_generation_active",
+      "to": "screenshot-factory-4-questions-received_generate_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Кнопка 'Сгенерировать .kosmos.md' находится на вкладке Генерация"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_factory_page",
+      "to": "screenshot-factory-4-questions-received_success_toast",
+      "relation": "displays",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.92,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Страница фабрики отображает toast-уведомление об успешном получении вопросов от LLM"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_goal_text",
+      "to": "screenshot-factory-4-questions-received_llm_api_response",
+      "relation": "was_input_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Цель пользователя была отправлена как входной параметр в LLM API для генерации вопросов"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_llm_questions_prompt",
+      "to": "screenshot-factory-4-questions-received_llm_api_response",
+      "relation": "was_system_prompt_for",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Системный промпт генерации вопросов (task-factory-questions.md) был использован как system message при вызове LLM API"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_llm_api_response",
+      "to": "screenshot-factory-4-questions-received_questions_list",
+      "relation": "populates",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Ответ LLM API содержит массив уточняющих вопросов, которые отображаются в UI как список вопросов"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_tab_generation_active",
+      "to": "screenshot-factory-4-questions-received_tab_questions_active",
+      "relation": "activated_after_questions_received",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Таб генерации становится активным только после получения уточняющих вопросов от LLM (questions.length > 0)"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_kosmos_task_app",
+      "to": "screenshot-factory-4-questions-received_factory_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Приложение kosmos-task содержит страницу фабрики задач"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_kosmos_task_app",
+      "to": "screenshot-factory-4-questions-received_two_pass_llm_scheme",
+      "relation": "implements",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Приложение kosmos-task реализует двухпроходную схему LLM генерации через фабрику задач"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_factory_workflow_pass1_complete",
+      "to": "screenshot-factory-4-questions-received_two_pass_llm_scheme",
+      "relation": "completes_pass1_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Первый проход двухпроходной схемы завершён: вопросы сгенерированы и получены"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_factory_workflow_pass1_complete",
+      "to": "screenshot-factory-4-questions-received_answer_inputs",
+      "relation": "expects_user_input_for_pass2",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "После первого прохода система ожидает ответы пользователя на уточняющие вопросы для запуска второго прохода генерации"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_flow_state",
+      "to": "screenshot-factory-4-questions-received_factory_page",
+      "relation": "depicts",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Данный скриншот запечатлел четвёртый шаг Factory Flow — состояние после получения вопросов от LLM"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_flow_state",
+      "to": "screenshot-factory-4-questions-received_flow_state",
+      "relation": "transitions_to",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "После нажатия 'Задать вопросы' в состоянии goal-filled система переходит в состояние questions-received"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_success_toast",
+      "to": "screenshot-factory-4-questions-received_llm_api_response",
+      "relation": "confirms_success",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Toast-уведомление подтверждает успешный ответ LLM API с вопросами"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_generate_button",
+      "to": "screenshot-factory-4-questions-received_two_pass_llm_scheme",
+      "relation": "triggers_pass2",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Нажатие 'Сгенерировать .kosmos.md' запускает второй проход двухпроходной схемы — финальную генерацию .kosmos.md файла"
+    },
+    {
+      "from": "screenshot-factory-4-questions-received_view_prompt_button",
+      "to": "screenshot-factory-4-questions-received_llm_questions_prompt",
+      "relation": "opens_prompt_viewer",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-4-questions-received.png",
+      "description": "Кнопка 'Посмотреть промпт' открывает модальное окно с содержимым системного промпта для просмотра/редактирования"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_factory_questions_received_state",
+      "label": "Factory Questions Received — UI State After LLM Response",
+      "nodes": [
+        "screenshot-factory-4-questions-received_tab_questions_active",
+        "screenshot-factory-4-questions-received_questions_list",
+        "screenshot-factory-4-questions-received_answer_inputs",
+        "screenshot-factory-4-questions-received_goal_input_persisted",
+        "screenshot-factory-4-questions-received_success_toast",
+        "screenshot-factory-4-questions-received_tab_generation_active",
+        "screenshot-factory-4-questions-received_generate_button"
+      ],
+      "relation": "forms_questions_received_ui_state",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.94,
+      "metadata": "Состояние UI после получения вопросов от LLM: активная вкладка 'Вопросы' со списком вопросов и полями ответов, toast 'Вопросы получены!', таб генерации разблокирован с бейджем, кнопка генерации готова к использованию после заполнения ответов"
+    },
+    {
+      "id": "he_factory_pass1_complete_pipeline",
+      "label": "Factory Two-Pass Pipeline — Pass 1 Complete, Ready for Pass 2",
+      "nodes": [
+        "screenshot-factory-4-questions-received_goal_text",
+        "screenshot-factory-4-questions-received_llm_questions_prompt",
+        "screenshot-factory-4-questions-received_llm_api_response",
+        "screenshot-factory-4-questions-received_questions_list",
+        "screenshot-factory-4-questions-received_answer_inputs",
+        "screenshot-factory-4-questions-received_generate_button",
+        "screenshot-factory-4-questions-received_two_pass_llm_scheme"
+      ],
+      "relation": "forms_pass1_complete_pipeline",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.93,
+      "metadata": "Pipeline двухпроходной схемы: Pass 1 завершён (цель → LLM API → вопросы получены → отображаются в UI). Pass 2 ожидает (ответы пользователя → нажатие 'Сгенерировать .kosmos.md' → LLM генерирует финальный .kosmos.md файл)"
+    },
+    {
+      "id": "he_factory_flow_chain_step4",
+      "label": "Factory Flow Chain (4 steps) — Step 4: Questions Received",
+      "nodes": [
+        "screenshot-factory-4-questions-received_flow_state",
+        "screenshot-factory-4-questions-received_factory_page",
+        "screenshot-factory-4-questions-received_questions_list",
+        "screenshot-factory-4-questions-received_answer_inputs",
+        "screenshot-factory-4-questions-received_success_toast",
+        "screenshot-factory-3-goal-filled_flow_state",
+        "screenshot-factory-1-initial_flow_state"
+      ],
+      "relation": "part_of_sequence",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.88,
+      "metadata": "Скриншот 4 из 4 в цепочке Factory Flow: initial (step 1) → goal-filled (step 2) → toast (step 3) → questions-received (step 4, данный скриншот). Ключевое отличие: LLM ответил вопросами, UI показывает их с полями ответов, генерация разблокирована."
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

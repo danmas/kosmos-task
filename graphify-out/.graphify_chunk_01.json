@@ -1,0 +1,570 @@
+{
+  "nodes": [
+    {
+      "id": "kosmos_kosmos_task",
+      "name": "kosmos-task",
+      "type": "project",
+      "description": "Open-source project: one executable .kosmos.md file = full living project. Created by @danmas on GitHub.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "github_url": "https://github.com/danmas/kosmos-task",
+        "version": "v2.0",
+        "date": "2025-12"
+      }
+    },
+    {
+      "id": "person_danmas",
+      "name": "@danmas",
+      "type": "person",
+      "description": "Creator and maintainer of kosmos-task project on GitHub.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md"
+      ],
+      "metadata": {
+        "github": "https://github.com/danmas"
+      }
+    },
+    {
+      "id": "concept_living_document",
+      "name": "Living Document",
+      "type": "concept",
+      "description": "The philosophy that one executable Markdown file contains the entire project: idea -> tasks -> code -> result -> conclusions. Readable by humans, executable by machines, versioned in Git.",
+      "file_type": "concept",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "fmt_kosmos_md_v2",
+      "name": ".kosmos.md format v2.0",
+      "type": "format",
+      "description": "Executable Markdown file format. Structure: ## Задача N, ### Шаг N, - [ ] Выполнено, ```lang executable code blocks. Currently supports JavaScript via vm sandbox.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "version": "v2.0",
+        "language_support": "JavaScript",
+        "planned_languages": "python, bash"
+      }
+    },
+    {
+      "id": "tech_kosmos_runner_cli",
+      "name": "kosmos-runner-cli.js",
+      "type": "code",
+      "description": "CLI executor v2.0 written in JavaScript. Parses .kosmos.md, executes code blocks in Node.js vm sandbox, updates progress and results back into the file.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_progress.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "location": "kosmos-runner-cli.js",
+        "runtime": "Bun / Node.js 18+"
+      }
+    },
+    {
+      "id": "concept_task_factory",
+      "name": "Task Factory",
+      "type": "concept",
+      "description": "Interactive CLI tool that generates .kosmos.md project plans via LLM. Two-pass scheme: user answers 3-5 clarifying questions, then LLM generates a complete .kosmos.md file.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "location": "src/task-factory.ts",
+        "prompts": "prompts/task-factory-questions.md, prompts/task-factory-generator.md"
+      }
+    },
+    {
+      "id": "concept_agent_factory",
+      "name": "Agent Factory",
+      "type": "concept",
+      "description": "Generates TypeScript agent scripts that modify project code. Two modes: auto (apply changes) and diff (show diff only).",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "location": "src/factory.ts",
+        "prompt": "prompts/factory-generator-v1.md",
+        "modes": "auto, diff"
+      }
+    },
+    {
+      "id": "tech_llm_layer",
+      "name": "LLM Layer",
+      "type": "code",
+      "description": "Shared OpenAI-compatible LLM integration layer for both factories. Configured via .env: LLM_SERVER_URL, LLM_MODEL, LLM_API_KEY. Temperature 0.3. Mock fallback on network errors.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "location": "src/llm.ts",
+        "temperature": "0.3",
+        "fallback": "mock mode"
+      }
+    },
+    {
+      "id": "spec_kosmos_spec_v1",
+      "name": "kosmos-spec-v1.0",
+      "type": "specification",
+      "description": "System prompt specification for LLMs to generate perfect .kosmos.md files. Available in JSON and YAML formats. Tested error rate ~0%.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "location": "specification/kosmos-spec-v1.0.json, specification/kosmos-spec-v1.0.yaml",
+        "error_rate": "~0%"
+      }
+    },
+    {
+      "id": "tech_rest_api_server",
+      "name": "REST API Server",
+      "type": "code",
+      "description": "Express + CORS REST API with routes for files, execution, and LLM operations. Supports /api/files, /api/execute, /api/llm.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "location": "server/",
+        "framework": "Express + CORS",
+        "entry": "server/index.js"
+      }
+    },
+    {
+      "id": "runtime_bun",
+      "name": "Bun v1+",
+      "type": "runtime",
+      "description": "Preferred JavaScript runtime for kosmos-task. Recommended over Node.js.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {
+        "url": "https://bun.sh"
+      }
+    },
+    {
+      "id": "runtime_nodejs",
+      "name": "Node.js 18+",
+      "type": "runtime",
+      "description": "Fallback JavaScript runtime for kosmos-task. Supported but Bun recommended.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "tech_sandbox_vm",
+      "name": "Node.js VM Sandbox",
+      "type": "code",
+      "description": "Node.js vm module used to execute code blocks in isolated sandbox. Restricted: no fs.writeFile, mkdir, child_process.",
+      "file_type": "concept",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "concept_git_friendly",
+      "name": "Git-friendly format",
+      "type": "concept",
+      "description": "The .kosmos.md format is designed to be 100% Git-friendly: versionable, diffable, mergeable as plain text.",
+      "file_type": "concept",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "concept_philosophy_tagline",
+      "name": "New way for ideas to exist",
+      "type": "concept",
+      "description": "Project philosophy: 'kosmos-task -- eto ne instrument. Eto novyj sposob sushestvovaniya idej.' / 'kosmos-task is not a tool. It is a new way for ideas to exist.'",
+      "file_type": "concept",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "person_grok_agent",
+      "name": "Grok AI Agent",
+      "type": "person",
+      "description": "AI agent (by xAI) used for development of kosmos-task. Has specific AGENTS.md rules for task complexity evaluation and code conventions.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md"
+      ],
+      "metadata": {
+        "rules_file": "AGENTS.md"
+      }
+    },
+    {
+      "id": "concept_complexity_scale",
+      "name": "Task Complexity Scale (0-7)",
+      "type": "concept",
+      "description": "Rule in AGENTS.md: before executing any task, estimate complexity 0-7, ask exactly N clarifying questions (N=complexity), then proceed. Minimizes errors and rework.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "tech_github_repo",
+      "name": "GitHub Repository",
+      "type": "code",
+      "description": "Public GitHub repository at https://github.com/danmas/kosmos-task. Contains source code, specifications, prompts, examples.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md"
+      ],
+      "metadata": {
+        "url": "https://github.com/danmas/kosmos-task"
+      }
+    },
+    {
+      "id": "fmt_test_example_kosmos",
+      "name": "test-example.kosmos.md",
+      "type": "document",
+      "description": "Working test example file used to verify the runner. Successfully executes 2/2 steps (100%).",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_progress.md"
+      ],
+      "metadata": {
+        "location": "test-example.kosmos.md",
+        "status": "passing"
+      }
+    },
+    {
+      "id": "concept_two_pass_scheme",
+      "name": "Two-pass LLM generation scheme",
+      "type": "concept",
+      "description": "Task Factory uses two passes: (1) LLM generates clarifying questions from user one-phrase goal, (2) answers injected into context, LLM generates complete .kosmos.md file.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "license_mit",
+      "name": "MIT License",
+      "type": "license",
+      "description": "Project is licensed under MIT -- do whatever you want with it.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+      ],
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "person_danmas",
+      "to": "kosmos_kosmos_task",
+      "relation": "created",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+      "description": "@danmas created the kosmos-task project"
+    },
+    {
+      "from": "kosmos_kosmos_task",
+      "to": "fmt_kosmos_md_v2",
+      "relation": "defines_format",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+      "description": "kosmos-task defines the .kosmos.md format v2.0"
+    },
+    {
+      "from": "fmt_kosmos_md_v2",
+      "to": "concept_living_document",
+      "relation": "implements",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+      "description": ".kosmos.md format implements living document concept"
+    },
+    {
+      "from": "tech_kosmos_runner_cli",
+      "to": "fmt_kosmos_md_v2",
+      "relation": "executes",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+      "description": "kosmos-runner-cli.js executes .kosmos.md files"
+    },
+    {
+      "from": "tech_kosmos_runner_cli",
+      "to": "tech_sandbox_vm",
+      "relation": "uses",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+      "description": "kosmos-runner-cli.js uses vm sandbox for safe execution"
+    },
+    {
+      "from": "concept_task_factory",
+      "to": "tech_llm_layer",
+      "relation": "uses",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md",
+      "description": "Task Factory uses shared LLM Layer"
+    },
+    {
+      "from": "concept_agent_factory",
+      "to": "tech_llm_layer",
+      "relation": "uses",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md",
+      "description": "Agent Factory uses shared LLM Layer"
+    },
+    {
+      "from": "concept_task_factory",
+      "to": "concept_two_pass_scheme",
+      "relation": "uses",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md",
+      "description": "Task Factory implements two-pass LLM generation scheme"
+    },
+    {
+      "from": "spec_kosmos_spec_v1",
+      "to": "fmt_kosmos_md_v2",
+      "relation": "specifies",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+      "description": "kosmos-spec-v1.0 specifies the .kosmos.md format"
+    },
+    {
+      "from": "tech_rest_api_server",
+      "to": "kosmos_kosmos_task",
+      "relation": "part_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+      "description": "REST API server is part of kosmos-task project"
+    },
+    {
+      "from": "kosmos_kosmos_task",
+      "to": "runtime_bun",
+      "relation": "recommends",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+      "description": "Bun is the recommended runtime"
+    },
+    {
+      "from": "kosmos_kosmos_task",
+      "to": "runtime_nodejs",
+      "relation": "supports",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+      "description": "Node.js 18+ is supported as fallback runtime"
+    },
+    {
+      "from": "kosmos_kosmos_task",
+      "to": "tech_github_repo",
+      "relation": "hosted_on",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+      "description": "kosmos-task is hosted on GitHub"
+    },
+    {
+      "from": "kosmos_kosmos_task",
+      "to": "license_mit",
+      "relation": "licensed_under",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+      "description": "kosmos-task is MIT licensed"
+    },
+    {
+      "from": "fmt_kosmos_md_v2",
+      "to": "concept_git_friendly",
+      "relation": "is",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+      "description": ".kosmos.md format is 100% Git-friendly"
+    },
+    {
+      "from": "kosmos_kosmos_task",
+      "to": "concept_philosophy_tagline",
+      "relation": "has_philosophy",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+      "description": "Project philosophy: new way for ideas to exist"
+    },
+    {
+      "from": "person_grok_agent",
+      "to": "kosmos_kosmos_task",
+      "relation": "contributes_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\.grok-context.md",
+      "description": "Grok AI agent contributed to project development"
+    },
+    {
+      "from": "person_grok_agent",
+      "to": "concept_complexity_scale",
+      "relation": "follows",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+      "description": "Grok follows the Complexity Scale rule"
+    },
+    {
+      "from": "fmt_test_example_kosmos",
+      "to": "tech_kosmos_runner_cli",
+      "relation": "validates",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README_progress.md",
+      "description": "test-example.kosmos.md validates the runner (2/2 passed)"
+    },
+    {
+      "from": "tech_llm_layer",
+      "to": "spec_kosmos_spec_v1",
+      "relation": "uses_as_system_prompt",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md",
+      "description": "LLM layer uses kosmos-spec-v1.0 as system prompt"
+    },
+    {
+      "from": "fmt_kosmos_md_v2",
+      "to": "tech_sandbox_vm",
+      "relation": "restricted_by",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md",
+      "description": "Executable code blocks restricted: no fs/mkdir/child_process"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_core_paradigm",
+      "name": "Core Paradigm: Living Executable Document",
+      "type": "concept",
+      "description": "One .kosmos.md file that is simultaneously human-readable document, executable program, todo-list, and Git-versioned artifact.",
+      "nodes": [
+        "concept_living_document",
+        "fmt_kosmos_md_v2",
+        "tech_kosmos_runner_cli",
+        "concept_git_friendly",
+        "fmt_test_example_kosmos"
+      ],
+      "relations": [
+        {
+          "description": "fmt_kosmos_md_v2 implements concept_living_document, executed by tech_kosmos_runner_cli, is concept_git_friendly, validated by fmt_test_example_kosmos"
+        }
+      ],
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README.md"
+    },
+    {
+      "id": "he_ai_ecosystem",
+      "name": "AI Integration Ecosystem",
+      "type": "concept",
+      "description": "Complete AI toolchain: specification, LLM layer, Task Factory, Agent Factory, two-pass scheme.",
+      "nodes": [
+        "spec_kosmos_spec_v1",
+        "tech_llm_layer",
+        "concept_task_factory",
+        "concept_agent_factory",
+        "concept_two_pass_scheme"
+      ],
+      "relations": [
+        {
+          "description": "spec_kosmos_spec_v1 used as system prompt by tech_llm_layer, which powers both concept_task_factory (via concept_two_pass_scheme) and concept_agent_factory"
+        }
+      ],
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\README_short_description.md"
+    },
+    {
+      "id": "he_runtime_environment",
+      "name": "Runtime and Execution Environment",
+      "type": "concept",
+      "description": "Multi-tier runtime: Bun (preferred), Node.js (fallback), server (REST API), sandbox (security).",
+      "nodes": [
+        "runtime_bun",
+        "runtime_nodejs",
+        "tech_rest_api_server",
+        "tech_sandbox_vm",
+        "tech_kosmos_runner_cli"
+      ],
+      "relations": [
+        {
+          "description": "runtime_bun preferred, runtime_nodejs fallback. tech_rest_api_server runs in either. tech_sandbox_vm secured inside tech_kosmos_runner_cli."
+        }
+      ],
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\AGENTS.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

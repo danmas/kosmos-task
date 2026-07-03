@@ -1,0 +1,558 @@
+{
+  "nodes": [
+    {
+      "id": "kosmos_project",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Kosmos Task Project",
+      "description": "Проект kosmos-task — исполняемые Markdown-файлы (.kosmos.md): идея → задачи → код → результат → выводы",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "id": "kosmos_ai_model_integration",
+      "type": "concept",
+      "file_type": "document",
+      "name": "AI Model Integration",
+      "description": "Архитектура и шаги по внедрению взаимодействия с сервером моделей ИИ (OpenAI-совместимый API) в Node.js/TypeScript проект",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "id": "kosmos_ai_server_usage",
+      "type": "concept",
+      "file_type": "document",
+      "name": "AI Server Usage in Kosmos Task",
+      "description": "Практическое описание как проект kosmos-task использует AI Server: Task Factory и Agent Factory сценарии",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "id": "kosmos_llm_client",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "LLM Client (src/llm.ts)",
+      "description": "Модуль клиента для вызова AI через OpenAI-совместимый API с историей и обработкой ошибок",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "id": "kosmos_env_config",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Environment Configuration (src/env.ts)",
+      "description": "Модуль типизированного доступа к переменным окружения (LLM_SERVER_URL, LLM_API_KEY, LLM_MODEL)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "id": "kosmos_task_factory",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Task Factory (src/task-factory.ts)",
+      "description": "Двухпроходная генерация .kosmos.md: AI генерирует вопросы → пользователь отвечает → AI генерирует файл",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "id": "kosmos_agent_factory",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Agent Factory (src/factory.ts)",
+      "description": "Генерация кода AI-агентов на TypeScript по контракту (жёсткий список вопросов → код)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "id": "kosmos_two_pass_generation",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Two-Pass Generation Pattern",
+      "description": "Паттерн 'Интерактивное уточнение': User Goal → AI Questions → User Answers → AI Generation",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "id": "kosmos_contract_pattern",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Contract-Based Generation Pattern",
+      "description": "Паттерн 'Контракт': жёсткий список вопросов → сбор ответов → единственный вызов LLM для генерации кода",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "id": "kosmos_mock_mode",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Mock Mode",
+      "description": "Система заглушек для разработки без GPU/AI: при недоступности сервера возвращает тестовые ответы",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "id": "kosmos_history_logging",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "History Logging System",
+      "description": "Сохранение истории запросов и ответов в history.json + debug-логи factory-debug-*.json",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "id": "kosmos_openai_api",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "OpenAI-Compatible API",
+      "description": "Формат POST /chat/completions с messages, model, temperature; заголовки Content-Type и Authorization: Bearer",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "id": "kosmos_md_format",
+      "type": "concept",
+      "file_type": "concept",
+      "name": ".kosmos.md Format",
+      "description": "Исполняемый Markdown-формат: задача-шаги с executable-блоками, чекбоксами, прогрессом и результатами",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\specification\\kosmos-spec-v1.0.yaml"
+    },
+    {
+      "id": "kosmos_specification",
+      "type": "document",
+      "file_type": "document",
+      "name": "Kosmos Spec v1.0",
+      "description": "Спецификация формата kosmos-v2.0: обязательная структура, правила, запреты, рекомендованные параметры",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\specification\\kosmos-spec-v1.0.yaml"
+    },
+    {
+      "id": "kosmos_runner",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Kosmos Runner",
+      "description": "Компонент, выполняющий .kosmos.md: парсит файл, находит невыполненные шаги, запускает executable-блоки в sandbox, обновляет чекбоксы и прогресс",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "id": "kosmos_sandbox",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "Sandbox (vm.createContext)",
+      "description": "Изолированная среда выполнения JS-кода через vm.createContext — нет доступа к файловой системе, таймаут 5 секунд",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "id": "kosmos_demo_ui",
+      "type": "code",
+      "file_type": "code",
+      "name": "Demo Interactive UI",
+      "description": "Интерактивная HTML-страница демонстрации жизненного цикла .kosmos.md с 3 сценариями, tabs, execution panel",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "id": "kosmos_ui_panel",
+      "type": "code",
+      "file_type": "code",
+      "name": "UI Panel v2.0",
+      "description": "HTML-панель управления с навигацией: Задачи, Фабрика, Редактор, История; проверка AI Health",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+    },
+    {
+      "id": "kosmos_hello_scenario",
+      "type": "document",
+      "file_type": "document",
+      "name": "Hello Kosmos! Scenario",
+      "description": "Простейшая демонстрация формата: вывод приветствия и математических операций (2 шага)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\1-hello.kosmos.md"
+    },
+    {
+      "id": "kosmos_fibonacci_scenario",
+      "type": "document",
+      "file_type": "document",
+      "name": "Fibonacci Calculator Scenario",
+      "description": "Средняя сложность: генерация чисел Фибоначчи, фильтрация чётных/нечётных, статистика и золотое сечение (3 шага)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md"
+    },
+    {
+      "id": "kosmos_data_report_scenario",
+      "type": "document",
+      "file_type": "document",
+      "name": "Data Analysis & Report Scenario",
+      "description": "Сложная мульти-задачная структура: генерация данных, валидация, статистика, IQR-аномалии, отчёт (5 шагов, 3 задачи)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\3-data-report.kosmos.md"
+    },
+    {
+      "id": "kosmos_test_example",
+      "type": "document",
+      "file_type": "document",
+      "name": "Test Example .kosmos.md",
+      "description": "Тестовый пример с 2 шагами вывода приветствий, прогресс 100%",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\test-example.kosmos.md"
+    },
+    {
+      "id": "kosmos_factory_generator_prompt",
+      "type": "rationale",
+      "file_type": "rationale",
+      "name": "Agent Factory Generator Prompt",
+      "description": "Промпт для генерации кода TypeScript-агента: контракт ответов (5 полей), шаблон с MCP, автокоммит, diff-режим",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\factory-generator-v1.md"
+    },
+    {
+      "id": "kosmos_factory_questions_prompt",
+      "type": "rationale",
+      "file_type": "rationale",
+      "name": "Agent Factory Questions Prompt",
+      "description": "Промпт для генерации 3-6 уточняющих вопросов по цели пользователя (файлы, логгер, автокоммит, режим, ограничения)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\factory-questions.md"
+    },
+    {
+      "id": "kosmos_task_factory_generator_prompt",
+      "type": "rationale",
+      "file_type": "rationale",
+      "name": "Task Factory Generator Prompt",
+      "description": "Строгий генератор .kosmos.md файлов: обязательная структура, нумерация, чекбоксы, прогресс, 10 правил и запреты",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\task-factory-generator.md"
+    },
+    {
+      "id": "kosmos_task_factory_questions_prompt",
+      "type": "rationale",
+      "file_type": "rationale",
+      "name": "Task Factory Questions Prompt",
+      "description": "Промпт для 3-5 уточняющих вопросов: контекст, ресурсы, верификация, уровень детализации, ручные шаги, зависимости",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\task-factory-questions.md"
+    },
+    {
+      "id": "kosmos_dotenv_dependency",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "dotenv Dependency",
+      "description": "npm-пакет dotenv для загрузки переменных окружения из .env файла",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "id": "kosmos_typescript_interfaces",
+      "type": "concept",
+      "file_type": "concept",
+      "name": "TypeScript Message Interfaces",
+      "description": "Типы Message (system|user|assistant) и HistoryEntry (timestamp, model, messages, response, error)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    }
+  ],
+  "edges": [
+    {
+      "from": "kosmos_ai_server_usage",
+      "to": "kosmos_ai_model_integration",
+      "relation": "references",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "README_task_AI_SERVER_usage.md содержит ссылку на инструкцию по интеграции: '[инструкции по интеграции](./README_task_AI_MODEL_integration.md)'",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "from": "kosmos_project",
+      "to": "kosmos_llm_client",
+      "relation": "has_component",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Проект kosmos-task включает модуль LLM клиента (src/llm.ts) для взаимодействия с AI сервером",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "from": "kosmos_project",
+      "to": "kosmos_task_factory",
+      "relation": "has_component",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Проект использует Task Factory для генерации структурированных .kosmos.md задач",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "from": "kosmos_project",
+      "to": "kosmos_agent_factory",
+      "relation": "has_component",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Проект использует Agent Factory для генерации кода AI-агентов",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "from": "kosmos_project",
+      "to": "kosmos_runner",
+      "relation": "has_component",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Runner парсит .kosmos.md файл, выполняет шаги и обновляет документ",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_task_factory",
+      "to": "kosmos_two_pass_generation",
+      "relation": "implements_pattern",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Task Factory использует паттерн 'Интерактивное уточнение' (двухпроходная генерация)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "from": "kosmos_agent_factory",
+      "to": "kosmos_contract_pattern",
+      "relation": "implements_pattern",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Agent Factory использует паттерн 'Контракт' (жёсткий список вопросов → код)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "from": "kosmos_llm_client",
+      "to": "kosmos_openai_api",
+      "relation": "communicates_via",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "callLLM функция отправляет POST /chat/completions с Authorization Bearer и JSON body",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "from": "kosmos_llm_client",
+      "to": "kosmos_mock_mode",
+      "relation": "has_fallback",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "При ошибке сети или ECONNREFUSED вызывается getMockResponse(), анализирующий system prompt",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "from": "kosmos_llm_client",
+      "to": "kosmos_history_logging",
+      "relation": "has_feature",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "saveHistory() сохраняет каждый запрос/ответ/ошибку в history.json",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "from": "kosmos_env_config",
+      "to": "kosmos_dotenv_dependency",
+      "relation": "depends_on",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "src/env.ts использует dotenv.config() для загрузки .env переменных",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "from": "kosmos_llm_client",
+      "to": "kosmos_env_config",
+      "relation": "depends_on",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "callLLM импортирует LLM_BASE_URL, LLM_API_KEY, LLM_MODEL из ./env",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "from": "kosmos_llm_client",
+      "to": "kosmos_typescript_interfaces",
+      "relation": "defines",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "src/llm.ts определяет типы Message и HistoryEntry",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_MODEL_integration.md"
+    },
+    {
+      "from": "kosmos_task_factory",
+      "to": "kosmos_task_factory_questions_prompt",
+      "relation": "uses_prompt",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Task Factory Stage 1 использует QUESTIONS_PROMPT для генерации уточняющих вопросов",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\task-factory-questions.md"
+    },
+    {
+      "from": "kosmos_task_factory",
+      "to": "kosmos_task_factory_generator_prompt",
+      "relation": "uses_prompt",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Task Factory Stage 2 использует GENERATOR_PROMPT для финальной генерации .kosmos.md",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\task-factory-generator.md"
+    },
+    {
+      "from": "kosmos_agent_factory",
+      "to": "kosmos_factory_questions_prompt",
+      "relation": "uses_prompt",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Agent Factory использует промпт для генерации вопросов по контракту",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\factory-questions.md"
+    },
+    {
+      "from": "kosmos_agent_factory",
+      "to": "kosmos_factory_generator_prompt",
+      "relation": "uses_prompt",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Agent Factory использует промпт для генерации кода TypeScript-агента",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\factory-generator-v1.md"
+    },
+    {
+      "from": "kosmos_runner",
+      "to": "kosmos_md_format",
+      "relation": "executes",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Runner парсит .kosmos.md файл, находит невыполненные шаги и запускает executable-блоки",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_runner",
+      "to": "kosmos_sandbox",
+      "relation": "uses",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Runner выполняет JS-код в sandbox (vm.createContext) с таймаутом 5 секунд",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_md_format",
+      "to": "kosmos_specification",
+      "relation": "defined_by",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Спецификация kosmos-spec-v1.0.yaml определяет формат .kosmos.md (format_version: kosmos-v2.0)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\specification\\kosmos-spec-v1.0.yaml"
+    },
+    {
+      "from": "kosmos_task_factory",
+      "to": "kosmos_md_format",
+      "relation": "generates",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Task Factory генерирует структурированные .kosmos.md файлы из идеи пользователя",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "from": "kosmos_hello_scenario",
+      "to": "kosmos_md_format",
+      "relation": "instance_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Файл 1-hello.kosmos.md является примером формата .kosmos.md",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\1-hello.kosmos.md"
+    },
+    {
+      "from": "kosmos_fibonacci_scenario",
+      "to": "kosmos_md_format",
+      "relation": "instance_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Файл 2-fibonacci.kosmos.md является примером формата .kosmos.md",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md"
+    },
+    {
+      "from": "kosmos_data_report_scenario",
+      "to": "kosmos_md_format",
+      "relation": "instance_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Файл 3-data-report.kosmos.md является примером формата .kosmos.md",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\3-data-report.kosmos.md"
+    },
+    {
+      "from": "kosmos_test_example",
+      "to": "kosmos_md_format",
+      "relation": "instance_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Файл test-example.kosmos.md является примером формата .kosmos.md",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\test-example.kosmos.md"
+    },
+    {
+      "from": "kosmos_demo_ui",
+      "to": "kosmos_runner",
+      "relation": "demonstrates",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Демо UI визуализирует работу Runner'а: пошаговое выполнение, авто-запуск, обновление прогресса",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_demo_ui",
+      "to": "kosmos_hello_scenario",
+      "relation": "displays",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Демо UI включает таб сценария '1. Привет, Kosmos!'",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_demo_ui",
+      "to": "kosmos_fibonacci_scenario",
+      "relation": "displays",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Демо UI включает таб сценария '2. Калькулятор Fibonacci'",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_demo_ui",
+      "to": "kosmos_data_report_scenario",
+      "relation": "displays",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Демо UI включает таб сценария '3. Анализ данных'",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_hello_scenario",
+      "to": "kosmos_fibonacci_scenario",
+      "relation": "lower_complexity_than",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.9,
+      "context": "hello — простой (2 шага), fibonacci — средний (3 шага), data-report — сложный (5 шагов)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_fibonacci_scenario",
+      "to": "kosmos_data_report_scenario",
+      "relation": "lower_complexity_than",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.9,
+      "context": "Сложность сценариев: простой < средний < сложный",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_project",
+      "to": "kosmos_demo_ui",
+      "relation": "has_component",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Проект включает интерактивную демо-страницу",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "from": "kosmos_project",
+      "to": "kosmos_ui_panel",
+      "relation": "has_component",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Проект включает UI панель v2.0 с навигацией",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyperedge_gen_pipeline",
+      "nodes": ["kosmos_task_factory", "kosmos_agent_factory", "kosmos_llm_client", "kosmos_mock_mode", "kosmos_history_logging"],
+      "relation": "ai_generation_pipeline",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Полный пайплайн AI-генерации: Task/Agent Factory → LLM Client (callLLM) → fallback Mock → логирование истории",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\KB\\README_task_AI_SERVER_usage.md"
+    },
+    {
+      "id": "hyperedge_demo_scenarios",
+      "nodes": ["kosmos_hello_scenario", "kosmos_fibonacci_scenario", "kosmos_data_report_scenario"],
+      "relation": "demo_scenario_set",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Три демо-сценария разной сложности: простой (1 задача, 2 шага), средний (2 задачи, 3 шага), сложный (3 задачи, 5 шагов)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\demo\\index.html"
+    },
+    {
+      "id": "hyperedge_prompts",
+      "nodes": ["kosmos_factory_generator_prompt", "kosmos_factory_questions_prompt", "kosmos_task_factory_generator_prompt", "kosmos_task_factory_questions_prompt"],
+      "relation": "prompt_set_for_factories",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "Набор из 4 AI-промптов: Agent Factory (генератор + вопросы) и Task Factory (генератор + вопросы)",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\prompts\\task-factory-generator.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

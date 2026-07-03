@@ -1,0 +1,386 @@
+{
+  "chunk_num": 21,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+  "description": "Knowledge graph extracted from screenshot-test-4-saved.png — Test UI после сохранения задачи из редактора. Показывает интерфейс страницы задачи (TaskPage) в режиме просмотра после успешного сохранения отредактированного .kosmos.md файла 'проверка-палиндрома.kosmos.md' (Palindrome Check). Слева — rendered markdown задачи, справа — панель выполнения с прогрессом, шагами и кнопками управления.",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-test-4-saved_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами. На данном скриншоте — страница просмотра задачи после успешного сохранения отредактированного файла 'проверка-палиндрома.kosmos.md'. Интерфейс перешёл из редактора в режим просмотра задачи (TaskPage) с двухпанельным layout.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-4-saved_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи (активен), 🏭 Фабрика, ✏️ Редактор, 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI (⚪ AI: не проверен), кнопка 'Проверить AI'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "dashboard (Задачи)"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_task_page",
+      "name": "TaskPage — просмотр 'проверка-палиндрома.kosmos.md'",
+      "type": "page",
+      "description": "Страница просмотра задачи (.kosmos.md файла) после успешного сохранения из редактора. Отображает двухпанельный layout: слева отрендеренный markdown-документ задачи 'Проверка палиндрома', справа панель выполнения. Задача имеет статус 'done' и прогресс 100%. В левой панели виден заголовок '#Проверка палиндрома', статус, прогресс-бар, разделы цели, задачи с шагами и executable-блоки JS.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\data\\проверка-палиндрома.kosmos.md"
+      ],
+      "metadata": {
+        "route": "#task/проверка-палиндрома.kosmos.md",
+        "filename": "проверка-палиндрома.kosmos.md",
+        "status": "done",
+        "progress": "100%",
+        "post_save_navigation": "true",
+        "panels": "task-file (left), task-exec (right)"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_file_panel",
+      "name": "Левая панель — rendered markdown 'Проверка палиндрома'",
+      "type": "ui_element",
+      "description": "Левая панель страницы просмотра. Отображает отрендеренный .kosmos.md документ задачи 'Проверка палиндрома': заголовок '#Проверка палиндрома', статус '✅ done', прогресс '100%', дата последнего обновления, раздел цели (создание функции isPalindrome), Задача 1 с двумя шагами: Шаг 1 (реализация функции isPalindrome — выполнено, содержит JS executable блок) и Шаг 2 (тестирование функции — выполнено). Результат шага 2 показывает 'ОШИБКА: isPalindrome is not defined'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\data\\проверка-палиндрома.kosmos.md"
+      ],
+      "metadata": {
+        "class": "task-file",
+        "task_title": "Проверка палиндрома",
+        "task_status": "done",
+        "task_progress": "100%",
+        "steps": "2",
+        "tasks": "1"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_exec_panel",
+      "name": "Правая панель — выполнение шагов (Palindrome check)",
+      "type": "ui_element",
+      "description": "Правая панель с элементами управления выполнением: заголовок '⚡ Выполнение', progress-bar (100% — заполнен), карточки шагов (step-card) для 2 шагов задачи 'Проверка палиндрома', кнопки '▶ Запустить все' и '↺ Сброс'. Шаги имеют статусы '✅ Выполнено'. Визуально отображает завершённое состояние задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-exec",
+        "progress_percent": "100",
+        "controls": "run_all, reset",
+        "step_count": "2"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_step1_card",
+      "name": "Step Card 1 — isPalindrome функция",
+      "type": "ui_element",
+      "description": "Карточка шага 1 (step-card) на панели выполнения: заголовок 'Шаг 1: Написать функцию isPalindrome', статус '✅ Выполнено', содержит JS code block с реализацией функции. Чекбокс выполнения отмечен.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "step_num": "1",
+        "step_title": "Написать функцию isPalindrome",
+        "status": "done",
+        "has_code": "true"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_step2_card",
+      "name": "Step Card 2 — Тестирование isPalindrome",
+      "type": "ui_element",
+      "description": "Карточка шага 2 (step-card) на панели выполнения: заголовок 'Шаг 2: Протестировать функцию на примерах', статус '✅ Выполнено', содержит JS код с вызовами console.log для тестирования isPalindrome('level'), isPalindrome('hello'), isPalindrome('A man, a plan, a canal: Panama'). Чекбокс выполнения отмечен.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "step_num": "2",
+        "step_title": "Протестировать функцию на примерах",
+        "status": "done",
+        "has_code": "true"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_save_success_state",
+      "name": "Post-Save State (Editor → TaskPage transition)",
+      "type": "concept",
+      "description": "Состояние UI после успешного сохранения отредактированного .kosmos.md файла. После нажатия '💾 Сохранить' в редакторе (EditorPage) произошёл вызов PUT /files/проверка-палиндрома.kosmos.md с обновлённым содержимым, после чего приложение выполнило app.navigate('task', 'проверка-палиндрома.kosmos.md') для перехода на страницу просмотра задачи. Сайдбар показывает пункт '📋 Задачи' как активный.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "trigger": "editor_save_success",
+        "source_page": "editor_edit_mode",
+        "destination_page": "task_view",
+        "http_method": "PUT",
+        "endpoint": "/files/:filename",
+        "navigation": "app.navigate('task', 'проверка-палиндрома.kosmos.md')"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_dashboard_nav_active",
+      "name": "Nav Item: 📋 Задачи (активен)",
+      "type": "concept",
+      "description": "Пункт навигации 'Задачи' в сайдбаре — подсвечен как активный (data-page='dashboard'), так как после сохранения редактора пользователь перешёл на страницу просмотра задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-4-saved_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён — соединение не установлено.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — проверка AI-сервиса через /api/ai-test ещё не выполнялась или не завершена.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-4-saved_check_ai_button",
+      "name": "Button: Проверить AI",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через API endpoint /api/ai-test.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test"
+      }
+    },
+    {
+      "id": "kosmos_scenario_palindrome_check",
+      "name": "проверка-палиндрома.kosmos.md (Проверка палиндрома)",
+      "type": "document",
+      "description": ".kosmos.md файл задачи 'Проверка палиндрома'. Статус: done, прогресс 100%. Содержит 1 задачу (Реализовать функцию проверки палиндрома) с 2 шагами: Шаг 1 — написать функцию isPalindrome (JS код) и Шаг 2 — протестировать на примерах. Результат шага 2 показывает ошибку 'isPalindrome is not defined'. В скриншоте — файл отображается на странице просмотра задачи после успешного сохранения из редактора.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\data\\проверка-палиндрома.kosmos.md"
+      ],
+      "metadata": {
+        "complexity": "Простая",
+        "tasks_count": 1,
+        "steps_count": 2,
+        "title": "Проверка палиндрома",
+        "status": "done",
+        "progress": "100%"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-4-saved_app",
+      "to": "screenshot-test-4-saved_task_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Приложение kosmos-task содержит страницу просмотра задачи после сохранения."
+    },
+    {
+      "from": "screenshot-test-4-saved_sidebar",
+      "to": "screenshot-test-4-saved_task_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Пункт '📋 Задачи' в сайдбаре активен — пользователь перешёл на страницу просмотра задачи после сохранения."
+    },
+    {
+      "from": "screenshot-test-4-saved_sidebar",
+      "to": "screenshot-test-4-saved_dashboard_nav_active",
+      "relation": "has_active_item",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "В сайдбаре пункт 'Задачи' подсвечен как активный."
+    },
+    {
+      "from": "screenshot-test-4-saved_task_page",
+      "to": "screenshot-test-4-saved_file_panel",
+      "relation": "has_left_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Страница просмотра задачи содержит левую панель с отрендеренным markdown-документом."
+    },
+    {
+      "from": "screenshot-test-4-saved_task_page",
+      "to": "screenshot-test-4-saved_exec_panel",
+      "relation": "has_right_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Страница просмотра задачи содержит правую панель выполнения шагов."
+    },
+    {
+      "from": "screenshot-test-4-saved_exec_panel",
+      "to": "screenshot-test-4-saved_step1_card",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Панель выполнения содержит карточку шага 1 (Написать функцию isPalindrome)."
+    },
+    {
+      "from": "screenshot-test-4-saved_exec_panel",
+      "to": "screenshot-test-4-saved_step2_card",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Панель выполнения содержит карточку шага 2 (Тестирование isPalindrome)."
+    },
+    {
+      "from": "screenshot-test-4-saved_save_success_state",
+      "to": "screenshot-test-4-saved_task_page",
+      "relation": "defines_state_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Состояние post-save определяет текущий вид страницы — просмотр задачи после выхода из редактора."
+    },
+    {
+      "from": "screenshot-test-4-saved_save_success_state",
+      "to": "kosmos_scenario_palindrome_check",
+      "relation": "persisted_changes_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Изменения, сохранённые в редакторе, персистентно записаны в файл проверка-палиндрома.kosmos.md (PUT /files/проверка-палиндрома.kosmos.md)."
+    },
+    {
+      "from": "screenshot-test-4-saved_file_panel",
+      "to": "kosmos_scenario_palindrome_check",
+      "relation": "displays_content_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Левая панель отображает отрендеренное содержимое .kosmos.md файла 'проверка-палиндрома.kosmos.md'."
+    },
+    {
+      "from": "screenshot-test-4-saved_sidebar",
+      "to": "screenshot-test-4-saved_ws_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Футер сайдбара показывает статус WebSocket: ⚪ не подключён."
+    },
+    {
+      "from": "screenshot-test-4-saved_sidebar",
+      "to": "screenshot-test-4-saved_ai_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Футер сайдбара показывает статус AI: ⚪ не проверен."
+    },
+    {
+      "from": "screenshot-test-4-saved_sidebar",
+      "to": "screenshot-test-4-saved_check_ai_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png",
+      "description": "Футер сайдбара содержит кнопку 'Проверить AI'."
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_test4_saved_task_view_layout",
+      "type": "composition",
+      "description": "Состав UI страницы просмотра задачи после сохранения: заголовок задачи с прогрессом, левая панель (rendered markdown), правая панель (выполнение шагов), карточки шагов 1-2, футер со статусами WS и AI.",
+      "nodes": [
+        "screenshot-test-4-saved_task_page",
+        "screenshot-test-4-saved_file_panel",
+        "screenshot-test-4-saved_exec_panel",
+        "screenshot-test-4-saved_step1_card",
+        "screenshot-test-4-saved_step2_card",
+        "screenshot-test-4-saved_ws_status",
+        "screenshot-test-4-saved_ai_status"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png"
+    },
+    {
+      "id": "hyper_test4_save_flow_palindrome",
+      "type": "sequence",
+      "description": "Последовательность: редактор (edit mode) → сохранение (PUT /files/проверка-палиндрома.kosmos.md) → переход на страницу задачи (TaskPage) → отображение сохранённого .kosmos.md файла 'Проверка палиндрома' в режиме просмотра.",
+      "nodes": [
+        "screenshot-test-4-saved_save_success_state",
+        "screenshot-test-4-saved_task_page",
+        "screenshot-test-4-saved_file_panel",
+        "kosmos_scenario_palindrome_check"
+      ],
+      "confidence_score": 0.92,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png"
+    },
+    {
+      "id": "hyper_test4_sidebar_state_saved",
+      "type": "composition",
+      "description": "Состав сайдбара при просмотре задачи после сохранения: навигация (Задачи активны), статус WS (отключён), статус AI (не проверен), кнопка проверки AI.",
+      "nodes": [
+        "screenshot-test-4-saved_sidebar",
+        "screenshot-test-4-saved_dashboard_nav_active",
+        "screenshot-test-4-saved_ws_status",
+        "screenshot-test-4-saved_ai_status",
+        "screenshot-test-4-saved_check_ai_button"
+      ],
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-saved.png"
+    }
+  ]
+}

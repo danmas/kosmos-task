@@ -1,0 +1,320 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-factory-3-goal-filled_factory_page",
+      "label": "Фабрика задач (Task Factory Page) — Goal Filled",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Главная страница фабрики задач kosmos-task UI с заполненным полем цели задачи — пользователь ввёл описание задачи, готов к генерации уточняющих вопросов"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_goal_input_filled",
+      "label": "Goal Input Field (заполнен)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Текстовое поле ввода цели задачи, заполненное пользовательским текстом (например, 'Создать калькулятор Fibonacci с проверкой чётности'); более не содержит placeholder"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_goal_text",
+      "label": "Введённая цель задачи (User Goal Text)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Текст цели задачи, введённый пользователем в поле ввода; содержимое будет отправлено в LLM для генерации уточняющих вопросов"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_sidebar",
+      "label": "Sidebar Navigation",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Левая боковая панель навигации с пунктами: Задачи, Фабрика, Редактор, История; пункт 'Фабрика' подсвечен как активный"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_factory_tabs",
+      "label": "Factory Tabs: Вопросы / Генерация",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Два таба: '❓ Вопросы' (активный) и '🏭 Генерация' (disabled); бейдж на табе 'Генерация' показывает 0, так как вопросы ещё не заданы"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_ask_questions_button",
+      "label": "❓ Задать вопросы Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Фиолетовая кнопка запуска генерации уточняющих вопросов через LLM; активна, так как цель задачи заполнена"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_view_prompt_button",
+      "label": "📄 Посмотреть промпт Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Вторичная кнопка, открывающая модалку просмотра/редактирования системного промпта для генерации вопросов"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_form_group_task_count",
+      "label": "Подсказка: задач Select (1-3)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Выпадающий список для выбора количества задач (1/2/3); определяет структуру генерируемого .kosmos.md файла"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_form_group_steps_count",
+      "label": "Подсказка: шагов на задачу Select (1-3)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Выпадающий список для выбора количества шагов на задачу (1/2/3); определяет детализацию каждого шага"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_kosmos_task_app",
+      "label": "kosmos-task Application",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Веб-приложение kosmos-task v2.0 — UI панель для управления задачами; скриншот запечатлел этап заполнения цели на странице фабрики"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_factory_workflow",
+      "label": "Factory Workflow — Goal Filled State",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Двухпроходная схема фабрики: первый проход (LLM задаёт вопросы) готов к запуску — цель введена, пользователь может нажать 'Задать вопросы'"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_flow_state",
+      "label": "Factory Flow — Step 2: Goal Filled",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Второй шаг в последовательности фабрики (4 шага: initial → goal-filled → toast → questions-received): цель задачи введена, кнопка 'Задать вопросы' активна"
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_prompt_system_role",
+      "label": "LLM System Prompt for Questions",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Концепция: системный промпт для первого прохода фабрики — генерация 3-5 уточняющих вопросов по цели пользователя"
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-factory-3-goal-filled_goal_input_filled",
+      "to": "screenshot-factory-3-goal-filled_goal_text",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Поле ввода цели содержит введённый пользователем текст задачи"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_factory_page",
+      "to": "screenshot-factory-3-goal-filled_goal_input_filled",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Страница фабрики содержит заполненное поле ввода цели"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_factory_page",
+      "to": "screenshot-factory-3-goal-filled_factory_tabs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Страница фабрики содержит два таба: '❓ Вопросы' (активный) и '🏭 Генерация' (disabled)"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_factory_page",
+      "to": "screenshot-factory-3-goal-filled_ask_questions_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Фиолетовая кнопка 'Задать вопросы' расположена на странице фабрики, активна после заполнения цели"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_factory_page",
+      "to": "screenshot-factory-3-goal-filled_view_prompt_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Кнопка 'Посмотреть промпт' расположена на странице фабрики"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_factory_page",
+      "to": "screenshot-factory-3-goal-filled_form_group_task_count",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Селект количества задач расположен на странице фабрики"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_factory_page",
+      "to": "screenshot-factory-3-goal-filled_form_group_steps_count",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Селект количества шагов расположен на странице фабрики"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_sidebar",
+      "to": "screenshot-factory-3-goal-filled_factory_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Пункт навигации 'Фабрика' в сайдбаре ведёт на эту страницу и подсвечен как активный"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_ask_questions_button",
+      "to": "screenshot-factory-3-goal-filled_goal_text",
+      "relation": "will_send_to_llm",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Нажатие 'Задать вопросы' отправит текст цели в LLM вместе с системным промптом для генерации уточняющих вопросов"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_ask_questions_button",
+      "to": "screenshot-factory-3-goal-filled_prompt_system_role",
+      "relation": "uses_prompt",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.92,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Кнопка 'Задать вопросы' отправляет системный промпт генерации вопросов вместе с целью пользователя в LLM"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_view_prompt_button",
+      "to": "screenshot-factory-3-goal-filled_prompt_system_role",
+      "relation": "opens_prompt_viewer",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Кнопка 'Посмотреть промпт' открывает модальное окно с содержимым системного промпта для просмотра/редактирования"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_goal_text",
+      "to": "screenshot-factory-3-goal-filled_factory_workflow",
+      "relation": "is_input_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Введённая цель задачи является входными данными для первого прохода двухпроходной схемы фабрики"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_factory_workflow",
+      "to": "screenshot-factory-3-goal-filled_prompt_system_role",
+      "relation": "configures_llm_behavior",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Двухпроходная схема использует системный промпт для настройки поведения LLM на этапе генерации вопросов"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_flow_state",
+      "to": "screenshot-factory-3-goal-filled_factory_page",
+      "relation": "depicts",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Данный скриншот запечатлел второй шаг Factory Flow — состояние после заполнения цели пользователем"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_kosmos_task_app",
+      "to": "screenshot-factory-3-goal-filled_factory_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Приложение kosmos-task содержит страницу фабрики задач"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_kosmos_task_app",
+      "to": "screenshot-factory-3-goal-filled_factory_workflow",
+      "relation": "implements",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "Приложение kosmos-task реализует двухпроходную схему фабрики задач через страницу 'Фабрика'"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_goal_input_filled",
+      "to": "screenshot-factory-1-initial_goal_input",
+      "relation": "transitions_from_empty",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "В этой точке фабричного потока поле цели было пустым (factory-1) и теперь заполнено пользователем"
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_flow_state",
+      "to": "screenshot-factory-2-toast_flow_state",
+      "relation": "follows",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "В хронологии Factory Flow: initial → toast(?) → goal-filled → questions-received. Данный скриншот следует после factory-2-toast."
+    },
+    {
+      "from": "screenshot-factory-3-goal-filled_flow_state",
+      "to": "screenshot-factory-4-questions-received_flow_state",
+      "relation": "transitions_to",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-3-goal-filled.png",
+      "description": "После нажатия 'Задать вопросы' из этого состояния система переходит к получению вопросов от LLM (factory-4)"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_factory_goal_filled_form",
+      "label": "Factory Goal Filled — Input Form State",
+      "nodes": [
+        "screenshot-factory-3-goal-filled_goal_input_filled",
+        "screenshot-factory-3-goal-filled_goal_text",
+        "screenshot-factory-3-goal-filled_ask_questions_button",
+        "screenshot-factory-3-goal-filled_view_prompt_button",
+        "screenshot-factory-3-goal-filled_form_group_task_count",
+        "screenshot-factory-3-goal-filled_form_group_steps_count"
+      ],
+      "relation": "forms_goal_filled_form_state",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Состояние формы после заполнения цели: поле ввода содержит текст, конфигурация (задачи/шаги) выбрана, кнопка 'Задать вопросы' активна, кнопка 'Посмотреть промпт' доступна"
+    },
+    {
+      "id": "he_factory_flow_chain_step2",
+      "label": "Factory Flow Chain (4 steps) — Step 2: Goal Filled",
+      "nodes": [
+        "screenshot-factory-3-goal-filled_flow_state",
+        "screenshot-factory-3-goal-filled_factory_page",
+        "screenshot-factory-3-goal-filled_goal_input_filled",
+        "screenshot-factory-3-goal-filled_goal_text",
+        "screenshot-factory-3-goal-filled_ask_questions_button",
+        "screenshot-factory-1-initial_flow_state",
+        "screenshot-factory-4-questions-received_flow_state"
+      ],
+      "relation": "part_of_sequence",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.88,
+      "metadata": "Скриншот 2 из 4 в цепочке Factory Flow: initial (step 1) → goal-filled (step 2, данный скриншот) → toast (step 3) → questions-received (step 4). Ключевое отличие: цель введена, система готова к первому LLM-запросу."
+    },
+    {
+      "id": "he_factory_llm_input_preparation",
+      "label": "Factory LLM Input Preparation",
+      "nodes": [
+        "screenshot-factory-3-goal-filled_goal_text",
+        "screenshot-factory-3-goal-filled_ask_questions_button",
+        "screenshot-factory-3-goal-filled_prompt_system_role",
+        "screenshot-factory-3-goal-filled_factory_workflow",
+        "screenshot-factory-3-goal-filled_view_prompt_button"
+      ],
+      "relation": "forms_llm_input_pipeline",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.90,
+      "metadata": "Pipeline подготовки LLM-запроса: пользовательская цель + системный промпт (просматриваемый/редактируемый через модалку) + кнопка отправки → первый проход двухпроходной схемы"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

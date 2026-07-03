@@ -1,0 +1,414 @@
+{
+  "chunk_num": 20,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+  "description": "Knowledge graph extracted from screenshot-test-4-edit-mode.png — Test 4 в режиме редактирования (Editor UI edit mode). Показывает интерфейс редактора kosmos-task SPA в режиме редактирования существующей задачи (edit mode). Загружено содержимое задачи для редактирования.",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-test-4-edit-mode_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами с сайдбаром и страницами. На данном скриншоте — страница редактора в режиме редактирования (Test 4)",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи, 🏭 Фабрика, ✏️ Редактор (активен), 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI (⚪ AI: не проверен), кнопка 'Проверить AI'",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "editor (Редактор)"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_editor_page",
+      "name": "Editor Page (Редактирование) — Test 4",
+      "type": "page",
+      "description": "Страница редактора в режиме редактирования (mode='edit'). Открыта после клика по кнопке 'Редактировать' на задаче в дашборде. Содержит заголовок '✏️ Редактирование', кнопки '✓ Валидация' и '💾 Сохранить', отображение имени файла и текстовый редактор с загруженным содержимым .kosmos.md файла",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "mode": "edit",
+        "trigger": "click_edit_on_task",
+        "test_number": 4
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_page_header",
+      "name": "Page Header «← ✏️ Редактирование»",
+      "type": "ui_element",
+      "description": "Заголовок страницы: кнопка назад (←) для возврата на дашборд (app.navigate('dashboard')) и текст '✏️ Редактирование'. Режим редактирования существующего файла (this.mode === 'edit')",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "header_text": "✏️ Редактирование",
+        "back_action": "app.navigate('dashboard')"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_back_button",
+      "name": "Back Button ←",
+      "type": "ui_element",
+      "description": "Кнопка '←' для возврата на предыдущую страницу (dashboard). CSS-класс btn-secondary. Вызов: app.navigate('dashboard')",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_validate_button",
+      "name": "Button: ✓ Валидация",
+      "type": "ui_element",
+      "description": "Вторичная кнопка '✓ Валидация' (btn-secondary) — запускает EditorPage.validate() для проверки структуры .kosmos.md файла (POST /files/validate). Проверяет наличие секций, executable-блоков, чекбоксов, метаданных",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "action": "EditorPage.validate()",
+        "endpoint": "POST /files/validate",
+        "button_style": "btn-secondary"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_save_button",
+      "name": "Button: 💾 Сохранить",
+      "type": "ui_element",
+      "description": "Основная кнопка '💾 Сохранить' (btn-primary, id='btnSave') — вызывает EditorPage.save(). В режиме edit отправляет PUT /files/:filename с обновлённым содержимым. После успешного сохранения перенаправляет на страницу задачи (app.navigate('task', filename))",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "action": "EditorPage.save()",
+        "http_method": "PUT",
+        "endpoint": "/files/:filename",
+        "post_save": "app.navigate('task', filename)"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_validation_area",
+      "name": "Validation Result Area",
+      "type": "ui_element",
+      "description": "Область отображения результата валидации (id='validationResult') — расположена под заголовком, над именем файла. Может быть пустой (до первой валидации) или содержать результат последней валидации (div.validation-ok или div.validation-err)",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_file_name_display",
+      "name": "File Name Display (.kosmos.md file in edit mode)",
+      "type": "ui_element",
+      "description": "Отображение имени редактируемого файла в режиме edit. Показывает 'Файл: <span class=\"file-name\"><filename>.kosmos.md</span>'. Имя файла получено из параметра навигации (editFilename). В режиме create на этом месте отображается поле ввода (input) для нового имени",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "mode": "edit",
+        "visible_in": "edit_mode_only"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_editor_textarea",
+      "name": "Editor Textarea with .kosmos.md Content (Test 4)",
+      "type": "ui_element",
+      "description": "Большое текстовое поле (textarea id='editorContent') с загруженным содержимым редактируемого .kosmos.md файла — Тест 4. Содержимое получено через GET /files/:filename. Размер: min-height:calc(100vh - 300px). В текстареа отображается полный .kosmos.md файл: заголовок, метаданные (статус, прогресс), задачи с шагами, executable-блоки JS, чекбоксы, секции результата и верификации",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "edit_mode": true,
+        "loaded_from": "GET /files/:filename",
+        "test_number": 4
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_edit_mode_state",
+      "name": "Editor Edit Mode State (Test 4)",
+      "type": "concept",
+      "description": "Режим редактирования существующего файла (this.mode === 'edit') для тестового сценария 4. Активируется при EditorPage.render(container, filename). Отличия от create mode: отображает имя файла (не поле ввода), загружает содержимое через GET /files/:filename, сохраняет через PUT /files/:filename",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "mode": "edit",
+        "save_method": "PUT /files/:filename",
+        "load_method": "GET /files/:filename"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_transition_from_task",
+      "name": "Edit Click Transition (Задача → Редактор, Test 4)",
+      "type": "concept",
+      "description": "Переход пользователя со страницы задачи (или дашборда) в редактор для тестового сценария 4: клик по действию 'Редактировать' на задаче вызывает app.navigate('editor', filename), что запускает EditorPage.render() в режиме edit с загрузкой файла через API",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "source_page": "task_view_or_dashboard",
+        "destination": "editor_edit_mode",
+        "navigation_call": "app.navigate('editor', '<filename>')"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_editor_nav_item",
+      "name": "Nav Item: ✏️ Редактор (активен)",
+      "type": "concept",
+      "description": "Пункт навигации 'Редактор' в сайдбаре — подсвечен как активный (data-page='editor'), так как пользователь перешёл в редактор для редактирования файла тестового сценария 4",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён — соединение не установлено (сервер не запущен или WebSocket не инициализирован)",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — проверка AI-сервиса через /api/ai-test ещё не выполнялась или не завершена",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-4-edit-mode_check_ai_button",
+      "name": "Button: Проверить AI",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через API endpoint /api/ai-test. CSS-класс btn-secondary, ширина 100%",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-4-edit-mode_app",
+      "to": "screenshot-test-4-edit-mode_editor_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Приложение kosmos-task содержит страницу редактора в режиме редактирования (Test 4)"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_sidebar",
+      "to": "screenshot-test-4-edit-mode_editor_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Пункт 'Редактор' в сайдбаре активен — пользователь перешёл в редактор"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_editor_page",
+      "to": "screenshot-test-4-edit-mode_page_header",
+      "relation": "has_header",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Страница редактора содержит заголовок с кнопкой назад и текстом '✏️ Редактирование'"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_editor_page",
+      "to": "screenshot-test-4-edit-mode_file_name_display",
+      "relation": "shows_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Страница редактора отображает имя редактируемого файла (.kosmos.md)"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_editor_page",
+      "to": "screenshot-test-4-edit-mode_editor_textarea",
+      "relation": "contains_editor",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Страница редактора содержит текстовое поле (textarea) с загруженным содержимым .kosmos.md файла"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_editor_page",
+      "to": "screenshot-test-4-edit-mode_validate_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Страница редактора включает кнопку '✓ Валидация' для проверки структуры .kosmos.md файла"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_editor_page",
+      "to": "screenshot-test-4-edit-mode_save_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Страница редактора включает кнопку '💾 Сохранить' для сохранения изменений в файл"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_editor_page",
+      "to": "screenshot-test-4-edit-mode_validation_area",
+      "relation": "contains_validation_result",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Страница редактора содержит область для отображения результата валидации (id='validationResult')"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_editor_page",
+      "to": "screenshot-test-4-edit-mode_edit_mode_state",
+      "relation": "is_in_mode",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Страница редактора находится в режиме редактирования (this.mode === 'edit') для файла тестового сценария 4"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_edit_mode_state",
+      "to": "screenshot-test-4-edit-mode_transition_from_task",
+      "relation": "activated_by",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Режим редактирования активирован кликом 'Редактировать' на задаче тестового сценария 4"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_sidebar",
+      "to": "screenshot-test-4-edit-mode_editor_nav_item",
+      "relation": "has_active_item",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "В сайдбаре пункт 'Редактор' подсвечен как активный"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_sidebar",
+      "to": "screenshot-test-4-edit-mode_ws_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Футер сайдбара показывает статус WebSocket: ⚪ не подключён"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_sidebar",
+      "to": "screenshot-test-4-edit-mode_ai_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Футер сайдбара показывает статус AI: ⚪ не проверен"
+    },
+    {
+      "from": "screenshot-test-4-edit-mode_sidebar",
+      "to": "screenshot-test-4-edit-mode_check_ai_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png",
+      "description": "Футер сайдбара содержит кнопку 'Проверить AI' для проверки AI-сервиса"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_editor_edit_flow_4",
+      "type": "sequence",
+      "description": "Последовательность действий при редактировании файла тестового сценария 4 через UI редактор: нажатие 'Редактировать' на задаче → переход на EditorPage (edit mode) → загрузка содержимого файла → редактирование → валидация → сохранение",
+      "nodes": [
+        "screenshot-test-4-edit-mode_transition_from_task",
+        "screenshot-test-4-edit-mode_edit_mode_state",
+        "screenshot-test-4-edit-mode_editor_textarea",
+        "screenshot-test-4-edit-mode_validate_button",
+        "screenshot-test-4-edit-mode_save_button"
+      ],
+      "confidence_score": 0.92,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png"
+    },
+    {
+      "id": "hyper_editor_sidebar_state_4",
+      "type": "composition",
+      "description": "Состав сайдбара UI Panel в состоянии редактирования тестового сценария 4: навигация (Редактор активен), статус WS (отключён), статус AI (не проверен), кнопка проверки AI",
+      "nodes": [
+        "screenshot-test-4-edit-mode_sidebar",
+        "screenshot-test-4-edit-mode_editor_nav_item",
+        "screenshot-test-4-edit-mode_ws_status",
+        "screenshot-test-4-edit-mode_ai_status",
+        "screenshot-test-4-edit-mode_check_ai_button"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png"
+    },
+    {
+      "id": "hyper_scenario4_edit_relation",
+      "type": "context",
+      "description": "Связь между UI редактора и содержимым тестового сценария 4: файл .kosmos.md загружен в текстовый редактор, отображается его имя, содержимое активно для редактирования в текстовой области",
+      "nodes": [
+        "screenshot-test-4-edit-mode_editor_textarea",
+        "screenshot-test-4-edit-mode_file_name_display",
+        "screenshot-test-4-edit-mode_edit_mode_state"
+      ],
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-4-edit-mode.png"
+    }
+  ]
+}

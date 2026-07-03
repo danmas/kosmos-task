@@ -1,0 +1,312 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-edit-flow-4-reset_factory_page",
+      "label": "Фабрика задач (Task Factory Page)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Главная страница фабрики задач kosmos-task UI после сброса промпта"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_prompt_modal",
+      "label": "Prompt Modal (после сброса)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Модальное окно просмотра промпта после восстановления оригинального содержимого с диска"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_modal_overlay",
+      "label": "Modal Overlay",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Полупрозрачный тёмный фон, перекрывающий содержимое страницы при открытой модалке"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_modal_header",
+      "label": "Modal Header",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Заголовок модального окна с иконкой, названием промпта и именем файла"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_prompt_title",
+      "label": "📄 Промпт: Уточняющие вопросы / Генерация .kosmos.md",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Заголовок модалки — тот же, что был до сброса"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_edit_button",
+      "label": "✏️ Редактировать Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Кнопка переключения в режим редактирования промпта (доступна после сброса)"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_reset_button_disabled",
+      "label": "↺ Сбросить Button (disabled)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Кнопка сброса промпта в неактивном состоянии — содержимое уже совпадает с оригиналом на диске"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_close_button",
+      "label": "× Close Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Кнопка закрытия модального окна (×)"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_modal_body",
+      "label": "Modal Body (восстановленный промпт)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Основная область модалки, содержащая восстановленный оригинальный текст промпта в read-only режиме"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_restored_prompt_content",
+      "label": "Восстановленный текст промпта",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Оригинальное содержимое системного промпта, восстановленное с диска после сброса"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_toast_notification",
+      "label": "Toast Notification «Промпт сброшен»",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Всплывающее уведомление зелёного/информационного цвета о том, что промпт успешно сброшен к оригиналу"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_sidebar",
+      "label": "Sidebar Navigation",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Левая боковая панель навигации с пунктами: Задачи, Фабрика, Редактор, История"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_factory_tabs",
+      "label": "Factory Tabs: Вопросы / Генерация",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Два таба: '❓ Вопросы' (активный) и '🏭 Генерация' — состояние не изменилось после сброса"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_flow_state",
+      "label": "Edit Flow — Step 4: Reset Complete",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Четвёртый шаг в цепочке редактирования промпта: сброс выполнен, промпт возвращён к оригиналу"
+    },
+    {
+      "id": "screenshot-edit-flow-4-reset_kosmos_task_app",
+      "label": "kosmos-task Application",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-4-reset.png",
+      "description": "Веб-приложение kosmos-task v2.0 — UI панель для управления задачами"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_reset_modal_overlay_covers_factory",
+      "source_id": "screenshot-edit-flow-4-reset_modal_overlay",
+      "target_id": "screenshot-edit-flow-4-reset_factory_page",
+      "relation": "covers",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Оверлей затемняет страницу фабрики при открытой модалке"
+    },
+    {
+      "id": "e_reset_modal_contains_overlay",
+      "source_id": "screenshot-edit-flow-4-reset_prompt_modal",
+      "target_id": "screenshot-edit-flow-4-reset_modal_overlay",
+      "relation": "displayed_on",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Модалка рендерится внутри overlay-контейнера"
+    },
+    {
+      "id": "e_reset_modal_contains_header",
+      "source_id": "screenshot-edit-flow-4-reset_prompt_modal",
+      "target_id": "screenshot-edit-flow-4-reset_modal_header",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Хедер является частью модального окна"
+    },
+    {
+      "id": "e_reset_modal_contains_body",
+      "source_id": "screenshot-edit-flow-4-reset_prompt_modal",
+      "target_id": "screenshot-edit-flow-4-reset_modal_body",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Body-секция является частью модального окна"
+    },
+    {
+      "id": "e_reset_header_contains_title",
+      "source_id": "screenshot-edit-flow-4-reset_modal_header",
+      "target_id": "screenshot-edit-flow-4-reset_prompt_title",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Заголовок расположен в хедере модалки"
+    },
+    {
+      "id": "e_reset_header_contains_edit_button",
+      "source_id": "screenshot-edit-flow-4-reset_modal_header",
+      "target_id": "screenshot-edit-flow-4-reset_edit_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Кнопка редактирования в правой части хедера (активна)"
+    },
+    {
+      "id": "e_reset_header_contains_reset_button_disabled",
+      "source_id": "screenshot-edit-flow-4-reset_modal_header",
+      "target_id": "screenshot-edit-flow-4-reset_reset_button_disabled",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Кнопка сброса в правой части хедера в disabled-состоянии"
+    },
+    {
+      "id": "e_reset_header_contains_close_button",
+      "source_id": "screenshot-edit-flow-4-reset_modal_header",
+      "target_id": "screenshot-edit-flow-4-reset_close_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Кнопка закрытия × в правой части хедера"
+    },
+    {
+      "id": "e_reset_body_displays_restored_prompt",
+      "source_id": "screenshot-edit-flow-4-reset_modal_body",
+      "target_id": "screenshot-edit-flow-4-reset_restored_prompt_content",
+      "relation": "displays",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "metadata": "Body содержит восстановленный оригинальный текст промпта"
+    },
+    {
+      "id": "e_reset_toast_shows_on_page",
+      "source_id": "screenshot-edit-flow-4-reset_toast_notification",
+      "target_id": "screenshot-edit-flow-4-reset_factory_page",
+      "relation": "displayed_on",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.90,
+      "metadata": "Toast-уведомление отображается поверх страницы после успешного сброса"
+    },
+    {
+      "id": "e_reset_edit_button_triggers_edit",
+      "source_id": "screenshot-edit-flow-4-reset_edit_button",
+      "target_id": "screenshot-edit-flow-4-reset_flow_state",
+      "relation": "triggers_transition_to",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.85,
+      "metadata": "Нажатие 'Редактировать' после сброса переводит в edit-mode для повторного редактирования"
+    },
+    {
+      "id": "e_reset_close_button_dismisses",
+      "source_id": "screenshot-edit-flow-4-reset_close_button",
+      "target_id": "screenshot-edit-flow-4-reset_prompt_modal",
+      "relation": "closes",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.98,
+      "metadata": "Кнопка × закрывает модальное окно"
+    },
+    {
+      "id": "e_reset_page_contains_tabs",
+      "source_id": "screenshot-edit-flow-4-reset_factory_page",
+      "target_id": "screenshot-edit-flow-4-reset_factory_tabs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Страница фабрики содержит два таба: Вопросы и Генерация"
+    },
+    {
+      "id": "e_reset_sidebar_navigates_to_factory",
+      "source_id": "screenshot-edit-flow-4-reset_sidebar",
+      "target_id": "screenshot-edit-flow-4-reset_factory_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Пункт навигации 'Фабрика' в сайдбаре ведёт на эту страницу"
+    },
+    {
+      "id": "e_reset_flow_depicts_step_4",
+      "source_id": "screenshot-edit-flow-4-reset_flow_state",
+      "target_id": "screenshot-edit-flow-4-reset_prompt_modal",
+      "relation": "depicts",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Данный скриншот запечатлел четвёртый шаг flow — состояние после сброса промпта"
+    },
+    {
+      "id": "e_reset_restored_content_matches_disk",
+      "source_id": "screenshot-edit-flow-4-reset_restored_prompt_content",
+      "target_id": "screenshot-edit-flow-4-reset_reset_button_disabled",
+      "relation": "causes_disabled_state",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.92,
+      "metadata": "Кнопка 'Сбросить' в disabled, т.к. содержимое промпта совпадает с оригиналом на диске"
+    },
+    {
+      "id": "e_reset_app_hosts_factory",
+      "source_id": "screenshot-edit-flow-4-reset_kosmos_task_app",
+      "target_id": "screenshot-edit-flow-4-reset_factory_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Приложение kosmos-task содержит страницу фабрики задач"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_reset_flow_modal_interaction",
+      "label": "Edit Flow — Reset Interaction Pattern",
+      "nodes": [
+        "screenshot-edit-flow-4-reset_edit_button",
+        "screenshot-edit-flow-4-reset_prompt_modal",
+        "screenshot-edit-flow-4-reset_reset_button_disabled",
+        "screenshot-edit-flow-4-reset_close_button",
+        "screenshot-edit-flow-4-reset_modal_body",
+        "screenshot-edit-flow-4-reset_toast_notification"
+      ],
+      "relation": "forms_interaction_loop",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.92,
+      "metadata": "Паттерн взаимодействия после сброса: восстановленный промпт, disabled reset, toast-уведомление, доступное редактирование"
+    },
+    {
+      "id": "he_reset_flow_chain_end",
+      "label": "Screenshot Edit Flow Chain (Step 4 of 4: Reset)",
+      "nodes": [
+        "screenshot-edit-flow-4-reset_prompt_modal",
+        "screenshot-edit-flow-4-reset_flow_state",
+        "screenshot-edit-flow-4-reset_restored_prompt_content",
+        "screenshot-edit-flow-4-reset_toast_notification"
+      ],
+      "relation": "part_of_sequence",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.85,
+      "metadata": "Скриншот 4 из 4 в цепочке edit flow: view → edit → save → reset. Точка возврата к исходному состоянию."
+    },
+    {
+      "id": "he_reset_undo_pattern",
+      "label": "Reset Restores Original Content",
+      "nodes": [
+        "screenshot-edit-flow-4-reset_reset_button_disabled",
+        "screenshot-edit-flow-4-reset_restored_prompt_content",
+        "screenshot-edit-flow-4-reset_modal_body",
+        "screenshot-edit-flow-4-reset_toast_notification"
+      ],
+      "relation": "forms_undo_pattern",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.88,
+      "metadata": "Паттерн «отмена изменений»: кнопка сброса → восстановление контента → toast-подтверждение → disabled-состояние кнопки"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

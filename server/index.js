@@ -9,7 +9,25 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 const http = require('http');
+
+const PROJECT_ROOT = path.resolve(__dirname, '..');
+const CONFIG_PATH = path.join(PROJECT_ROOT, 'config.json');
+
+/**
+ * Прочитать и вернуть содержимое config.json
+ */
+function readConfig() {
+    return JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf-8'));
+}
+
+/**
+ * Записать config.json
+ */
+function writeConfig(config) {
+    fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2), 'utf-8');
+}
 
 // Роуты
 const filesRouter = require('./routes/files');
@@ -39,12 +57,71 @@ app.use('/api', llmRouter);
 
 // Health check
 app.get('/api/health', (req, res) => {
+    let dataDir = './data';
+    try {
+        const config = readConfig();
+        dataDir = config.DATA_DIR || dataDir;
+    } catch {}
     res.json({
         success: true,
         status: 'ok',
         version: '2.0.0',
-        dataDir: process.env.MYDATA || './data'
+        dataDir: path.resolve(PROJECT_ROOT, dataDir)
     });
+});
+
+// === DATA_DIR config endpoints ===
+
+/**
+ * GET /api/config/data-dir
+ * Вернуть текущий путь к папке данных
+ */
+app.get('/api/config/data-dir', (req, res) => {
+    try {
+        const config = readConfig();
+        const dataDir = config.DATA_DIR || './data';
+        res.json({
+            success: true,
+            dataDir: path.resolve(PROJECT_ROOT, dataDir)
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+/**
+ * PUT /api/config/data-dir
+ * Сохранить новый путь к папке данных
+ * Body: { dataDir: string }
+ */
+app.put('/api/config/data-dir', (req, res) => {
+    try {
+        const { dataDir } = req.body;
+        if (!dataDir || typeof dataDir !== 'string') {
+            return res.status(400).json({ success: false, error: 'Требуется параметр dataDir (строка)' });
+        }
+
+        const resolved = path.resolve(dataDir);
+
+        // Создаём папку если не существует
+        if (!fs.existsSync(resolved)) {
+            fs.mkdirSync(resolved, { recursive: true });
+        }
+
+        const config = readConfig();
+        // Сохраняем в config.json как относительный путь если он внутри проекта, иначе абсолютный
+        const relative = path.relative(PROJECT_ROOT, resolved);
+        config.DATA_DIR = relative && !relative.startsWith('..') ? './' + relative.replace(/\\/g, '/') : resolved;
+        writeConfig(config);
+
+        res.json({
+            success: true,
+            message: 'Путь сохранён',
+            dataDir: resolved
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
 });
 
 // UI redirect
@@ -112,7 +189,7 @@ server.listen(PORT, () => {
     console.log(`\n🚀 kosmos-task API Server запущен`);
     console.log(`   URL: http://localhost:${PORT}`);
     console.log(`   UI:  http://localhost:${PORT}/ui/`);
-    console.log(`   Data: ${path.resolve(process.env.MYDATA || './data')}`);
+    console.log(`   Data: ${(() => { try { const c = readConfig(); return path.resolve(PROJECT_ROOT, c.DATA_DIR || './data'); } catch { return path.resolve(PROJECT_ROOT, 'data'); } })()}`);
     console.log(`\n📚 Документация: http://localhost:${PORT}/api`);
     console.log(`❤️  Health check: http://localhost:${PORT}/api/health\n`);
 });

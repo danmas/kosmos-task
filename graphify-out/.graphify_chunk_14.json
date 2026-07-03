@@ -1,0 +1,365 @@
+{
+  "chunk_num": 14,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-view-mode.png",
+  "description": "Knowledge graph extracted from screenshot-test-1-view-mode.png — Test UI в режиме просмотра задачи (TaskPage view). Показывает интерфейс просмотра .kosmos.md файла с двумя панелями: rendered markdown-документ слева и панель выполнения шагов справа.",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-test-1-view-mode_ui_app",
+      "name": "Kosmos Task SPA",
+      "type": "ui_app",
+      "description": "Single-page application (SPA) для управления .kosmos.md задачами. Маршруты: dashboard, task, factory, editor, history. Использует hash-based роутинг, WebSocket для real-time обновлений, REST API бэкенд.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "framework": "Vanilla JS SPA",
+        "api_base": "/api",
+        "ws_protocol": "WebSocket"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_task_page",
+      "name": "TaskPage (режим просмотра задачи)",
+      "type": "ui_page",
+      "description": "Страница просмотра .kosmos.md файла с двухпанельным layout: слева rendered markdown-документ, справа панель выполнения с прогресс-баром, карточками шагов и кнопками управления.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "route": "#task/:filename",
+        "panels": "task-file (left), task-exec (right)"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_file_panel",
+      "name": "Левая панель — rendered .kosmos.md документ",
+      "type": "ui_panel",
+      "description": "Левая панель страницы просмотра. Отображает .kosmos.md файл в виде читаемого документа: заголовок, статус, прогресс, дата обновления, summary, цель, задачи с шагами, кодом, результатами и верификацией.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-file",
+        "render_func": "renderFile()"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_exec_panel",
+      "name": "Правая панель — выполнение шагов",
+      "type": "ui_panel",
+      "description": "Правая панель с элементами управления выполнением: заголовок '⚡ Выполнение', progress-bar, карточки шагов (step-card), кнопки '▶ Запустить все' и '↺ Сброс'.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-exec",
+        "controls": "btnRun, btnReset"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_progress_bar",
+      "name": "Progress Bar (прогресс выполнения)",
+      "type": "ui_component",
+      "description": "Визуальный индикатор прогресса выполнения шагов задачи. Отображается в правой панели. Обновляется через WebSocket в реальном времени (onStepDone -> msg.progress).",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "progress-fill",
+        "id": "taskProgress",
+        "ws_events": "step_done, run_done"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_step_cards",
+      "name": "Step Cards (карточки шагов)",
+      "type": "ui_component",
+      "description": "Карточки отдельных шагов в правой панели. Каждая содержит номер/галочку, заголовок шага и блок с выводом. Состояния: default, active (выполняется), done (завершён).",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "step-card",
+        "states": "default, active, done"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_page_header",
+      "name": "Page Header (заголовок страницы)",
+      "type": "ui_component",
+      "description": "Верхняя панель страницы с кнопкой назад (←), названием файла (заголовок h2), кнопками '🔄 Обновить' и '🗑 Удалить'.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "page-header",
+        "actions": "reload, deleteFile"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_sidebar_nav",
+      "name": "Sidebar Navigation (боковое меню)",
+      "type": "ui_component",
+      "description": "Боковая панель навигации с пунктами: 📋 Задачи (Dashboard), 👁 Задача (Task — активный), 🏭 Фабрика (Factory), ✏️ Редактор (Editor), 📜 История (History).",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "pages": "dashboard, task, factory, editor, history",
+        "active_page": "task"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_status_bar",
+      "name": "Status Bar (строка состояния)",
+      "type": "ui_component",
+      "description": "Нижняя строка состояния с индикаторами: WebSocket статус (🟢/🔴) и AI health статус (🟢/🟡/🔴 с именем модели и latency).",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "ws_id": "wsStatus",
+        "ai_id": "aiStatus"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_test_file",
+      "name": "test-1.kosmos.md / test-example.kosmos.md (тестовый файл)",
+      "type": "document",
+      "description": "Тестовый .kosmos.md файл, открытый в режиме просмотра. Содержит 2 шага с JavaScript-кодом (вывод приветствия и математические операции). Прогресс 100%, оба шага выполнены, результат отображён.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\test-example.kosmos.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-view-mode.png"
+      ],
+      "metadata": {
+        "status": "done (completed)",
+        "progress": "100%",
+        "steps": 2,
+        "language": "JavaScript"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_ws_real_time",
+      "name": "WebSocket real-time execution",
+      "type": "concept",
+      "description": "Механизм real-time обновлений через WebSocket. События: run_start, step_start, step_done (с output, success, progress), run_done, error. Позволяет видеть выполнение шагов в реальном времени без перезагрузки страницы.",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\server\\ws-handler.js"
+      ],
+      "metadata": {
+        "ws_events": "run_start, step_start, step_done, run_done, error",
+        "auto_reconnect": "3 seconds"
+      }
+    },
+    {
+      "id": "screenshot-test-1-view-mode_rendered_markdown",
+      "name": "Rendered .kosmos.md Markdown Document",
+      "type": "concept",
+      "description": "Визуальное представление .kosmos.md файла в левой панели. Отображает Markdown-разметку как структурированный документ с заголовками, жирным текстом, кодом, чекбоксами и результатами выполнения. Подсветка изменённых строк (class 'changed').",
+      "file_type": "code",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "render_func": "renderFile()",
+        "line_classes": "md-heading, md-bold, md-empty, md-checkbox, md-code, md-code-fence, md-result, changed"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-1-view-mode_ui_app",
+      "to": "screenshot-test-1-view-mode_task_page",
+      "relation": "contains_page",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js",
+      "description": "SPA роутит #task/:filename на TaskPage"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_task_page",
+      "to": "screenshot-test-1-view-mode_file_panel",
+      "relation": "has_panel_left",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Левая панель показывает rendered .kosmos.md документ"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_task_page",
+      "to": "screenshot-test-1-view-mode_exec_panel",
+      "relation": "has_panel_right",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Правая панель с элементами выполнения шагов"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_exec_panel",
+      "to": "screenshot-test-1-view-mode_progress_bar",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Progress bar встроен в exec panel"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_exec_panel",
+      "to": "screenshot-test-1-view-mode_step_cards",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Step cards отображаются в exec panel body"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_task_page",
+      "to": "screenshot-test-1-view-mode_page_header",
+      "relation": "has_header",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Page header с кнопками назад, обновить, удалить"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_ui_app",
+      "to": "screenshot-test-1-view-mode_sidebar_nav",
+      "relation": "has_navigation",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js",
+      "description": "Боковое меню навигации по страницам SPA"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_ui_app",
+      "to": "screenshot-test-1-view-mode_status_bar",
+      "relation": "has_status_bar",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js",
+      "description": "Status bar с WS и AI индикаторами"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_task_page",
+      "to": "screenshot-test-1-view-mode_test_file",
+      "relation": "displays_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "TaskPage отображает содержимое test .kosmos.md файла"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_file_panel",
+      "to": "screenshot-test-1-view-mode_rendered_markdown",
+      "relation": "renders",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Левая панель рендерит .kosmos.md как форматированный документ"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_exec_panel",
+      "to": "screenshot-test-1-view-mode_ws_real_time",
+      "relation": "uses",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Exec panel использует WebSocket для real-time обновлений шагов"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_step_cards",
+      "to": "screenshot-test-1-view-mode_ws_real_time",
+      "relation": "updated_via",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Step cards обновляются через WS события step_start / step_done"
+    },
+    {
+      "from": "screenshot-test-1-view-mode_progress_bar",
+      "to": "screenshot-test-1-view-mode_ws_real_time",
+      "relation": "updated_via",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "description": "Progress bar обновляется из msg.progress события step_done"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_test_ui_view_mode_layout",
+      "type": "layout_structure",
+      "description": "Двухпанельный layout Test UI в режиме просмотра: левая панель (rendered .kosmos.md) + правая панель (execution controls + step cards + progress)",
+      "nodes": [
+        "screenshot-test-1-view-mode_file_panel",
+        "screenshot-test-1-view-mode_exec_panel",
+        "screenshot-test-1-view-mode_progress_bar",
+        "screenshot-test-1-view-mode_step_cards",
+        "screenshot-test-1-view-mode_page_header"
+      ],
+      "relation": "forms_two_panel_task_view",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "metadata": {
+        "layout_class": "task-layout",
+        "left_panel_class": "task-file",
+        "right_panel_class": "task-exec"
+      }
+    },
+    {
+      "id": "hyper_test_ui_real_time_execution",
+      "type": "execution_pipeline",
+      "description": "Конвейер выполнения шагов: кнопка Run → WebSocket send('run_all') → сервер выполняет шаги → WS событие step_done → обновление step card + progress bar + rendered file",
+      "nodes": [
+        "screenshot-test-1-view-mode_exec_panel",
+        "screenshot-test-1-view-mode_ws_real_time",
+        "screenshot-test-1-view-mode_step_cards",
+        "screenshot-test-1-view-mode_progress_bar",
+        "screenshot-test-1-view-mode_file_panel"
+      ],
+      "relation": "forms_real_time_execution_pipeline",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+      "metadata": {
+        "trigger": "btnRun onclick=TaskPage.runAll()",
+        "ws_action": "run_all",
+        "ws_events_chain": "run_start → step_start × N → step_done × N → run_done"
+      }
+    },
+    {
+      "id": "hyper_test_ui_spa_architecture",
+      "type": "architecture",
+      "description": "SPA архитектура Test UI: app.js (роутер + API + WS клиент) → страницы (dashboard, task, factory, editor, history) → серверный API (/api) + WebSocket (/ws)",
+      "nodes": [
+        "screenshot-test-1-view-mode_ui_app",
+        "screenshot-test-1-view-mode_task_page",
+        "screenshot-test-1-view-mode_sidebar_nav",
+        "screenshot-test-1-view-mode_status_bar"
+      ],
+      "relation": "forms_spa_architecture",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js",
+      "metadata": {
+        "routing": "hash-based",
+        "api_client": "app.api()",
+        "ws_client": "app.ws / app.onWS()",
+        "pages": "dashboard, task, factory, editor, history"
+      }
+    }
+  ]
+}

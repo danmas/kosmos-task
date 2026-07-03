@@ -1,0 +1,472 @@
+{
+  "chunk_num": 27,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+  "description": "Knowledge graph extracted from screenshot-fibonacci.png — Скриншот страницы просмотра задачи (TaskPage) kosmos-task SPA для сценария 'Калькулятор Fibonacci' (2-fibonacci.kosmos.md). Показывает двухпанельный интерфейс: слева отрендеренный markdown-документ задачи со статусом 'in progress' и прогрессом 0%, справа панель выполнения (execution panel) с тремя шагами в состоянии 'Не запущен' и прогресс-баром на 0%. Сценарий Fibonacci средней сложности с 2 задачами и 3 шагами.",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-fibonacci_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами. На данном скриншоте — страница просмотра задачи (TaskPage) для сценария 'Калькулятор Fibonacci' (2-fibonacci.kosmos.md) в начальном состоянии до выполнения шагов. Двухпанельный layout: слева отрендеренный markdown, справа панель выполнения с прогрессом 0%.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-fibonacci_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи (активен), 🏭 Фабрика, ✏️ Редактор, 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI (⚪ AI: не проверен), кнопка 'Проверить AI'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "dashboard (Задачи)"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_dashboard_nav_active",
+      "name": "Nav Item: 📋 Задачи (активен)",
+      "type": "concept",
+      "description": "Пункт навигации 'Задачи' в сайдбаре — подсвечен как активный (data-page='dashboard'), так как пользователь просматривает страницу задачи (TaskPage), которая относится к разделу задач.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-fibonacci_task_page",
+      "name": "TaskPage — просмотр 'Калькулятор Fibonacci' (начальное состояние)",
+      "type": "page",
+      "description": "Страница просмотра задачи (.kosmos.md файла) для сценария 'Калькулятор Fibonacci'. Отображает двухпанельный layout: слева отрендеренный markdown-документ задачи, справа панель выполнения. Задача имеет статус 'in progress' и прогресс 0%. Все 3 шага (Шаг 1: генерация Fibonacci, Шаг 2: фильтрация чётных, Шаг 3: статистика) находятся в состоянии 'Не запущен'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md"
+      ],
+      "metadata": {
+        "route": "#task/2-fibonacci.kosmos.md",
+        "filename": "2-fibonacci.kosmos.md",
+        "task_title": "Калькулятор Fibonacci",
+        "status": "in progress",
+        "progress": "0%",
+        "panels": "task-file (left), task-exec (right)"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_file_panel",
+      "name": "Левая панель — rendered markdown 'Калькулятор Fibonacci'",
+      "type": "ui_element",
+      "description": "Левая панель страницы просмотра с отрендеренным .kosmos.md документом задачи 'Калькулятор Fibonacci'. Отображает: заголовок '# Калькулятор Fibonacci .kosmos.md', статус 'in progress' (badge-progress), прогресс 0%, дату обновления '2026-06-30'. Секция summary (пуста), цель (создать утилиту для вычисления чисел Фибоначчи с проверкой чётности и статистикой — средняя сложность). Задача 1 (Генерация последовательности) с Шагом 1 (функция fibonacci(10) — не выполнено) и Шагом 2 (фильтрация чётных fibonacci(15) — не выполнено). Задача 2 (Статистика и анализ) с Шагом 3 (статистика fibonacci(20) — не выполнено). Блоки JS-кода отображены, секции результатов пусты, чекбоксы верификации не отмечены.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md"
+      ],
+      "metadata": {
+        "class": "task-file",
+        "task_title": "Калькулятор Fibonacci",
+        "task_status": "in progress",
+        "task_progress": "0%",
+        "tasks_count": 2,
+        "steps_count": 3
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_exec_panel",
+      "name": "Правая панель — выполнение шагов (Fibonacci, начальное состояние)",
+      "type": "ui_element",
+      "description": "Правая панель с элементами управления выполнением: заголовок '⚡ Выполнение', progress-bar на 0% (пустой, серый/минимальный), 3 карточки шагов (step-card) задач 'Калькулятор Fibonacci' в состоянии '⬜ Не запущен'. Кнопки: '▶ Запустить все' (активна) и '↺ Сброс' (присутствует). Результатов выполнения нет, code blocks скрыты или свёрнуты.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-exec",
+        "progress_percent": "0",
+        "controls": "run_all, reset",
+        "step_count": 3,
+        "state": "initial"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_step1_card",
+      "name": "Step Card 1 — Функция генерации Fibonacci (не запущен)",
+      "type": "ui_element",
+      "description": "Карточка шага 1 (step-card, класс pending/not-started) на панели выполнения: заголовок 'Шаг 1: Функция генерации Fibonacci', статус '⬜ Не запущен', чекбокс выполнения не отмечен. Код JS-функции fibonacci(n) виден. Результат выполнения отсутствует (пусто).",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "step_num": "1",
+        "step_title": "Функция генерации Fibonacci",
+        "status": "not_started",
+        "checkbox": "unchecked",
+        "has_code": true,
+        "code_input": "fibonacci(10) — ожидается последовательность 10 чисел и последний элемент (34)"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_step2_card",
+      "name": "Step Card 2 — Фильтрация чётных чисел (не запущен)",
+      "type": "ui_element",
+      "description": "Карточка шага 2 (step-card, класс pending/not-started) на панели выполнения: заголовок 'Шаг 2: Фильтрация чётных чисел', статус '⬜ Не запущен', чекбокс выполнения не отмечен. Код JS с filter для чётных/нечётных виден. Результат выполнения отсутствует.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "step_num": "2",
+        "step_title": "Фильтрация чётных чисел",
+        "status": "not_started",
+        "checkbox": "unchecked",
+        "has_code": true,
+        "code_input": "fibonacci(15) с разделением на чётные и нечётные"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_step3_card",
+      "name": "Step Card 3 — Статистика последовательности (не запущен)",
+      "type": "ui_element",
+      "description": "Карточка шага 3 (step-card, класс pending/not-started) на панели выполнения: заголовок 'Шаг 3: Статистика последовательности', статус '⬜ Не запущен', чекбокс выполнения не отмечен. Код JS с reduce/Math.max и вычислением золотого сечения виден. Результат выполнения отсутствует.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "step_num": "3",
+        "step_title": "Статистика последовательности",
+        "status": "not_started",
+        "checkbox": "unchecked",
+        "has_code": true,
+        "code_input": "Fibonacci(20): сумма, макс, золотое сечение ≈ φ"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_run_all_button",
+      "name": "Button: ▶ Запустить все",
+      "type": "ui_element",
+      "description": "Кнопка '▶ Запустить все' (btn-primary) на панели выполнения. В начальном состоянии все шаги 'Не запущен', кнопка активна для запуска последовательного выполнения всех шагов через API execute endpoint.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "action": "run_all_steps",
+        "state": "enabled"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_reset_button",
+      "name": "Button: ↺ Сброс (на панели выполнения)",
+      "type": "ui_element",
+      "description": "Кнопка '↺ Сброс' (btn-secondary) на панели выполнения. В начальном состоянии присутствует, но неактивна (disabled) или активна — вызывает функцию сброса для очистки результатов выполнения.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "action": "task_page_reset",
+        "state": "initial"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён — соединение не установлено.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — проверка AI-сервиса через /api/ai-test ещё не выполнялась или не завершена.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_check_ai_button",
+      "name": "Button: Проверить AI",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через API endpoint /api/ai-test.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test"
+      }
+    },
+    {
+      "id": "kosmos_scenario_fibonacci_initial",
+      "name": "2-fibonacci.kosmos.md (Калькулятор Fibonacci) — начальное состояние",
+      "type": "document",
+      "description": ".kosmos.md файл задачи 'Калькулятор Fibonacci' в начальном состоянии (до выполнения). Статус: in progress, прогресс 0%. Содержит 2 задачи (Генерация последовательности, Статистика и анализ) с 3 шагами: Шаг 1 — функция fibonacci(n) для генерации 10 чисел, Шаг 2 — фильтрация чётных/нечётных чисел из 15 элементов, Шаг 3 — статистика последовательности из 20 чисел (сумма, максимум, золотое сечение ≈ φ). Результаты шагов пусты, чекбоксы верификации не отмечены. Задача демонстрирует среднюю сложность .kosmos.md — несколько задач с взаимосвязанными шагами.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md"
+      ],
+      "metadata": {
+        "complexity": "Средняя",
+        "tasks_count": 2,
+        "steps_count": 3,
+        "title": "Калькулятор Fibonacci",
+        "status": "in progress",
+        "progress": "0%"
+      }
+    },
+    {
+      "id": "screenshot-fibonacci_initial_state",
+      "name": "Начальное состояние — задача Fibonacci загружена, выполнение не начато",
+      "type": "concept",
+      "description": "Начальное состояние UI — страница просмотра задачи 'Калькулятор Fibonacci' загружена, но выполнение шагов ещё не начато. Прогресс 0%, все 3 шага в статусе 'Не запущен', результаты отсутствуют. Пользователь может запустить выполнение пошагово или через '▶ Запустить все'. Сценарий содержит JS-код для генерации последовательности Фибоначчи, фильтрации чётных/нечётных и вычисления статистики (сумма, максимум, золотое сечение).",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\server\\services\\executor.js"
+      ],
+      "metadata": {
+        "scenario": "2-fibonacci.kosmos.md",
+        "steps_total": "3",
+        "steps_done": "0",
+        "progress": "0%",
+        "status": "in progress",
+        "state": "initial_loaded"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-fibonacci_app",
+      "to": "screenshot-fibonacci_task_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Приложение kosmos-task содержит страницу просмотра задачи 'Калькулятор Fibonacci' в начальном состоянии."
+    },
+    {
+      "from": "screenshot-fibonacci_sidebar",
+      "to": "screenshot-fibonacci_task_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Пункт '📋 Задачи' в сайдбаре активен — пользователь на странице просмотра задачи Fibonacci."
+    },
+    {
+      "from": "screenshot-fibonacci_sidebar",
+      "to": "screenshot-fibonacci_dashboard_nav_active",
+      "relation": "has_active_item",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "В сайдбаре пункт 'Задачи' подсвечен как активный."
+    },
+    {
+      "from": "screenshot-fibonacci_task_page",
+      "to": "screenshot-fibonacci_file_panel",
+      "relation": "has_left_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Страница просмотра задачи содержит левую панель с отрендеренным markdown-документом 'Калькулятор Fibonacci'."
+    },
+    {
+      "from": "screenshot-fibonacci_task_page",
+      "to": "screenshot-fibonacci_exec_panel",
+      "relation": "has_right_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Страница просмотра задачи содержит правую панель выполнения шагов (начальное состояние, 0%)."
+    },
+    {
+      "from": "screenshot-fibonacci_exec_panel",
+      "to": "screenshot-fibonacci_step1_card",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Панель выполнения содержит карточку шага 1 (Функция генерации Fibonacci) в статусе 'Не запущен'."
+    },
+    {
+      "from": "screenshot-fibonacci_exec_panel",
+      "to": "screenshot-fibonacci_step2_card",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Панель выполнения содержит карточку шага 2 (Фильтрация чётных чисел) в статусе 'Не запущен'."
+    },
+    {
+      "from": "screenshot-fibonacci_exec_panel",
+      "to": "screenshot-fibonacci_step3_card",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Панель выполнения содержит карточку шага 3 (Статистика последовательности) в статусе 'Не запущен'."
+    },
+    {
+      "from": "screenshot-fibonacci_exec_panel",
+      "to": "screenshot-fibonacci_run_all_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Панель выполнения содержит кнопку '▶ Запустить все' для запуска всех шагов."
+    },
+    {
+      "from": "screenshot-fibonacci_exec_panel",
+      "to": "screenshot-fibonacci_reset_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Панель выполнения содержит кнопку '↺ Сброс' для сброса шагов."
+    },
+    {
+      "from": "screenshot-fibonacci_file_panel",
+      "to": "kosmos_scenario_fibonacci_initial",
+      "relation": "displays_content_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Левая панель отображает отрендеренное содержимое .kosmos.md файла '2-fibonacci.kosmos.md' в начальном состоянии."
+    },
+    {
+      "from": "screenshot-fibonacci_initial_state",
+      "to": "screenshot-fibonacci_task_page",
+      "relation": "defines_state_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Начальное состояние (загружено, не выполнено) определяет текущий вид страницы — просмотр с прогрессом 0% и не запущенными шагами."
+    },
+    {
+      "from": "screenshot-fibonacci_initial_state",
+      "to": "kosmos_scenario_fibonacci_initial",
+      "relation": "refers_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Начальное состояние отображает файл 2-fibonacci.kosmos.md с пустыми результатами и неотмеченными чекбоксами."
+    },
+    {
+      "from": "screenshot-fibonacci_sidebar",
+      "to": "screenshot-fibonacci_ws_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Футер сайдбара показывает статус WebSocket: ⚪ не подключён."
+    },
+    {
+      "from": "screenshot-fibonacci_sidebar",
+      "to": "screenshot-fibonacci_ai_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Футер сайдбара показывает статус AI: ⚪ не проверен."
+    },
+    {
+      "from": "screenshot-fibonacci_sidebar",
+      "to": "screenshot-fibonacci_check_ai_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png",
+      "description": "Футер сайдбара содержит кнопку 'Проверить AI'."
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_fibonacci_initial_task_view_layout",
+      "type": "composition",
+      "description": "Состав UI страницы просмотра задачи 'Калькулятор Fibonacci' в начальном состоянии: заголовок задачи с прогрессом 0%, левая панель (rendered markdown с пустыми результатами), правая панель (выполнение с 3 карточками шагов в статусе 'Не запущен'), кнопки '▶ Запустить все' и '↺ Сброс', футер сайдбара со статусами WS и AI.",
+      "nodes": [
+        "screenshot-fibonacci_task_page",
+        "screenshot-fibonacci_file_panel",
+        "screenshot-fibonacci_exec_panel",
+        "screenshot-fibonacci_step1_card",
+        "screenshot-fibonacci_step2_card",
+        "screenshot-fibonacci_step3_card",
+        "screenshot-fibonacci_run_all_button",
+        "screenshot-fibonacci_reset_button",
+        "screenshot-fibonacci_ws_status",
+        "screenshot-fibonacci_ai_status"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png"
+    },
+    {
+      "id": "hyper_fibonacci_scenario_structure",
+      "type": "composition",
+      "description": "Структура сценария 'Калькулятор Fibonacci' (2-fibonacci.kosmos.md): 2 задачи с 3 шагами. Задача 1 'Генерация последовательности': Шаг 1 (функция fibonacci(n) — генерация 10 чисел, ожидаемый результат: последовательность и последний элемент 34), Шаг 2 (фильтрация чётных/нечётных — 15 чисел, разделение на чётные и нечётные с подсчётом). Задача 2 'Статистика и анализ': Шаг 3 (статистика — 20 чисел, сумма, максимум, золотое сечение ≈ 1.618034). Средняя сложность. Все шаги в статусе 'Не запущен', прогресс 0%.",
+      "nodes": [
+        "kosmos_scenario_fibonacci_initial",
+        "screenshot-fibonacci_step1_card",
+        "screenshot-fibonacci_step2_card",
+        "screenshot-fibonacci_step3_card",
+        "screenshot-fibonacci_initial_state"
+      ],
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png"
+    },
+    {
+      "id": "hyper_fibonacci_sidebar_state",
+      "type": "composition",
+      "description": "Состав сайдбара при начальном просмотре задачи Fibonacci: навигация (Задачи активны), статус WS (отключён), статус AI (не проверен), кнопка проверки AI.",
+      "nodes": [
+        "screenshot-fibonacci_sidebar",
+        "screenshot-fibonacci_dashboard_nav_active",
+        "screenshot-fibonacci_ws_status",
+        "screenshot-fibonacci_ai_status",
+        "screenshot-fibonacci_check_ai_button"
+      ],
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-fibonacci.png"
+    }
+  ]
+}

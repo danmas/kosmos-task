@@ -1,0 +1,323 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-factory-1-initial_factory_page",
+      "label": "Фабрика задач (Task Factory Page)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Главная страница фабрики задач kosmos-task UI в начальном пустом состоянии"
+    },
+    {
+      "id": "screenshot-factory-1-initial_kosmos_task_app",
+      "label": "kosmos-task Application",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Веб-приложение kosmos-task v2.0 — UI панель для управления задачами"
+    },
+    {
+      "id": "screenshot-factory-1-initial_sidebar",
+      "label": "Sidebar Navigation",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Левая боковая панель навигации с пунктами: Задачи, Фабрика (активен), Редактор, История"
+    },
+    {
+      "id": "screenshot-factory-1-initial_page_header",
+      "label": "Page Header «🏭 Фабрика задач»",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Заголовок страницы с иконкой фабрики и текстом 'Фабрика задач'"
+    },
+    {
+      "id": "screenshot-factory-1-initial_tabs",
+      "label": "Factory Tabs: Вопросы / Генерация",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Два таба: '❓ Вопросы' (активный) и '🏭 Генерация' (disabled, серый) — без badge"
+    },
+    {
+      "id": "screenshot-factory-1-initial_tab_questions_active",
+      "label": "Tab: ❓ Вопросы (активен)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Активный таб с вопросами — выделен акцентным цветом"
+    },
+    {
+      "id": "screenshot-factory-1-initial_tab_generation_disabled",
+      "label": "Tab: 🏭 Генерация (disabled)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Таб генерации в disabled-состоянии — неактивен, пока нет вопросов"
+    },
+    {
+      "id": "screenshot-factory-1-initial_description_text",
+      "label": "Описание: Опишите цель задачи",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Пояснительный текст под табами: 'Опишите цель задачи — LLM задаст уточняющие вопросы для формирования детального плана.'"
+    },
+    {
+      "id": "screenshot-factory-1-initial_goal_input",
+      "label": "Goal Input: Цель задачи",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Текстовое поле ввода цели задачи с placeholder 'Например: Создать калькулятор Fibonacci с проверкой чётности' — пустое в начальном состоянии"
+    },
+    {
+      "id": "screenshot-factory-1-initial_task_count_select",
+      "label": "Select: Подсказка задач (default: 2)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Выпадающий список 'Подсказка: задач' со значениями 1/2/3, по умолчанию выбрано 2"
+    },
+    {
+      "id": "screenshot-factory-1-initial_steps_per_task_select",
+      "label": "Select: Подсказка шагов (default: 2)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Выпадающий список 'Подсказка: шагов' со значениями 1/2/3, по умолчанию выбрано 2"
+    },
+    {
+      "id": "screenshot-factory-1-initial_ask_button",
+      "label": "Button: ❓ Задать вопросы",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Фиолетовая/акцентная кнопка '❓ Задать вопросы' — отправляет цель на LLM для генерации вопросов"
+    },
+    {
+      "id": "screenshot-factory-1-initial_view_prompt_button",
+      "label": "Button: 📄 Посмотреть промпт",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Вторичная кнопка '📄 Посмотреть промпт' — открывает модалку с содержимым системного промпта для вкладки Вопросы"
+    },
+    {
+      "id": "screenshot-factory-1-initial_status_area",
+      "label": "Status Area (пусто)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Пустая область статуса под кнопками — в начальном состоянии не содержит сообщений"
+    },
+    {
+      "id": "screenshot-factory-1-initial_empty_state",
+      "label": "Empty State: нет вопросов",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Начальное пустое состояние фабрики: цель не введена, вопросы не сгенерированы, таб генерации заблокирован"
+    },
+    {
+      "id": "screenshot-factory-1-initial_flow_state",
+      "label": "Factory Flow — Step 0: Empty Initial State",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-factory-1-initial.png",
+      "description": "Начальная точка в двухпроходном factory flow: пользователь только открыл страницу фабрики, никаких действий ещё не выполнено"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_initial_app_hosts_factory",
+      "source_id": "screenshot-factory-1-initial_kosmos_task_app",
+      "target_id": "screenshot-factory-1-initial_factory_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Приложение kosmos-task содержит страницу фабрики задач"
+    },
+    {
+      "id": "e_initial_sidebar_navigates_to_factory",
+      "source_id": "screenshot-factory-1-initial_sidebar",
+      "target_id": "screenshot-factory-1-initial_factory_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Пункт навигации 'Фабрика' в сайдбаре активен и ведёт на эту страницу"
+    },
+    {
+      "id": "e_initial_page_contains_header",
+      "source_id": "screenshot-factory-1-initial_factory_page",
+      "target_id": "screenshot-factory-1-initial_page_header",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Страница фабрики содержит заголовок '🏭 Фабрика задач'"
+    },
+    {
+      "id": "e_initial_page_contains_tabs",
+      "source_id": "screenshot-factory-1-initial_factory_page",
+      "target_id": "screenshot-factory-1-initial_tabs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Страница фабрики содержит два таба: Вопросы и Генерация"
+    },
+    {
+      "id": "e_initial_tabs_contains_questions",
+      "source_id": "screenshot-factory-1-initial_tabs",
+      "target_id": "screenshot-factory-1-initial_tab_questions_active",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Таб '❓ Вопросы' активен и является частью группы табов"
+    },
+    {
+      "id": "e_initial_tabs_contains_generation_disabled",
+      "source_id": "screenshot-factory-1-initial_tabs",
+      "target_id": "screenshot-factory-1-initial_tab_generation_disabled",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Таб '🏭 Генерация' в disabled-состоянии — часть группы табов"
+    },
+    {
+      "id": "e_initial_questions_tab_contains_description",
+      "source_id": "screenshot-factory-1-initial_tab_questions_active",
+      "target_id": "screenshot-factory-1-initial_description_text",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "metadata": "Вкладка 'Вопросы' содержит пояснительный текст под табами"
+    },
+    {
+      "id": "e_initial_questions_tab_contains_goal_input",
+      "source_id": "screenshot-factory-1-initial_tab_questions_active",
+      "target_id": "screenshot-factory-1-initial_goal_input",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Поле ввода 'Цель задачи' находится на вкладке Вопросы"
+    },
+    {
+      "id": "e_initial_questions_tab_contains_task_count",
+      "source_id": "screenshot-factory-1-initial_tab_questions_active",
+      "target_id": "screenshot-factory-1-initial_task_count_select",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Селект 'Подсказка: задач' расположен на вкладке Вопросы"
+    },
+    {
+      "id": "e_initial_questions_tab_contains_steps_count",
+      "source_id": "screenshot-factory-1-initial_tab_questions_active",
+      "target_id": "screenshot-factory-1-initial_steps_per_task_select",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Селект 'Подсказка: шагов' расположен на вкладке Вопросы"
+    },
+    {
+      "id": "e_initial_questions_tab_contains_ask_button",
+      "source_id": "screenshot-factory-1-initial_tab_questions_active",
+      "target_id": "screenshot-factory-1-initial_ask_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Кнопка '❓ Задать вопросы' находится на вкладке Вопросы"
+    },
+    {
+      "id": "e_initial_questions_tab_contains_view_prompt_button",
+      "source_id": "screenshot-factory-1-initial_tab_questions_active",
+      "target_id": "screenshot-factory-1-initial_view_prompt_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "metadata": "Кнопка '📄 Посмотреть промпт' находится на вкладке Вопросы"
+    },
+    {
+      "id": "e_initial_questions_tab_contains_status_area",
+      "source_id": "screenshot-factory-1-initial_tab_questions_active",
+      "target_id": "screenshot-factory-1-initial_status_area",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.93,
+      "metadata": "Пустая область статуса расположена на вкладке Вопросы"
+    },
+    {
+      "id": "e_initial_generation_disabled_by_empty_state",
+      "source_id": "screenshot-factory-1-initial_empty_state",
+      "target_id": "screenshot-factory-1-initial_tab_generation_disabled",
+      "relation": "causes_disabled_state",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.95,
+      "metadata": "Таб генерации disabled, так как questions.length === 0 в начальном состоянии"
+    },
+    {
+      "id": "e_initial_ask_button_triggers_questions",
+      "source_id": "screenshot-factory-1-initial_ask_button",
+      "target_id": "screenshot-factory-1-initial_flow_state",
+      "relation": "triggers_transition_to",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "metadata": "Нажатие '❓ Задать вопросы' инициирует первый шаг factory flow — генерацию вопросов LLM"
+    },
+    {
+      "id": "e_initial_flow_depicts_step_0",
+      "source_id": "screenshot-factory-1-initial_flow_state",
+      "target_id": "screenshot-factory-1-initial_factory_page",
+      "relation": "depicts",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Данный скриншот запечатлел начальную точку (Step 0) factory flow — пустое состояние"
+    },
+    {
+      "id": "e_initial_goal_input_placeholder_shows_example",
+      "source_id": "screenshot-factory-1-initial_goal_input",
+      "target_id": "screenshot-factory-1-initial_empty_state",
+      "relation": "indicates_expected_input",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.88,
+      "metadata": "Placeholder в поле ввода цели предлагает пример ввода для заполнения пустого состояния"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_initial_empty_factory_ui",
+      "label": "Factory UI — Empty Initial State Layout",
+      "nodes": [
+        "screenshot-factory-1-initial_tab_questions_active",
+        "screenshot-factory-1-initial_goal_input",
+        "screenshot-factory-1-initial_task_count_select",
+        "screenshot-factory-1-initial_steps_per_task_select",
+        "screenshot-factory-1-initial_ask_button",
+        "screenshot-factory-1-initial_view_prompt_button",
+        "screenshot-factory-1-initial_status_area",
+        "screenshot-factory-1-initial_tab_generation_disabled"
+      ],
+      "relation": "forms_ui_layout",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "metadata": "Начальная раскладка UI: активная вкладка Вопросы с полем цели, селектами подсказок, кнопками и disabled-табом Генерации"
+    },
+    {
+      "id": "he_initial_factory_flow_start",
+      "label": "Factory Flow — Two-Pass Pipeline Start",
+      "nodes": [
+        "screenshot-factory-1-initial_flow_state",
+        "screenshot-factory-1-initial_empty_state",
+        "screenshot-factory-1-initial_goal_input",
+        "screenshot-factory-1-initial_ask_button",
+        "screenshot-factory-1-initial_tab_generation_disabled"
+      ],
+      "relation": "forms_pipeline_start",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.92,
+      "metadata": "Начальная точка двухпроходного пайплайна: Pass 1 (Вопросы) ожидает ввода цели → LLM генерирует вопросы → Pass 2 (Генерация) разблокируется"
+    },
+    {
+      "id": "he_initial_questions_tab_interaction_group",
+      "label": "Questions Tab — User Input Controls",
+      "nodes": [
+        "screenshot-factory-1-initial_goal_input",
+        "screenshot-factory-1-initial_task_count_select",
+        "screenshot-factory-1-initial_steps_per_task_select",
+        "screenshot-factory-1-initial_ask_button",
+        "screenshot-factory-1-initial_view_prompt_button"
+      ],
+      "relation": "forms_input_group",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Группа элементов ввода на вкладке Вопросы: текстовое поле цели, два селекта подсказок и две кнопки действий"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

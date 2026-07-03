@@ -1,0 +1,346 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-test-1-initial_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами с сайдбаром и страницами",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-1-initial_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с пунктами: Задачи (📋), Фабрика (🏭), Редактор (✏️ — активен), История (📦). Внизу: WS статус, AI статус, кнопка 'Проверить AI'",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-1-initial_editor_nav_item",
+      "name": "Nav Item: ✏️ Редактор (активен)",
+      "type": "concept",
+      "description": "Пункт навигации 'Редактор' в сайдбаре — подсвечен как активный (data-page='editor'), так как пользователь открыл страницу редактора",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-1-initial_editor_page",
+      "name": "Editor Page (Редактор)",
+      "type": "page",
+      "description": "Страница создания/редактирования .kosmos.md файлов. На скриншоте — режим создания (create mode): '✏️ Новая задача'",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {
+        "mode": "create"
+      }
+    },
+    {
+      "id": "screenshot-test-1-initial_page_header",
+      "name": "Page Header «← ✏️ Новая задача»",
+      "type": "ui_element",
+      "description": "Заголовок страницы: кнопка назад (←) и текст '✏️ Новая задача'. Режим создания нового файла",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-1-internal_back_button",
+      "name": "Back Button ←",
+      "type": "ui_element",
+      "description": "Кнопка '←' для возврата на предыдущую страницу (dashboard). Вызов: app.navigate('dashboard')",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-1-initial_validate_button",
+      "name": "Button: ✓ Валидация",
+      "type": "ui_element",
+      "description": "Вторичная кнопка '✓ Валидация' — запускает EditorPage.validate() для проверки структуры .kosmos.md файла",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {
+        "action": "EditorPage.validate()"
+      }
+    },
+    {
+      "id": "screenshot-test-1-initial_save_button",
+      "name": "Button: 💾 Сохранить",
+      "type": "ui_element",
+      "description": "Основная кнопка '💾 Сохранить' (btn-primary) — вызывает EditorPage.save() для сохранения файла",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {
+        "action": "EditorPage.save()"
+      }
+    },
+    {
+      "id": "screenshot-test-1-initial_validation_area",
+      "name": "Validation Result Area (пусто)",
+      "type": "ui_element",
+      "description": "Пустая область отображения результата валидации (id='validationResult') — в начальном состоянии не содержит сообщений",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-1-initial_filename_input",
+      "name": "Filename Input Field",
+      "type": "ui_element",
+      "description": "Текстовое поле ввода имени файла (id='editorFilename') с placeholder 'my-task.kosmos.md' — пустое в начальном состоянии. Видно только в режиме 'create'",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {
+        "placeholder": "my-task.kosmos.md",
+        "visible_in": "create_mode"
+      }
+    },
+    {
+      "id": "screenshot-test-1-initial_editor_textarea",
+      "name": "Editor Textarea with Template",
+      "type": "ui_element",
+      "description": "Большое текстовое поле (textarea id='editorContent') с предзаполненным шаблоном .kosmos.md: заголовок, статус, прогресс, цель, задача 1 с шагом 1 и js executable блоком",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {
+        "template": "full_kosmos_md_template"
+      }
+    },
+    {
+      "id": "screenshot-test-1-initial_create_mode",
+      "name": "Editor Create Mode State",
+      "type": "concept",
+      "description": "Режим создания нового файла (this.mode === 'create'). Показывает поле ввода имени файла и шаблон .kosmos.md. После сохранения создаёт новый файл через POST /files",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-1-initial_initial_state",
+      "name": "Editor Initial Empty State",
+      "type": "concept",
+      "description": "Начальное состояние редактора: пользователь только открыл страницу без параметра редактирования, filename не задан, поле имени пустое, шаблон предзаполнен",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+      ],
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-1-initial_app",
+      "to": "screenshot-test-1-initial_editor_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Приложение kosmos-task содержит страницу редактора"
+    },
+    {
+      "from": "screenshot-test-1-initial_sidebar",
+      "to": "screenshot-test-1-initial_editor_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Пункт '✏️ Редактор' в сайдбаре активен и ведёт на страницу редактора"
+    },
+    {
+      "from": "screenshot-test-1-initial_sidebar",
+      "to": "screenshot-test-1-initial_editor_nav_item",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Сайдбар содержит активный пункт навигации 'Редактор'"
+    },
+    {
+      "from": "screenshot-test-1-initial_editor_page",
+      "to": "screenshot-test-1-initial_page_header",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Страница редактора содержит заголовок '← ✏️ Новая задача'"
+    },
+    {
+      "from": "screenshot-test-1-initial_editor_page",
+      "to": "screenshot-test-1-initial_validate_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Кнопка '✓ Валидация' находится на панели инструментов редактора"
+    },
+    {
+      "from": "screenshot-test-1-initial_editor_page",
+      "to": "screenshot-test-1-initial_save_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Кнопка '💾 Сохранить' находится на панели инструментов редактора"
+    },
+    {
+      "from": "screenshot-test-1-initial_editor_page",
+      "to": "screenshot-test-1-initial_validation_area",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Пустая область валидации находится на странице редактора"
+    },
+    {
+      "from": "screenshot-test-1-initial_editor_page",
+      "to": "screenshot-test-1-initial_filename_input",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Поле ввода имени файла отображается на странице в режиме создания"
+    },
+    {
+      "from": "screenshot-test-1-initial_editor_page",
+      "to": "screenshot-test-1-initial_editor_textarea",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Большое текстовое поле редактора с шаблоном находится на странице"
+    },
+    {
+      "from": "screenshot-test-1-initial_create_mode",
+      "to": "screenshot-test-1-initial_editor_page",
+      "relation": "defines_state_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Режим создания (create mode) определяет текущее состояние страницы редактора"
+    },
+    {
+      "from": "screenshot-test-1-initial_create_mode",
+      "to": "screenshot-test-1-initial_filename_input",
+      "relation": "shows_when_active",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Поле ввода имени файла отображается только в режиме create (не edit)"
+    },
+    {
+      "from": "screenshot-test-1-initial_initial_state",
+      "to": "screenshot-test-1-initial_create_mode",
+      "relation": "describes",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Начальное пустое состояние соответствует режиму create с незаполненными полями"
+    },
+    {
+      "from": "screenshot-test-1-initial_initial_state",
+      "to": "screenshot-test-1-initial_editor_page",
+      "relation": "depicts",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Данный скриншот запечатлел начальное (initial) состояние редактора — только что открытая страница создания"
+    },
+    {
+      "from": "screenshot-test-1-initial_save_button",
+      "to": "screenshot-test-1-initial_create_mode",
+      "relation": "triggers_transition",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Нажатие '💾 Сохранить' при create mode создаёт новый файл (POST /files) и переходит на страницу задачи"
+    },
+    {
+      "from": "screenshot-test-1-initial_validate_button",
+      "to": "screenshot-test-1-initial_validation_area",
+      "relation": "outputs_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png",
+      "description": "Результат валидации отображается в validation area под кнопками"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_test_initial_editor_ui_layout",
+      "name": "Editor UI — Initial Create Mode Layout",
+      "type": "concept",
+      "description": "Начальная раскладка UI редактора в режиме создания: заголовок с навигацией, панель инструментов (Валидация, Сохранить), поле имени файла и текстовый редактор с шаблоном",
+      "nodes": [
+        "screenshot-test-1-initial_page_header",
+        "screenshot-test-1-initial_validate_button",
+        "screenshot-test-1-initial_save_button",
+        "screenshot-test-1-initial_validation_area",
+        "screenshot-test-1-initial_filename_input",
+        "screenshot-test-1-initial_editor_textarea",
+        "screenshot-test-1-initial_create_mode"
+      ],
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+    },
+    {
+      "id": "he_test_initial_editor_workflow_start",
+      "name": "Editor Workflow — Entry Point State",
+      "type": "concept",
+      "description": "Точка входа в редактор: пользователь открыл страницу создания новой задачи. Предзаполнен шаблон .kosmos.md, поле имени пустое. Действия: ввести имя → заполнить/изменить содержимое → валидировать → сохранить",
+      "nodes": [
+        "screenshot-test-1-initial_initial_state",
+        "screenshot-test-1-initial_create_mode",
+        "screenshot-test-1-initial_filename_input",
+        "screenshot-test-1-initial_editor_textarea",
+        "screenshot-test-1-initial_save_button",
+        "screenshot-test-1-initial_validate_button"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+    },
+    {
+      "id": "he_test_initial_sidebar_and_editor",
+      "name": "Sidebar + Editor Navigation Context",
+      "type": "concept",
+      "description": "Глобальная навигационная структура приложения: сайдбар с четырьмя пунктами (Задачи, Фабрика, Редактор — активен, История) и статус-индикаторами (WS, AI) в футере",
+      "nodes": [
+        "screenshot-test-1-initial_app",
+        "screenshot-test-1-initial_sidebar",
+        "screenshot-test-1-initial_editor_nav_item",
+        "screenshot-test-1-initial_editor_page"
+      ],
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-1-initial.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,1083 @@
+{
+  "communities": {
+    "0": [
+      "server_index",
+      "server_index_app",
+      "server_index_cors",
+      "server_index_executerouter",
+      "server_index_express",
+      "server_index_filesrouter",
+      "server_index_http",
+      "server_index_llmrouter",
+      "server_index_path",
+      "server_index_server",
+      "server_index_setupwebsocket",
+      "server_routes_execute",
+      "server_routes_execute_executor",
+      "server_routes_execute_express",
+      "server_routes_execute_fileutils",
+      "server_routes_execute_parser",
+      "server_routes_execute_router",
+      "server_routes_files",
+      "server_routes_files_express",
+      "server_routes_files_fileutils",
+      "server_routes_files_parser",
+      "server_routes_files_router",
+      "server_routes_files_validator",
+      "server_services_executor",
+      "server_services_executor_executecode",
+      "server_services_executor_isexecutablelanguage",
+      "server_services_executor_vm",
+      "server_services_parser",
+      "server_services_parser_parsegoal",
+      "server_services_parser_parsekosmosfile",
+      "server_services_parser_parsemetadata",
+      "server_services_parser_parseprogress",
+      "server_services_parser_parsesteps",
+      "server_services_parser_parsetasks",
+      "server_services_validator",
+      "server_services_validator_validatekosmosfile",
+      "server_ws_handler",
+      "server_ws_handler_executor",
+      "server_ws_handler_fileutils",
+      "server_ws_handler_handleexecutestep",
+      "server_ws_handler_handlerun",
+      "server_ws_handler_handlerunall",
+      "server_ws_handler_parser",
+      "server_ws_handler_setupwebsocket",
+      "server_ws_handler_updatestepinfile",
+      "server_ws_handler_websocketserver"
+    ],
+    "1": [
+      "kosmos_agent_factory",
+      "kosmos_contract_pattern",
+      "kosmos_data_report_scenario",
+      "kosmos_demo_ui",
+      "kosmos_dotenv_dependency",
+      "kosmos_env_config",
+      "kosmos_factory_generator_prompt",
+      "kosmos_factory_questions_prompt",
+      "kosmos_fibonacci_scenario",
+      "kosmos_hello_scenario",
+      "kosmos_history_logging",
+      "kosmos_llm_client",
+      "kosmos_md_format",
+      "kosmos_mock_mode",
+      "kosmos_openai_api",
+      "kosmos_project",
+      "kosmos_runner",
+      "kosmos_sandbox",
+      "kosmos_specification",
+      "kosmos_task_factory",
+      "kosmos_task_factory_generator_prompt",
+      "kosmos_task_factory_questions_prompt",
+      "kosmos_test_example",
+      "kosmos_two_pass_generation",
+      "kosmos_typescript_interfaces",
+      "kosmos_ui_panel"
+    ],
+    "2": [
+      "src_env",
+      "src_llm",
+      "src_llm_callllm",
+      "src_llm_getmockresponse",
+      "src_llm_history_file",
+      "src_llm_historyentry",
+      "src_llm_loadhistory",
+      "src_llm_message",
+      "src_llm_savehistory",
+      "src_task_factory",
+      "src_task_factory_answersdata",
+      "src_task_factory_clean",
+      "src_task_factory_debuglog",
+      "src_task_factory_dirname",
+      "src_task_factory_logs_dir",
+      "src_task_factory_output_dir",
+      "src_task_factory_outputpath",
+      "src_task_factory_parsequestions",
+      "src_task_factory_prompts_dir",
+      "src_task_factory_questions",
+      "src_task_factory_runnow",
+      "src_task_factory_savedebuglog",
+      "src_task_factory_stage1messages",
+      "src_task_factory_stage2messages",
+      "src_task_factory_titlematch"
+    ],
+    "3": [
+      "server_routes_llm",
+      "server_routes_llm_callllm",
+      "server_routes_llm_express",
+      "server_routes_llm_extractfilename",
+      "server_routes_llm_fs",
+      "server_routes_llm_generator_prompt",
+      "server_routes_llm_parsequestions",
+      "server_routes_llm_path",
+      "server_routes_llm_prompt_files",
+      "server_routes_llm_prompts_dir",
+      "server_routes_llm_questions_prompt",
+      "server_routes_llm_reloadprompts",
+      "server_routes_llm_router",
+      "server_utils_file_utils",
+      "server_utils_file_utils_createbackup",
+      "server_utils_file_utils_deletefile",
+      "server_utils_file_utils_fileexists",
+      "server_utils_file_utils_fs",
+      "server_utils_file_utils_getdatadir",
+      "server_utils_file_utils_listkosmosfiles",
+      "server_utils_file_utils_path",
+      "server_utils_file_utils_readfile",
+      "server_utils_file_utils_writefile"
+    ],
+    "4": [
+      "screenshot-factory-3-goal-filled_flow_state",
+      "screenshot-factory-4-questions-received_answer_inputs",
+      "screenshot-factory-4-questions-received_factory_page",
+      "screenshot-factory-4-questions-received_factory_workflow_pass1_complete",
+      "screenshot-factory-4-questions-received_flow_state",
+      "screenshot-factory-4-questions-received_form_group_steps_count",
+      "screenshot-factory-4-questions-received_form_group_task_count",
+      "screenshot-factory-4-questions-received_generate_button",
+      "screenshot-factory-4-questions-received_goal_input_persisted",
+      "screenshot-factory-4-questions-received_goal_text",
+      "screenshot-factory-4-questions-received_kosmos_task_app",
+      "screenshot-factory-4-questions-received_llm_api_response",
+      "screenshot-factory-4-questions-received_llm_questions_prompt",
+      "screenshot-factory-4-questions-received_page_header",
+      "screenshot-factory-4-questions-received_questions_list",
+      "screenshot-factory-4-questions-received_sidebar",
+      "screenshot-factory-4-questions-received_success_toast",
+      "screenshot-factory-4-questions-received_tab_generation_active",
+      "screenshot-factory-4-questions-received_tab_questions_active",
+      "screenshot-factory-4-questions-received_tabs",
+      "screenshot-factory-4-questions-received_two_pass_llm_scheme",
+      "screenshot-factory-4-questions-received_view_prompt_button"
+    ],
+    "5": [
+      "concept_agent_factory",
+      "concept_complexity_scale",
+      "concept_git_friendly",
+      "concept_living_document",
+      "concept_philosophy_tagline",
+      "concept_task_factory",
+      "concept_two_pass_scheme",
+      "fmt_kosmos_md_v2",
+      "fmt_test_example_kosmos",
+      "kosmos_kosmos_task",
+      "license_mit",
+      "person_danmas",
+      "person_grok_agent",
+      "runtime_bun",
+      "runtime_nodejs",
+      "spec_kosmos_spec_v1",
+      "tech_github_repo",
+      "tech_kosmos_runner_cli",
+      "tech_llm_layer",
+      "tech_rest_api_server",
+      "tech_sandbox_vm"
+    ],
+    "6": [
+      "screenshot-edit-flow-2-edit-mode_flow_state",
+      "screenshot-edit-flow-3-saved_close_button",
+      "screenshot-edit-flow-3-saved_disk_file",
+      "screenshot-edit-flow-3-saved_edit_button",
+      "screenshot-edit-flow-3-saved_edit_flow_concept",
+      "screenshot-edit-flow-3-saved_factory_page",
+      "screenshot-edit-flow-3-saved_factory_tabs",
+      "screenshot-edit-flow-3-saved_flow_state",
+      "screenshot-edit-flow-3-saved_kosmos_task_app",
+      "screenshot-edit-flow-3-saved_modal_body",
+      "screenshot-edit-flow-3-saved_modal_header",
+      "screenshot-edit-flow-3-saved_modal_overlay",
+      "screenshot-edit-flow-3-saved_modal_title",
+      "screenshot-edit-flow-3-saved_prompt_content",
+      "screenshot-edit-flow-3-saved_prompt_modal",
+      "screenshot-edit-flow-3-saved_prompt_system_role",
+      "screenshot-edit-flow-3-saved_reset_button",
+      "screenshot-edit-flow-3-saved_sidebar",
+      "screenshot-edit-flow-3-saved_success_badge",
+      "screenshot-edit-flow-4-reset_flow_state"
+    ],
+    "7": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_cors",
+      "package_dependencies_dotenv",
+      "package_dependencies_express",
+      "package_dependencies_ws",
+      "package_description",
+      "package_keywords",
+      "package_license",
+      "package_main",
+      "package_name",
+      "package_scripts",
+      "package_scripts_dev",
+      "package_scripts_factory",
+      "package_scripts_server",
+      "package_scripts_server_node",
+      "package_scripts_start",
+      "package_scripts_start_node",
+      "package_version"
+    ],
+    "8": [
+      "screenshot-test-3-edit-transition_ai_status",
+      "screenshot-test-3-edit-transition_app",
+      "screenshot-test-3-edit-transition_check_ai_button",
+      "screenshot-test-3-edit-transition_edit_mode_state",
+      "screenshot-test-3-edit-transition_editor_nav_item",
+      "screenshot-test-3-edit-transition_editor_page",
+      "screenshot-test-3-edit-transition_editor_textarea",
+      "screenshot-test-3-edit-transition_file_name_display",
+      "screenshot-test-3-edit-transition_kosmos_scenario",
+      "screenshot-test-3-edit-transition_page_header",
+      "screenshot-test-3-edit-transition_save_button",
+      "screenshot-test-3-edit-transition_save_transition",
+      "screenshot-test-3-edit-transition_sidebar",
+      "screenshot-test-3-edit-transition_validate_button",
+      "screenshot-test-3-edit-transition_validation_area",
+      "screenshot-test-3-edit-transition_validation_result_err",
+      "screenshot-test-3-edit-transition_validation_result_ok",
+      "screenshot-test-3-edit-transition_validation_spinner",
+      "screenshot-test-3-edit-transition_ws_status"
+    ],
+    "9": [
+      "src_factory",
+      "src_factory_agentpath",
+      "src_factory_agents_dir",
+      "src_factory_answers",
+      "src_factory_clean",
+      "src_factory_confirm",
+      "src_factory_debuglog",
+      "src_factory_extra",
+      "src_factory_filesfilter",
+      "src_factory_loggerpath",
+      "src_factory_logpath",
+      "src_factory_logs_dir",
+      "src_factory_norm",
+      "src_factory_prompts_dir",
+      "src_factory_questions",
+      "src_factory_questionsdata",
+      "src_factory_randomword",
+      "src_factory_savedebuglog",
+      "src_factory_stage1messages"
+    ],
+    "10": [
+      "screenshot-test-2-prompt-view_ai_status",
+      "screenshot-test-2-prompt-view_app",
+      "screenshot-test-2-prompt-view_check_ai_button",
+      "screenshot-test-2-prompt-view_factory_nav_item",
+      "screenshot-test-2-prompt-view_factory_page",
+      "screenshot-test-2-prompt-view_modal_overlay",
+      "screenshot-test-2-prompt-view_prompt_close_button",
+      "screenshot-test-2-prompt-view_prompt_content",
+      "screenshot-test-2-prompt-view_prompt_edit_button",
+      "screenshot-test-2-prompt-view_prompt_header",
+      "screenshot-test-2-prompt-view_prompt_modal",
+      "screenshot-test-2-prompt-view_prompt_reset_button",
+      "screenshot-test-2-prompt-view_prompt_type_generator",
+      "screenshot-test-2-prompt-view_prompt_type_questions",
+      "screenshot-test-2-prompt-view_sidebar",
+      "screenshot-test-2-prompt-view_two_pass_scheme_visible",
+      "screenshot-test-2-prompt-view_ws_status"
+    ],
+    "11": [
+      "kosmos_scenario_3_data_report",
+      "screenshot-test-3-edit-mode_ai_status",
+      "screenshot-test-3-edit-mode_app",
+      "screenshot-test-3-edit-mode_check_ai_button",
+      "screenshot-test-3-edit-mode_edit_mode_state",
+      "screenshot-test-3-edit-mode_editor_nav_item",
+      "screenshot-test-3-edit-mode_editor_page",
+      "screenshot-test-3-edit-mode_editor_textarea",
+      "screenshot-test-3-edit-mode_file_name_display",
+      "screenshot-test-3-edit-mode_page_header",
+      "screenshot-test-3-edit-mode_save_button",
+      "screenshot-test-3-edit-mode_sidebar",
+      "screenshot-test-3-edit-mode_transition_from_task",
+      "screenshot-test-3-edit-mode_validate_button",
+      "screenshot-test-3-edit-mode_validation_area",
+      "screenshot-test-3-edit-mode_ws_status"
+    ],
+    "12": [
+      "kosmos_scenario_data_report",
+      "kosmos_scenario_fibonacci",
+      "kosmos_scenario_hello",
+      "screenshot-test-5-saved_ai_status",
+      "screenshot-test-5-saved_app",
+      "screenshot-test-5-saved_check_ai_button",
+      "screenshot-test-5-saved_dashboard_page",
+      "screenshot-test-5-saved_file_row_data_report",
+      "screenshot-test-5-saved_file_row_fibonacci",
+      "screenshot-test-5-saved_file_row_hello",
+      "screenshot-test-5-saved_file_row_palindrome",
+      "screenshot-test-5-saved_filter_tabs",
+      "screenshot-test-5-saved_new_task_button",
+      "screenshot-test-5-saved_post_save_dashboard_state",
+      "screenshot-test-5-saved_sidebar",
+      "screenshot-test-5-saved_ws_status"
+    ],
+    "13": [
+      "kosmos_scenario_fibonacci_initial",
+      "screenshot-fibonacci_ai_status",
+      "screenshot-fibonacci_app",
+      "screenshot-fibonacci_check_ai_button",
+      "screenshot-fibonacci_dashboard_nav_active",
+      "screenshot-fibonacci_exec_panel",
+      "screenshot-fibonacci_file_panel",
+      "screenshot-fibonacci_initial_state",
+      "screenshot-fibonacci_reset_button",
+      "screenshot-fibonacci_run_all_button",
+      "screenshot-fibonacci_sidebar",
+      "screenshot-fibonacci_step1_card",
+      "screenshot-fibonacci_step2_card",
+      "screenshot-fibonacci_step3_card",
+      "screenshot-fibonacci_task_page",
+      "screenshot-fibonacci_ws_status"
+    ],
+    "14": [
+      "screenshot-test-3-after-edit-click_ai_status",
+      "screenshot-test-3-after-edit-click_app",
+      "screenshot-test-3-after-edit-click_check_ai_button",
+      "screenshot-test-3-after-edit-click_edit_mode_state",
+      "screenshot-test-3-after-edit-click_edited_task",
+      "screenshot-test-3-after-edit-click_editor_nav_item",
+      "screenshot-test-3-after-edit-click_editor_page",
+      "screenshot-test-3-after-edit-click_editor_textarea",
+      "screenshot-test-3-after-edit-click_file_name_display",
+      "screenshot-test-3-after-edit-click_page_header",
+      "screenshot-test-3-after-edit-click_save_button",
+      "screenshot-test-3-after-edit-click_sidebar",
+      "screenshot-test-3-after-edit-click_transition_from_task",
+      "screenshot-test-3-after-edit-click_validate_button",
+      "screenshot-test-3-after-edit-click_validation_area",
+      "screenshot-test-3-after-edit-click_ws_status"
+    ],
+    "15": [
+      "screenshot-test-2-after-edit-click_ai_status",
+      "screenshot-test-2-after-edit-click_app",
+      "screenshot-test-2-after-edit-click_check_ai_button",
+      "screenshot-test-2-after-edit-click_edit_mode_state",
+      "screenshot-test-2-after-edit-click_editor_nav_item",
+      "screenshot-test-2-after-edit-click_editor_page",
+      "screenshot-test-2-after-edit-click_editor_textarea",
+      "screenshot-test-2-after-edit-click_file_name_display",
+      "screenshot-test-2-after-edit-click_page_header",
+      "screenshot-test-2-after-edit-click_save_button",
+      "screenshot-test-2-after-edit-click_sidebar",
+      "screenshot-test-2-after-edit-click_transition_from_task",
+      "screenshot-test-2-after-edit-click_validate_button",
+      "screenshot-test-2-after-edit-click_validation_area",
+      "screenshot-test-2-after-edit-click_ws_status"
+    ],
+    "16": [
+      "screenshot-test-4-edit-mode_ai_status",
+      "screenshot-test-4-edit-mode_app",
+      "screenshot-test-4-edit-mode_check_ai_button",
+      "screenshot-test-4-edit-mode_edit_mode_state",
+      "screenshot-test-4-edit-mode_editor_nav_item",
+      "screenshot-test-4-edit-mode_editor_page",
+      "screenshot-test-4-edit-mode_editor_textarea",
+      "screenshot-test-4-edit-mode_file_name_display",
+      "screenshot-test-4-edit-mode_page_header",
+      "screenshot-test-4-edit-mode_save_button",
+      "screenshot-test-4-edit-mode_sidebar",
+      "screenshot-test-4-edit-mode_transition_from_task",
+      "screenshot-test-4-edit-mode_validate_button",
+      "screenshot-test-4-edit-mode_validation_area",
+      "screenshot-test-4-edit-mode_ws_status"
+    ],
+    "17": [
+      "src_utils_logger",
+      "src_utils_logger_level_colors",
+      "src_utils_logger_level_priority",
+      "src_utils_logger_logger",
+      "src_utils_logger_logger_child",
+      "src_utils_logger_logger_constructor",
+      "src_utils_logger_logger_debug",
+      "src_utils_logger_logger_error",
+      "src_utils_logger_logger_formatmessage",
+      "src_utils_logger_logger_info",
+      "src_utils_logger_logger_setlevel",
+      "src_utils_logger_logger_shouldlog",
+      "src_utils_logger_logger_warn",
+      "src_utils_logger_loggeroptions",
+      "src_utils_logger_loglevel"
+    ],
+    "18": [
+      "kosmos_runner_cli",
+      "kosmos_runner_cli_args",
+      "kosmos_runner_cli_content",
+      "kosmos_runner_cli_filepath",
+      "kosmos_runner_cli_fs",
+      "kosmos_runner_cli_novalidate",
+      "kosmos_runner_cli_parsesteps",
+      "kosmos_runner_cli_processstep",
+      "kosmos_runner_cli_readline",
+      "kosmos_runner_cli_rl",
+      "kosmos_runner_cli_steps",
+      "kosmos_runner_cli_updatefileandprogress",
+      "kosmos_runner_cli_validatekosmosfile",
+      "kosmos_runner_cli_vm"
+    ],
+    "19": [
+      "screenshot-test-5-final_ai_status",
+      "screenshot-test-5-final_app",
+      "screenshot-test-5-final_check_ai_button",
+      "screenshot-test-5-final_completed_state",
+      "screenshot-test-5-final_dashboard_nav_active",
+      "screenshot-test-5-final_exec_panel",
+      "screenshot-test-5-final_fibonacci_scenario",
+      "screenshot-test-5-final_file_panel",
+      "screenshot-test-5-final_sidebar",
+      "screenshot-test-5-final_step1_card",
+      "screenshot-test-5-final_step2_card",
+      "screenshot-test-5-final_step3_card",
+      "screenshot-test-5-final_task_page",
+      "screenshot-test-5-final_ws_status"
+    ],
+    "20": [
+      "screenshot-test-6-after-reset_ai_status",
+      "screenshot-test-6-after-reset_app",
+      "screenshot-test-6-after-reset_check_ai_button",
+      "screenshot-test-6-after-reset_dashboard_nav_active",
+      "screenshot-test-6-after-reset_exec_panel",
+      "screenshot-test-6-after-reset_file_panel",
+      "screenshot-test-6-after-reset_reset_button",
+      "screenshot-test-6-after-reset_reset_state",
+      "screenshot-test-6-after-reset_run_all_button",
+      "screenshot-test-6-after-reset_sidebar",
+      "screenshot-test-6-after-reset_step_card_1",
+      "screenshot-test-6-after-reset_step_card_2",
+      "screenshot-test-6-after-reset_task_page",
+      "screenshot-test-6-after-reset_ws_status"
+    ],
+    "21": [
+      "screenshot-test-7-reset-confirm_ai_status",
+      "screenshot-test-7-reset-confirm_app",
+      "screenshot-test-7-reset-confirm_cancel_button",
+      "screenshot-test-7-reset-confirm_check_ai_button",
+      "screenshot-test-7-reset-confirm_confirm_button",
+      "screenshot-test-7-reset-confirm_dashboard_nav_active",
+      "screenshot-test-7-reset-confirm_exec_panel",
+      "screenshot-test-7-reset-confirm_file_panel",
+      "screenshot-test-7-reset-confirm_modal_dialog",
+      "screenshot-test-7-reset-confirm_modal_overlay",
+      "screenshot-test-7-reset-confirm_reset_state_before",
+      "screenshot-test-7-reset-confirm_sidebar",
+      "screenshot-test-7-reset-confirm_task_page",
+      "screenshot-test-7-reset-confirm_ws_status"
+    ],
+    "22": [
+      "kosmos_scenario_palindrome_check",
+      "screenshot-test-4-saved_ai_status",
+      "screenshot-test-4-saved_app",
+      "screenshot-test-4-saved_check_ai_button",
+      "screenshot-test-4-saved_dashboard_nav_active",
+      "screenshot-test-4-saved_exec_panel",
+      "screenshot-test-4-saved_file_panel",
+      "screenshot-test-4-saved_save_success_state",
+      "screenshot-test-4-saved_sidebar",
+      "screenshot-test-4-saved_step1_card",
+      "screenshot-test-4-saved_step2_card",
+      "screenshot-test-4-saved_task_page",
+      "screenshot-test-4-saved_ws_status"
+    ],
+    "23": [
+      "screenshot-factory-1-initial_goal_input",
+      "screenshot-factory-3-goal-filled_ask_questions_button",
+      "screenshot-factory-3-goal-filled_factory_page",
+      "screenshot-factory-3-goal-filled_factory_tabs",
+      "screenshot-factory-3-goal-filled_factory_workflow",
+      "screenshot-factory-3-goal-filled_form_group_steps_count",
+      "screenshot-factory-3-goal-filled_form_group_task_count",
+      "screenshot-factory-3-goal-filled_goal_input_filled",
+      "screenshot-factory-3-goal-filled_goal_text",
+      "screenshot-factory-3-goal-filled_kosmos_task_app",
+      "screenshot-factory-3-goal-filled_prompt_system_role",
+      "screenshot-factory-3-goal-filled_sidebar",
+      "screenshot-factory-3-goal-filled_view_prompt_button"
+    ],
+    "24": [
+      "screenshot-test-1-initial_app",
+      "screenshot-test-1-initial_create_mode",
+      "screenshot-test-1-initial_editor_nav_item",
+      "screenshot-test-1-initial_editor_page",
+      "screenshot-test-1-initial_editor_textarea",
+      "screenshot-test-1-initial_filename_input",
+      "screenshot-test-1-initial_initial_state",
+      "screenshot-test-1-initial_page_header",
+      "screenshot-test-1-initial_save_button",
+      "screenshot-test-1-initial_sidebar",
+      "screenshot-test-1-initial_validate_button",
+      "screenshot-test-1-initial_validation_area"
+    ],
+    "25": [
+      "screenshot-test-1-view-mode_exec_panel",
+      "screenshot-test-1-view-mode_file_panel",
+      "screenshot-test-1-view-mode_page_header",
+      "screenshot-test-1-view-mode_progress_bar",
+      "screenshot-test-1-view-mode_rendered_markdown",
+      "screenshot-test-1-view-mode_sidebar_nav",
+      "screenshot-test-1-view-mode_status_bar",
+      "screenshot-test-1-view-mode_step_cards",
+      "screenshot-test-1-view-mode_task_page",
+      "screenshot-test-1-view-mode_test_file",
+      "screenshot-test-1-view-mode_ui_app",
+      "screenshot-test-1-view-mode_ws_real_time"
+    ],
+    "26": [
+      "screenshot-test-8-modal-closed_ai_status",
+      "screenshot-test-8-modal-closed_app",
+      "screenshot-test-8-modal-closed_check_ai_button",
+      "screenshot-test-8-modal-closed_dashboard_nav_active",
+      "screenshot-test-8-modal-closed_exec_panel",
+      "screenshot-test-8-modal-closed_file_panel",
+      "screenshot-test-8-modal-closed_modal_dismissed",
+      "screenshot-test-8-modal-closed_sidebar",
+      "screenshot-test-8-modal-closed_task_page",
+      "screenshot-test-8-modal-closed_ws_status"
+    ],
+    "27": [
+      "screenshot-factory-2-toast_factory_js",
+      "screenshot-factory-2-toast_goal_input",
+      "screenshot-factory-2-toast_llm_questions_prompt",
+      "screenshot-factory-2-toast_tab_generation",
+      "screenshot-factory-2-toast_tab_questions",
+      "screenshot-factory-2-toast_toast_notification",
+      "screenshot-factory-2-toast_ui_page"
+    ],
+    "28": [
+      "demo_serve",
+      "demo_serve_fs",
+      "demo_serve_http",
+      "demo_serve_mime_types",
+      "demo_serve_path",
+      "demo_serve_server"
+    ],
+    "29": [
+      "screenshot-intro_dashboard_page",
+      "screenshot-intro_empty_state",
+      "screenshot-intro_filter_tabs",
+      "screenshot-intro_sidebar_nav",
+      "screenshot-intro_status_indicators",
+      "screenshot-intro_ui_panel"
+    ],
+    "30": [
+      "screenshot-main_dashboard_page",
+      "screenshot-main_filter_tabs",
+      "screenshot-main_sidebar_nav",
+      "screenshot-main_status_indicators",
+      "screenshot-main_task_list",
+      "screenshot-main_ui_panel"
+    ],
+    "31": [
+      "kosmos_ai_model_integration",
+      "kosmos_ai_server_usage"
+    ],
+    "32": [
+      "ui_app",
+      "ui_app_app"
+    ],
+    "33": [
+      "ui_pages_dashboard",
+      "ui_pages_dashboard_dashboardpage"
+    ],
+    "34": [
+      "ui_pages_editor",
+      "ui_pages_editor_editorpage"
+    ],
+    "35": [
+      "ui_pages_factory",
+      "ui_pages_factory_factorypage"
+    ],
+    "36": [
+      "ui_pages_history",
+      "ui_pages_history_historypage"
+    ],
+    "37": [
+      "ui_pages_task",
+      "ui_pages_task_taskpage"
+    ],
+    "38": [
+      "screenshot-edit-flow-1-modal-view_ask_questions_button"
+    ],
+    "39": [
+      "screenshot-edit-flow-1-modal-view_close_button"
+    ],
+    "40": [
+      "screenshot-edit-flow-1-modal-view_edit_button"
+    ],
+    "41": [
+      "screenshot-edit-flow-1-modal-view_factory_page"
+    ],
+    "42": [
+      "screenshot-edit-flow-1-modal-view_factory_tabs"
+    ],
+    "43": [
+      "screenshot-edit-flow-1-modal-view_factory_workflow"
+    ],
+    "44": [
+      "screenshot-edit-flow-1-modal-view_form_group_steps_count"
+    ],
+    "45": [
+      "screenshot-edit-flow-1-modal-view_form_group_task_count"
+    ],
+    "46": [
+      "screenshot-edit-flow-1-modal-view_goal_input"
+    ],
+    "47": [
+      "screenshot-edit-flow-1-modal-view_kosmos_task_app"
+    ],
+    "48": [
+      "screenshot-edit-flow-1-modal-view_modal_body"
+    ],
+    "49": [
+      "screenshot-edit-flow-1-modal-view_modal_header"
+    ],
+    "50": [
+      "screenshot-edit-flow-1-modal-view_modal_overlay"
+    ],
+    "51": [
+      "screenshot-edit-flow-1-modal-view_modal_title"
+    ],
+    "52": [
+      "screenshot-edit-flow-1-modal-view_prompt_content"
+    ],
+    "53": [
+      "screenshot-edit-flow-1-modal-view_prompt_modal"
+    ],
+    "54": [
+      "screenshot-edit-flow-1-modal-view_prompt_system_role"
+    ],
+    "55": [
+      "screenshot-edit-flow-1-modal-view_reset_button"
+    ],
+    "56": [
+      "screenshot-edit-flow-1-modal-view_sidebar"
+    ],
+    "57": [
+      "screenshot-edit-flow-1-modal-view_view_prompt_button"
+    ],
+    "58": [
+      "screenshot-edit-flow-1-modal_view_flow_state"
+    ],
+    "59": [
+      "screenshot-edit-flow-2-edit-mode_ask_questions_button"
+    ],
+    "60": [
+      "screenshot-edit-flow-2-edit-mode_body_textarea"
+    ],
+    "61": [
+      "screenshot-edit-flow-2-edit-mode_cancel_button"
+    ],
+    "62": [
+      "screenshot-edit-flow-2-edit-mode_close_button"
+    ],
+    "63": [
+      "screenshot-edit-flow-2-edit-mode_factory_page"
+    ],
+    "64": [
+      "screenshot-edit-flow-2-edit-mode_factory_tabs"
+    ],
+    "65": [
+      "screenshot-edit-flow-2-edit-mode_factory_workflow"
+    ],
+    "66": [
+      "screenshot-edit-flow-2-edit-mode_goal_input"
+    ],
+    "67": [
+      "screenshot-edit-flow-2-edit-mode_kosmos_task_app"
+    ],
+    "68": [
+      "screenshot-edit-flow-2-edit-mode_modal_header"
+    ],
+    "69": [
+      "screenshot-edit-flow-2-edit-mode_modal_overlay"
+    ],
+    "70": [
+      "screenshot-edit-flow-2-edit-mode_modal_title"
+    ],
+    "71": [
+      "screenshot-edit-flow-2-edit-mode_prompt_content_editable"
+    ],
+    "72": [
+      "screenshot-edit-flow-2-edit-mode_prompt_modal"
+    ],
+    "73": [
+      "screenshot-edit-flow-2-edit-mode_prompt_system_role"
+    ],
+    "74": [
+      "screenshot-edit-flow-2-edit-mode_prompt_type_questions"
+    ],
+    "75": [
+      "screenshot-edit-flow-2-edit-mode_reset_button"
+    ],
+    "76": [
+      "screenshot-edit-flow-2-edit-mode_save_button"
+    ],
+    "77": [
+      "screenshot-edit-flow-2-edit-mode_sidebar"
+    ],
+    "78": [
+      "screenshot-edit-flow-4-reset_close_button"
+    ],
+    "79": [
+      "screenshot-edit-flow-4-reset_edit_button"
+    ],
+    "80": [
+      "screenshot-edit-flow-4-reset_factory_page"
+    ],
+    "81": [
+      "screenshot-edit-flow-4-reset_factory_tabs"
+    ],
+    "82": [
+      "screenshot-edit-flow-4-reset_kosmos_task_app"
+    ],
+    "83": [
+      "screenshot-edit-flow-4-reset_modal_body"
+    ],
+    "84": [
+      "screenshot-edit-flow-4-reset_modal_header"
+    ],
+    "85": [
+      "screenshot-edit-flow-4-reset_modal_overlay"
+    ],
+    "86": [
+      "screenshot-edit-flow-4-reset_prompt_modal"
+    ],
+    "87": [
+      "screenshot-edit-flow-4-reset_prompt_title"
+    ],
+    "88": [
+      "screenshot-edit-flow-4-reset_reset_button_disabled"
+    ],
+    "89": [
+      "screenshot-edit-flow-4-reset_restored_prompt_content"
+    ],
+    "90": [
+      "screenshot-edit-flow-4-reset_sidebar"
+    ],
+    "91": [
+      "screenshot-edit-flow-4-reset_toast_notification"
+    ],
+    "92": [
+      "screenshot-factory-1-initial_ask_button"
+    ],
+    "93": [
+      "screenshot-factory-1-initial_description_text"
+    ],
+    "94": [
+      "screenshot-factory-1-initial_empty_state"
+    ],
+    "95": [
+      "screenshot-factory-1-initial_factory_page"
+    ],
+    "96": [
+      "screenshot-factory-1-initial_flow_state"
+    ],
+    "97": [
+      "screenshot-factory-1-initial_kosmos_task_app"
+    ],
+    "98": [
+      "screenshot-factory-1-initial_page_header"
+    ],
+    "99": [
+      "screenshot-factory-1-initial_sidebar"
+    ],
+    "100": [
+      "screenshot-factory-1-initial_status_area"
+    ],
+    "101": [
+      "screenshot-factory-1-initial_steps_per_task_select"
+    ],
+    "102": [
+      "screenshot-factory-1-initial_tab_generation_disabled"
+    ],
+    "103": [
+      "screenshot-factory-1-initial_tab_questions_active"
+    ],
+    "104": [
+      "screenshot-factory-1-initial_tabs"
+    ],
+    "105": [
+      "screenshot-factory-1-initial_task_count_select"
+    ],
+    "106": [
+      "screenshot-factory-1-initial_view_prompt_button"
+    ],
+    "107": [
+      "screenshot-test-1-internal_back_button"
+    ],
+    "108": [
+      "screenshot-test-2-after-edit-click_back_button"
+    ],
+    "109": [
+      "screenshot-test-3-after-edit-click_back_button"
+    ],
+    "110": [
+      "screenshot-test-3-edit-mode_back_button"
+    ],
+    "111": [
+      "screenshot-test-4-edit-mode_back_button"
+    ]
+  },
+  "cohesion": {
+    "0": 0.05410628019323672,
+    "1": 0.09846153846153846,
+    "2": 0.1,
+    "3": 0.11067193675889328,
+    "4": 0.11688311688311688,
+    "5": 0.1,
+    "6": 0.12105263157894737,
+    "7": 0.10526315789473684,
+    "8": 0.1286549707602339,
+    "9": 0.1111111111111111,
+    "10": 0.1323529411764706,
+    "11": 0.125,
+    "12": 0.13333333333333333,
+    "13": 0.13333333333333333,
+    "14": 0.18333333333333332,
+    "15": 0.19047619047619047,
+    "16": 0.13333333333333333,
+    "17": 0.20952380952380953,
+    "18": 0.15384615384615385,
+    "19": 0.15384615384615385,
+    "20": 0.16483516483516483,
+    "21": 0.1978021978021978,
+    "22": 0.16666666666666666,
+    "23": 0.20512820512820512,
+    "24": 0.22727272727272727,
+    "25": 0.19696969696969696,
+    "26": 0.24444444444444444,
+    "27": 0.42857142857142855,
+    "28": 0.3333333333333333,
+    "29": 0.3333333333333333,
+    "30": 0.3333333333333333,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0,
+    "110": 1.0,
+    "111": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_utils_logger_logger",
+      "label": "Logger",
+      "degree": 10
+    },
+    {
+      "id": "screenshot-factory-3-goal-filled_factory_page",
+      "label": "Фабрика задач (Task Factory Page) — Goal Filled",
+      "degree": 9
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 7
+    },
+    {
+      "id": "server_utils_file_utils_getdatadir",
+      "label": "getDataDir()",
+      "degree": 7
+    },
+    {
+      "id": "kosmos_md_format",
+      "label": "kosmos_md_format",
+      "degree": 7
+    },
+    {
+      "id": "screenshot-factory-4-questions-received_tab_questions_active",
+      "label": "Tab: ❓ Вопросы (активен)",
+      "degree": 7
+    },
+    {
+      "id": "server_services_parser_parsekosmosfile",
+      "label": "parseKosmosFile()",
+      "degree": 6
+    },
+    {
+      "id": "kosmos_project",
+      "label": "kosmos_project",
+      "degree": 6
+    },
+    {
+      "id": "kosmos_llm_client",
+      "label": "kosmos_llm_client",
+      "degree": 6
+    },
+    {
+      "id": "screenshot-edit-flow-3-saved_prompt_modal",
+      "label": "Prompt Modal — Saved State",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "saveDebugLog()",
+      "target": "writeFile()",
+      "source_files": [
+        "src/factory.ts",
+        "server/utils/file-utils.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "saveDebugLog()",
+      "target": "writeFile()",
+      "source_files": [
+        "src/task-factory.ts",
+        "server/utils/file-utils.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "kosmos_project",
+      "target": "kosmos_ui_panel",
+      "source_files": [
+        "demo/index.html",
+        "ui/index.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "has_component",
+      "why": "connects across different repos/directories; peripheral node `kosmos_ui_panel` unexpectedly reaches hub `kosmos_project`"
+    },
+    {
+      "source": "kosmos_task_factory",
+      "target": "kosmos_task_factory_generator_prompt",
+      "source_files": [
+        "KB/README_task_AI_SERVER_usage.md",
+        "prompts/task-factory-generator.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses_prompt",
+      "why": "connects across different repos/directories; peripheral node `kosmos_task_factory_generator_prompt` unexpectedly reaches hub `kosmos_task_factory`"
+    },
+    {
+      "source": "kosmos_task_factory",
+      "target": "kosmos_task_factory_questions_prompt",
+      "source_files": [
+        "KB/README_task_AI_SERVER_usage.md",
+        "prompts/task-factory-questions.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses_prompt",
+      "why": "connects across different repos/directories; peripheral node `kosmos_task_factory_questions_prompt` unexpectedly reaches hub `kosmos_task_factory`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `writeFile()` connect `Community 3` to `Community 9`, `Community 2`?",
+      "why": "High betweenness centrality (0.020) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `saveDebugLog()` connect `Community 2` to `Community 3`?",
+      "why": "High betweenness centrality (0.012) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `saveDebugLog()` connect `Community 9` to `Community 3`?",
+      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `http`, `fs`, `path` to the rest of the system?",
+      "why": "206 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05410628019323672 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09846153846153846 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

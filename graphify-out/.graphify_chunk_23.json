@@ -1,0 +1,473 @@
+{
+  "chunk_num": 23,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+  "description": "Knowledge graph extracted from screenshot-test-5-saved.png — Test 5 UI в состоянии после сохранения задачи. Показывает интерфейс дашборда (DashboardPage) kosmos-task SPA со списком всех .kosmos.md задач после успешного сохранения задачи 'Проверка палиндрома' из редактора. Dashboard отображает фильтры (Все/В работе/Завершённые) и список файлов с прогрессом, статусом и метаданными.",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-test-5-saved_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами. На данном скриншоте — страница дашборда (DashboardPage) со списком всех задач после успешного сохранения отредактированного файла. Пользователь вернулся к списку задач после сохранения в редакторе и просмотра задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-5-saved_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи (активен), 🏭 Фабрика, ✏️ Редактор, 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI (⚪ AI: не проверен), кнопка 'Проверить AI'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "dashboard (Задачи)"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_dashboard_page",
+      "name": "DashboardPage — список задач после сохранения",
+      "type": "page",
+      "description": "Страница дашборда (📋 Задачи) kosmos-task SPA после сохранения задачи 'Проверка палиндрома' и возврата к списку. Отображает заголовок 'Задачи', фильтры (Все/В работе/Завершённые) и таблицу со списком .kosmos.md файлов. Каждая строка показывает: имя файла, заголовок задачи, статус (badge), прогресс-бар с процентами, количество выполненных/всего шагов, дату последнего изменения.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js"
+      ],
+      "metadata": {
+        "route": "#dashboard",
+        "active_filter": "all",
+        "page_title": "📋 Задачи",
+        "has_create_button": "true"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_filter_tabs",
+      "name": "Filter Tabs — Все / В работе / Завершённые",
+      "type": "ui_element",
+      "description": "Панель фильтрации списка задач с тремя вкладками: 'Все' (активна, показаны все задачи), 'В работе' (показывает только задачи со статусом 'in progress'), 'Завершённые' (показывает только задачи со статусом 'done'). Реализована через DashboardPage.setFilter().",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js"
+      ],
+      "metadata": {
+        "filters": "all, in progress, done",
+        "active_filter": "all",
+        "filter_behavior": "DashboardPage.setFilter()"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_file_row_hello",
+      "name": "File Row: 1-hello.kosmos.md (Привет, Kosmos!)",
+      "type": "ui_element",
+      "description": "Строка в списке задач для файла '1-hello.kosmos.md' с заголовком 'Привет, Kosmos!'. Статус: 'in progress' (badge-progress), прогресс 0%, 0/2 шагов. Дата последнего обновления — 2026-06-30. При клике открывается страница просмотра задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\1-hello.kosmos.md"
+      ],
+      "metadata": {
+        "filename": "1-hello.kosmos.md",
+        "title": "Привет, Kosmos!",
+        "status": "in progress",
+        "progress": "0%",
+        "completed_steps": 0,
+        "total_steps": 2,
+        "date": "2026-06-30"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_file_row_fibonacci",
+      "name": "File Row: 2-fibonacci.kosmos.md (Калькулятор Fibonacci)",
+      "type": "ui_element",
+      "description": "Строка в списке задач для файла '2-fibonacci.kosmos.md' с заголовком 'Калькулятор Fibonacci'. Статус: 'in progress' (badge-progress), прогресс 0%, 0/3 шагов. Дата последнего обновления — 2026-06-30. При клике открывается страница просмотра задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md"
+      ],
+      "metadata": {
+        "filename": "2-fibonacci.kosmos.md",
+        "title": "Калькулятор Fibonacci",
+        "status": "in progress",
+        "progress": "0%",
+        "completed_steps": 0,
+        "total_steps": 3,
+        "date": "2026-06-30"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_file_row_data_report",
+      "name": "File Row: 3-data-report.kosmos.md (Анализ данных и отчёт)",
+      "type": "ui_element",
+      "description": "Строка в списке задач для файла '3-data-report.kosmos.md' с заголовком 'Анализ данных и отчёт'. Статус: 'in progress' (badge-progress), прогресс 0%, 0/5 шагов. Дата последнего обновления — 2026-06-30. При клике открывается страница просмотра задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\3-data-report.kosmos.md"
+      ],
+      "metadata": {
+        "filename": "3-data-report.kosmos.md",
+        "title": "Анализ данных и отчёт",
+        "status": "in progress",
+        "progress": "0%",
+        "completed_steps": 0,
+        "total_steps": 5,
+        "date": "2026-06-30"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_file_row_palindrome",
+      "name": "File Row: проверка-палиндрома.kosmos.md (Проверка палиндрома)",
+      "type": "ui_element",
+      "description": "Строка в списке задач для файла 'проверка-палиндрома.kosmos.md' с заголовком 'Проверка палиндрома'. Статус: 'done' (badge-done), прогресс 100%, 2/2 шагов. Эта задача была недавно создана/отредактирована и сохранена через редактор (EditorPage) в тесте 4. Дата последнего обновления — актуальная дата сохранения. При клике открывается страница просмотра задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png"
+      ],
+      "metadata": {
+        "filename": "проверка-палиндрома.kosmos.md",
+        "title": "Проверка палиндрома",
+        "status": "done",
+        "progress": "100%",
+        "completed_steps": 2,
+        "total_steps": 2
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_new_task_button",
+      "name": "Button: + Новая задача",
+      "type": "ui_element",
+      "description": "Кнопка '+ Новая задача' в заголовке страницы дашборда. При нажатии вызывает app.navigate('editor') для перехода на страницу создания новой .kosmos.md задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js"
+      ],
+      "metadata": {
+        "action": "app.navigate('editor')",
+        "class": "btn btn-primary"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_post_save_dashboard_state",
+      "name": "Post-Save Dashboard State",
+      "type": "concept",
+      "description": "Состояние дашборда после успешного сохранения задачи через редактор (Test 4) и возврата к списку задач. Пользователь перешёл последовательно: редактор (edit mode) → сохранение → страница просмотра задачи → дашборд (через кнопку '←' на странице задачи). Dashboard обновился и теперь показывает задачу 'Проверка палиндрома' со статусом 'done' и прогрессом 100%.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "navigation_flow": "editor_save → task_view → dashboard",
+        "source_actions": "EditorPage.save() → TaskPage → DashboardPage",
+        "new_file_added": "проверка-палиндрома.kosmos.md",
+        "new_file_status": "done",
+        "new_file_progress": "100%"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён — соединение не установлено.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — проверка AI-сервиса через /api/ai-test ещё не выполнялась или не завершена.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-5-saved_check_ai_button",
+      "name": "Button: Проверить AI",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через API endpoint /api/ai-test.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test"
+      }
+    },
+    {
+      "id": "kosmos_scenario_hello",
+      "name": "1-hello.kosmos.md (Привет, Kosmos!)",
+      "type": "document",
+      "description": "Демонстрационный .kosmos.md файл 'Привет, Kosmos!' с простейшей задачей вывода приветствия. Статус: in progress, прогресс 0%. Содержит 1 задачу с 2 шагами: Шаг 1 — вывод приветствия (JS код), Шаг 2 — демонстрация математики.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\1-hello.kosmos.md"
+      ],
+      "metadata": {
+        "complexity": "Простая",
+        "tasks_count": 1,
+        "steps_count": 2,
+        "title": "Привет, Kosmos!",
+        "status": "in progress",
+        "progress": "0%"
+      }
+    },
+    {
+      "id": "kosmos_scenario_fibonacci",
+      "name": "2-fibonacci.kosmos.md (Калькулятор Fibonacci)",
+      "type": "document",
+      "description": "Демонстрационный .kosmos.md файл 'Калькулятор Fibonacci' со средней сложностью. Статус: in progress, прогресс 0%. Содержит 2 задачи (генерация последовательности, статистика) с 3 шагами: генерация Fibonacci, фильтрация чётных/нечётных, статистика последовательности.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\2-fibonacci.kosmos.md"
+      ],
+      "metadata": {
+        "complexity": "Средняя",
+        "tasks_count": 2,
+        "steps_count": 3,
+        "title": "Калькулятор Fibonacci",
+        "status": "in progress",
+        "progress": "0%"
+      }
+    },
+    {
+      "id": "kosmos_scenario_data_report",
+      "name": "3-data-report.kosmos.md (Анализ данных и отчёт)",
+      "type": "document",
+      "description": "Демонстрационный .kosmos.md файл 'Анализ данных и отчёт' со сложной мульти-задачной структурой. Статус: in progress, прогресс 0%. Содержит 3 задачи (генерация данных, статистический анализ, формирование отчёта) с 5 шагами.",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\3-data-report.kosmos.md"
+      ],
+      "metadata": {
+        "complexity": "Сложная",
+        "tasks_count": 3,
+        "steps_count": 5,
+        "title": "Анализ данных и отчёт",
+        "status": "in progress",
+        "progress": "0%"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-5-saved_app",
+      "to": "screenshot-test-5-saved_dashboard_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Приложение kosmos-task содержит страницу дашборда со списком задач."
+    },
+    {
+      "from": "screenshot-test-5-saved_sidebar",
+      "to": "screenshot-test-5-saved_dashboard_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Пункт '📋 Задачи' в сайдбаре активен — пользователь находится на странице дашборда."
+    },
+    {
+      "from": "screenshot-test-5-saved_dashboard_page",
+      "to": "screenshot-test-5-saved_filter_tabs",
+      "relation": "has_filter_tabs",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Страница дашборда содержит панель фильтрации по статусу задач."
+    },
+    {
+      "from": "screenshot-test-5-saved_dashboard_page",
+      "to": "screenshot-test-5-saved_file_row_hello",
+      "relation": "lists_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Дашборд отображает файл 1-hello.kosmos.md в списке задач."
+    },
+    {
+      "from": "screenshot-test-5-saved_dashboard_page",
+      "to": "screenshot-test-5-saved_file_row_fibonacci",
+      "relation": "lists_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Дашборд отображает файл 2-fibonacci.kosmos.md в списке задач."
+    },
+    {
+      "from": "screenshot-test-5-saved_dashboard_page",
+      "to": "screenshot-test-5-saved_file_row_data_report",
+      "relation": "lists_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Дашборд отображает файл 3-data-report.kosmos.md в списке задач."
+    },
+    {
+      "from": "screenshot-test-5-saved_dashboard_page",
+      "to": "screenshot-test-5-saved_file_row_palindrome",
+      "relation": "lists_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Дашборд отображает файл проверка-палиндрома.kosmos.md (недавно сохранённый) в списке задач."
+    },
+    {
+      "from": "screenshot-test-5-saved_dashboard_page",
+      "to": "screenshot-test-5-saved_new_task_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Страница дашборда содержит кнопку '+ Новая задача' для создания новой задачи."
+    },
+    {
+      "from": "screenshot-test-5-saved_post_save_dashboard_state",
+      "to": "screenshot-test-5-saved_dashboard_page",
+      "relation": "defines_state_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Состояние post-save определяет текущий вид дашборда — после сохранения задачи и возврата к списку."
+    },
+    {
+      "from": "screenshot-test-5-saved_post_save_dashboard_state",
+      "to": "screenshot-test-5-saved_file_row_palindrome",
+      "relation": "resulted_in_addition_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "После сохранения в редакторе в列表中 появилась новая задача 'Проверка палиндрома' со статусом done."
+    },
+    {
+      "from": "screenshot-test-5-saved_file_row_hello",
+      "to": "kosmos_scenario_hello",
+      "relation": "references",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Строка списка '1-hello.kosmos.md' ссылается на демо-файл 'Привет, Kosmos!'."
+    },
+    {
+      "from": "screenshot-test-5-saved_file_row_fibonacci",
+      "to": "kosmos_scenario_fibonacci",
+      "relation": "references",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Строка списка '2-fibonacci.kosmos.md' ссылается на демо-файл 'Калькулятор Fibonacci'."
+    },
+    {
+      "from": "screenshot-test-5-saved_file_row_data_report",
+      "to": "kosmos_scenario_data_report",
+      "relation": "references",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Строка списка '3-data-report.kosmos.md' ссылается на демо-файл 'Анализ данных и отчёт'."
+    },
+    {
+      "from": "screenshot-test-5-saved_sidebar",
+      "to": "screenshot-test-5-saved_ws_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Футер сайдбара показывает статус WebSocket: ⚪ не подключён."
+    },
+    {
+      "from": "screenshot-test-5-saved_sidebar",
+      "to": "screenshot-test-5-saved_ai_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Футер сайдбара показывает статус AI: ⚪ не проверен."
+    },
+    {
+      "from": "screenshot-test-5-saved_sidebar",
+      "to": "screenshot-test-5-saved_check_ai_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png",
+      "description": "Футер сайдбара содержит кнопку 'Проверить AI'."
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_test5_saved_dashboard_layout",
+      "type": "composition",
+      "description": "Состав дашборда после сохранения задачи: заголовок с кнопкой создания, фильтры задач, список файлов (4 .kosmos.md файла), сайдбар с навигацией и индикаторами статуса.",
+      "nodes": [
+        "screenshot-test-5-saved_dashboard_page",
+        "screenshot-test-5-saved_filter_tabs",
+        "screenshot-test-5-saved_file_row_hello",
+        "screenshot-test-5-saved_file_row_fibonacci",
+        "screenshot-test-5-saved_file_row_data_report",
+        "screenshot-test-5-saved_file_row_palindrome",
+        "screenshot-test-5-saved_new_task_button",
+        "screenshot-test-5-saved_sidebar",
+        "screenshot-test-5-saved_ws_status",
+        "screenshot-test-5-saved_ai_status",
+        "screenshot-test-5-saved_check_ai_button"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png"
+    },
+    {
+      "id": "hyper_test5_save_flow_to_dashboard",
+      "type": "sequence",
+      "description": "Последовательность: редактор (edit mode, Test 4) → сохранение (PUT /files/проверка-палиндрома.kosmos.md) → страница просмотра задачи (TaskPage) → возврат к дашборду (DashboardPage) → отображение обновлённого списка задач с новым файлом 'Проверка палиндрома' (done, 100%).",
+      "nodes": [
+        "screenshot-test-5-saved_post_save_dashboard_state",
+        "screenshot-test-5-saved_dashboard_page",
+        "screenshot-test-5-saved_file_row_palindrome"
+      ],
+      "confidence_score": 0.92,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png"
+    },
+    {
+      "id": "hyper_test5_demo_scenarios_list",
+      "type": "composition",
+      "description": "Набор демонстрационных .kosmos.md файлов, доступных в проекте kosmos-task: 1-hello.kosmos.md (Привет, Kosmos!), 2-fibonacci.kosmos.md (Калькулятор Fibonacci), 3-data-report.kosmos.md (Анализ данных и отчёт). Все имеют статус 'in progress' и прогресс 0%. Также новая задача 'Проверка палиндрома' со статусом 'done' и прогрессом 100%.",
+      "nodes": [
+        "kosmos_scenario_hello",
+        "kosmos_scenario_fibonacci",
+        "kosmos_scenario_data_report",
+        "screenshot-test-5-saved_file_row_palindrome"
+      ],
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-5-saved.png"
+    }
+  ]
+}

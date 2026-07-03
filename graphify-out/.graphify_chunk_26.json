@@ -1,0 +1,305 @@
+{
+  "chunk_num": 26,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+  "description": "Knowledge graph extracted from screenshot-test-8-modal-closed.png — Test 8: состояние UI после закрытия модального окна (confirmation dialog). Показывает интерфейс страницы задачи (TaskPage) kosmos-task SPA после того, как пользователь закрыл модальное окно подтверждения (вероятно, отмена сброса или другого действия). Модальное окно скрыто, под ним видна страница задачи с двухпанельным layout и полным UI.",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-test-8-modal-closed_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами. На данном скриншоте — страница просмотра задачи (TaskPage) после закрытия модального окна подтверждения. Модальное окно (Test 7) было закрыто, и пользователь вернулся к просмотру задачи под ним.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи (активен), 🏭 Фабрика, ✏️ Редактор, 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI (⚪ AI: не проверен), кнопка 'Проверить AI'. Состояние сайдбара не изменилось после закрытия модального окна.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "dashboard (Задачи)"
+      }
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_task_page",
+      "name": "TaskPage — просмотр задачи после закрытия модального окна",
+      "type": "page",
+      "description": "Страница просмотра задачи (.kosmos.md файла) после закрытия модального окна подтверждения. Отображает двухпанельный layout: слева отрендеренный markdown-документ задачи, справа панель выполнения. Модальное окно (overlay + dialog) было закрыто, и страница задачи снова полностью видна и интерактивна.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "route": "#task/<filename>",
+        "panels": "task-file (left), task-exec (right)",
+        "state": "after_modal_closed",
+        "trigger": "modal_dismiss_or_cancel"
+      }
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_file_panel",
+      "name": "Левая панель — rendered markdown задачи",
+      "type": "ui_element",
+      "description": "Левая панель страницы просмотра задачи после закрытия модального окна. Отображает отрендеренный .kosmos.md документ: заголовок, статус задачи, прогресс-бар, раздел цели, задачи с шагами и executable-блоки JS. Содержимое не изменилось — модальное окно не влияло на содержимое левой панели.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-file",
+        "state": "visible_after_modal_close"
+      }
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_exec_panel",
+      "name": "Правая панель — выполнение шагов (после закрытия модального окна)",
+      "type": "ui_element",
+      "description": "Правая панель с элементами управления выполнением задачи после закрытия модального окна. Заголовок '⚡ Выполнение', progress-бар, карточки шагов (step-card) с их текущим статусом, кнопки '▶ Запустить все' и '↺ Сброс'. Модальное окно было закрыто, и панель выполнения снова полностью отображается и доступна для взаимодействия.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-exec",
+        "controls": "run_all, reset",
+        "state": "visible_after_modal_close"
+      }
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_modal_dismissed",
+      "name": "Closed Modal State — модальное окно подтверждения закрыто",
+      "type": "concept",
+      "description": "Состояние UI после закрытия модального окна подтверждения (Test 7 → Test 8). Модальное окно (вероятно, confirmation dialog для сброса или другого действия) было закрыто одним из способов: нажатие 'Отмена', '✕' (close), клик вне модального окна (overlay click), или нажатие Escape. После закрытия модального окна страница задачи (TaskPage) снова полностью видна и доступна. Действие, которое подтверждалось модальным окном, НЕ было выполнено (отменено).",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "modal_type": "confirmation_dialog",
+        "modal_action": "cancelled_or_dismissed",
+        "previous_state": "screenshot-test-7-reset-confirm",
+        "action_not_executed": true,
+        "dismiss_method": "cancel_button_or_x_or_escape_or_overlay_click"
+      }
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_dashboard_nav_active",
+      "name": "Nav Item: 📋 Задачи (активен)",
+      "type": "concept",
+      "description": "Пункт навигации 'Задачи' в сайдбаре — подсвечен как активный (data-page='dashboard'), так как пользователь находится на странице просмотра задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён — соединение не установлено.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — проверка AI-сервиса через /api/ai-test ещё не выполнялась или не завершена.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-8-modal-closed_check_ai_button",
+      "name": "Button: Проверить AI",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через API endpoint /api/ai-test.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-8-modal-closed_app",
+      "to": "screenshot-test-8-modal-closed_task_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Приложение kosmos-task содержит страницу просмотра задачи после закрытия модального окна."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_sidebar",
+      "to": "screenshot-test-8-modal-closed_task_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Пункт '📋 Задачи' в сайдбаре активен — пользователь находится на странице просмотра задачи."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_sidebar",
+      "to": "screenshot-test-8-modal-closed_dashboard_nav_active",
+      "relation": "has_active_item",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "В сайдбаре пункт 'Задачи' подсвечен как активный."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_task_page",
+      "to": "screenshot-test-8-modal-closed_file_panel",
+      "relation": "has_left_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Страница просмотра задачи содержит левую панель с отрендеренным markdown-документом."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_task_page",
+      "to": "screenshot-test-8-modal-closed_exec_panel",
+      "relation": "has_right_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Страница просмотра задачи содержит правую панель выполнения шагов."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_modal_dismissed",
+      "to": "screenshot-test-8-modal-closed_task_page",
+      "relation": "defines_state_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Закрытие модального окна определяет текущее состояние страницы — TaskPage снова полностью видна."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_modal_dismissed",
+      "to": "screenshot-test-8-modal-closed_file_panel",
+      "relation": "reveals",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Закрытие модального окна снова делает левую панель с markdown видимой и доступной."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_modal_dismissed",
+      "to": "screenshot-test-8-modal-closed_exec_panel",
+      "relation": "reveals",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Закрытие модального окна снова делает правую панель выполнения видимой и доступной."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_sidebar",
+      "to": "screenshot-test-8-modal-closed_ws_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Футер сайдбара показывает статус WebSocket: ⚪ не подключён."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_sidebar",
+      "to": "screenshot-test-8-modal-closed_ai_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Футер сайдбара показывает статус AI: ⚪ не проверен."
+    },
+    {
+      "from": "screenshot-test-8-modal-closed_sidebar",
+      "to": "screenshot-test-8-modal-closed_check_ai_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png",
+      "description": "Футер сайдбара содержит кнопку 'Проверить AI'."
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_test8_modal_closed_layout",
+      "type": "composition",
+      "description": "Состав UI страницы просмотра задачи после закрытия модального окна подтверждения (Test 8): заголовок задачи, левая панель (rendered markdown), правая панель выполнения шагов, карточки шагов, кнопки управления (Запустить все, Сброс), сайдбар с навигацией и индикаторами статуса WS и AI. Модальное окно не отображается — страница полностью видна.",
+      "nodes": [
+        "screenshot-test-8-modal-closed_task_page",
+        "screenshot-test-8-modal-closed_file_panel",
+        "screenshot-test-8-modal-closed_exec_panel",
+        "screenshot-test-8-modal-closed_sidebar",
+        "screenshot-test-8-modal-closed_dashboard_nav_active",
+        "screenshot-test-8-modal-closed_ws_status",
+        "screenshot-test-8-modal-closed_ai_status",
+        "screenshot-test-8-modal-closed_check_ai_button"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png"
+    },
+    {
+      "id": "hyper_test8_modal_lifecycle",
+      "type": "sequence",
+      "description": "Последовательность: пользователь на странице просмотра задачи (TaskPage) → появление модального окна подтверждения (Test 7: reset-confirm) → пользователь закрывает модальное окно (отмена, ✕, Escape или клик вне окна) → модальное окно скрывается → страница задачи снова полностью видна (Test 8: modal-closed). Действие, для которого было вызвано модальное окно, НЕ выполнено.",
+      "nodes": [
+        "screenshot-test-8-modal-closed_modal_dismissed",
+        "screenshot-test-8-modal-closed_task_page",
+        "screenshot-test-8-modal-closed_file_panel",
+        "screenshot-test-8-modal-closed_exec_panel"
+      ],
+      "confidence_score": 0.91,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png"
+    },
+    {
+      "id": "hyper_test8_sidebar_state_modal_closed",
+      "type": "composition",
+      "description": "Состав сайдбара при просмотре задачи после закрытия модального окна: навигация (Задачи активны), статус WS (отключён), статус AI (не проверен), кнопка проверки AI. Сайдбар не изменился после закрытия модального окна.",
+      "nodes": [
+        "screenshot-test-8-modal-closed_sidebar",
+        "screenshot-test-8-modal-closed_dashboard_nav_active",
+        "screenshot-test-8-modal-closed_ws_status",
+        "screenshot-test-8-modal-closed_ai_status",
+        "screenshot-test-8-modal-closed_check_ai_button"
+      ],
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-8-modal-closed.png"
+    }
+  ]
+}

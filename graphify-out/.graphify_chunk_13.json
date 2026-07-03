@@ -1,0 +1,241 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-main_ui_panel",
+      "name": "kosmos-task UI Panel v2.0 — Main Screen",
+      "type": "ui_screen",
+      "description": "Главный экран kosmos-task UI Panel v2.0 в тёмной теме (GitHub Dark). Двухколоночный SPA layout: левая боковая панель (sidebar, 240px) + правая область контента. Отображает страницу '📋 Задачи' (Dashboard) со списком .kosmos.md задач и фильтрами.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\style.css",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "theme": "dark (GitHub Dark)",
+        "version": "v2.0",
+        "label": "UI Panel",
+        "layout": "sidebar + main-content",
+        "default_page": "dashboard"
+      }
+    },
+    {
+      "id": "screenshot-main_sidebar_nav",
+      "name": "Sidebar Navigation — Main Screen",
+      "type": "ui_component",
+      "description": "Левая боковая панель на главном экране. Логотип 'kosmos-task' с синим акцентом (blue #58a6ff), подпись 'v2.0 • UI Panel'. Четыре пункта навигации: 📋 Задачи (активна, синий бордер), 🏭 Фабрика, ✏️ Редактор, 📦 История. Внизу — статус-бар: индикатор WebSocket (⚪ WS: не подключён) и AI (⚪ AI: не проверен) с кнопкой 'Проверить AI'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "nav_items": "dashboard (Задачи), factory (Фабрика), editor (Редактор), history (История)",
+        "active_item": "dashboard (📋 Задачи)",
+        "ws_default": "⚪ WS: не подключён",
+        "ai_default": "⚪ AI: не проверен"
+      }
+    },
+    {
+      "id": "screenshot-main_dashboard_page",
+      "name": "Dashboard — Страница '📋 Задачи'",
+      "type": "ui_page",
+      "description": "Главная страница приложения '📋 Задачи' с заголовком и кнопкой '+ Новая задача'. Ниже — фильтр-табы: 'Все' (активна, синий), 'В работе', 'Завершённые'. Основная область отображает список .kosmos.md файлов (задач) с информацией: имя файла, заголовок, статус (badge), прогресс-бар (0-100%), количество шагов, дата изменения. Клик по строке открывает страницу задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\style.css"
+      ],
+      "metadata": {
+        "header": "📋 Задачи",
+        "action_button": "+ Новая задача",
+        "filters": "all (Все), in progress (В работе), done (Завершённые)",
+        "active_filter": "all",
+        "list_columns": "filename, title, status badge, progress bar, steps, date"
+      }
+    },
+    {
+      "id": "screenshot-main_filter_tabs",
+      "name": "Filter Tabs — Все / В работе / Завершённые",
+      "type": "ui_component",
+      "description": "Фильтр-табы над списком задач на дашборде. Три таба: 'Все' (активна по умолчанию, синий нижний бордер), 'В работе' (отфильтровывает задачи со статусом 'in progress'), 'Завершённые' (статус 'done'). Нижний бордер подсвечивает активный таб. Переключение фильтра перерисовывает список задач.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\style.css"
+      ],
+      "metadata": {
+        "filters": "all (Все), in progress (В работе), done (Завершённые)",
+        "active": "all",
+        "style": "horizontal tabs with bottom border accent"
+      }
+    },
+    {
+      "id": "screenshot-main_task_list",
+      "name": "Task List — Список .kosmos.md задач",
+      "type": "ui_component",
+      "description": "Список .kosmos.md файлов-задач на дашборде. Каждая строка — отдельная задача с колонками: имя файла (моноширинный, синий #58a6ff), заголовок задачи (серый), статус (badge: жёлтый 'in progress' / зелёный 'done'), прогресс-бар (градиент синий→зелёный), количество выполненных/всего шагов, дата последнего изменения. Клик по строке открывает детальный просмотр задачи.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\style.css"
+      ],
+      "metadata": {
+        "columns": "file name, title, status badge, progress bar (0-100%), steps (completed/total), modified date",
+        "interaction": "click → navigate to task detail view",
+        "sort_order": "by modification date (API returns as-is)"
+      }
+    },
+    {
+      "id": "screenshot-main_status_indicators",
+      "name": "Status Indicators — WebSocket & AI Health",
+      "type": "ui_component",
+      "description": "Индикаторы состояния в подвале боковой панели главного экрана. WebSocket: цветной круг + 'WS: подключён/не подключён/отключён/ошибка' (⚪/🟢/🔴). AI Health: круг + модель + статус проверки через /api/ai-test endpoint (⚪ не проверен → 🟡 проверка... → 🟢 доступен / 🔴 ошибка). Кнопка 'Проверить AI' (13px, secondary) для ручного запуска проверки.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "ws_endpoint": "ws://host/ws",
+        "ai_check_endpoint": "POST /api/ai-test",
+        "ai_config_endpoint": "GET /api/llm/health",
+        "reconnect_delay_ms": 3000
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-main_sidebar_nav",
+      "to": "screenshot-main_ui_panel",
+      "relation": "part_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+      "description": "Sidebar navigation is the left column of the main UI Panel on the main screen"
+    },
+    {
+      "from": "screenshot-main_dashboard_page",
+      "to": "screenshot-main_ui_panel",
+      "relation": "part_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+      "description": "Dashboard page is the default content area (right column) of the UI Panel on the main screen"
+    },
+    {
+      "from": "screenshot-main_dashboard_page",
+      "to": "screenshot-main_filter_tabs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+      "description": "Dashboard page contains filter tabs (Все / В работе / Завершённые) positioned above the task list"
+    },
+    {
+      "from": "screenshot-main_dashboard_page",
+      "to": "screenshot-main_task_list",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+      "description": "Dashboard page contains the task list with .kosmos.md file rows underneath the filter tabs"
+    },
+    {
+      "from": "screenshot-main_status_indicators",
+      "to": "screenshot-main_sidebar_nav",
+      "relation": "part_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+      "description": "Status indicators (WS + AI) are rendered in the footer section of the sidebar navigation panel"
+    },
+    {
+      "from": "screenshot-main_task_list",
+      "to": "screenshot-main_dashboard_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+      "description": "Clicking a task row in the list navigates to that task's detail/editor page"
+    },
+    {
+      "from": "screenshot-main_dashboard_page",
+      "to": "screenshot-main_ui_panel",
+      "relation": "default_view_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png",
+      "description": "Dashboard (Задачи) is the default/landing page shown in the main content area on app load"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_main_dashboard_screen",
+      "name": "Main Dashboard Screen — Task List View",
+      "type": "ui_layout",
+      "description": "Главный экран kosmos-task UI: двухколоночный layout с sidebar (логотип 'kosmos-task' + навигация: Задачи/Фабрика/Редактор/История + статусы WS/AI) и основной областью дашборда '📋 Задачи'. Дашборд отображает фильтр-табы (Все/В работе/Завершённые) и список .kosmos.md задач с прогресс-барами, статус-бейджами, шагами и датами. Это основной рабочий экран приложения.",
+      "nodes": [
+        "screenshot-main_ui_panel",
+        "screenshot-main_sidebar_nav",
+        "screenshot-main_dashboard_page",
+        "screenshot-main_filter_tabs",
+        "screenshot-main_task_list",
+        "screenshot-main_status_indicators"
+      ],
+      "relations": [
+        {
+          "description": "screenshot-main_ui_panel contains screenshot-main_sidebar_nav (left, 240px) and screenshot-main_dashboard_page (right, flex:1). screenshot-main_dashboard_page contains screenshot-main_filter_tabs (top) and screenshot-main_task_list (below, scrollable rows). screenshot-main_sidebar_nav footer contains screenshot-main_status_indicators (WS + AI status + Проверить AI button)."
+        }
+      ],
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png"
+    },
+    {
+      "id": "he_main_screen_navigation",
+      "name": "Navigation Flow from Main Dashboard",
+      "type": "user_flow",
+      "description": "С главного экрана пользователь может: (1) нажать '+ Новая задача' для создания новой задачи в редакторе, (2) кликнуть по любой строке задачи для просмотра деталей, (3) переключить фильтр для сортировки задач по статусу, (4) выбрать пункт sidebar (🏭 Фабрика, ✏️ Редактор, 📦 История) для перехода на другие страницы, (5) нажать 'Проверить AI' для проверки доступности LLM.",
+      "nodes": [
+        "screenshot-main_dashboard_page",
+        "screenshot-main_sidebar_nav",
+        "screenshot-main_task_list",
+        "screenshot-main_filter_tabs",
+        "screenshot-main_status_indicators"
+      ],
+      "relations": [
+        {
+          "description": "From screenshot-main_dashboard_page: '+ Новая задача' → editor page, filter tabs filter the task list. From screenshot-main_task_list: click row → task detail page. From screenshot-main_sidebar_nav: all 4 nav items navigate to their respective pages. From screenshot-main_status_indicators: 'Проверить AI' triggers health check via /api/ai-test."
+        }
+      ],
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png"
+    },
+    {
+      "id": "he_main_screen_real_time_monitoring",
+      "name": "Real-time Status Monitoring on Main Screen",
+      "type": "ui_feature",
+      "description": "Система мониторинга состояния в реальном времени на главном экране. WebSocket: авто-подключение при загрузке страницы (ws://host/ws), переподключение каждые 3 сек при обрыве. Статус отображается цветным кружком (⚪=не подключён, 🟢=подключён, 🔴=отключён/ошибка). AI Health: загрузка конфига при init (GET /api/llm/health), автоматическая проверка через 1.5 сек после загрузки (POST /api/ai-test), ручная через кнопку. Статус-строка показывает модель и задержку в мс.",
+      "nodes": [
+        "screenshot-main_status_indicators",
+        "screenshot-main_sidebar_nav",
+        "screenshot-main_ui_panel"
+      ],
+      "relations": [
+        {
+          "description": "screenshot-main_status_indicators встроены в подвал screenshot-main_sidebar_nav. WS статус обновляется через события WebSocket (onopen/onclose/onerror). AI статус обновляется через fetch к /api/ai-test. При ошибке AI в автоматическом режиме показывается alert, при ручной проверке — toast."
+        }
+      ],
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-main.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

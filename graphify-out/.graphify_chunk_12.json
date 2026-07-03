@@ -1,0 +1,205 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-intro_ui_panel",
+      "name": "kosmos-task UI Panel v2.0",
+      "type": "ui_screen",
+      "description": "Главный экран приветствия kosmos-task UI Panel v2.0. Тёмная тема (GitHub Dark). Содержит боковую панель и область контента. Отображается при загрузке приложения.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\style.css"
+      ],
+      "metadata": {
+        "theme": "dark (GitHub-style)",
+        "version": "v2.0",
+        "label": "UI Panel"
+      }
+    },
+    {
+      "id": "screenshot-intro_sidebar_nav",
+      "name": "Sidebar Navigation",
+      "type": "ui_component",
+      "description": "Левая боковая панель с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel', навигацией: 📋 Задачи (активна по умолчанию), 🏭 Фабрика, ✏️ Редактор, 📦 История. Внизу: статус WebSocket, статус AI и кнопка 'Проверить AI'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "dashboard (Задачи)"
+      }
+    },
+    {
+      "id": "screenshot-intro_dashboard_page",
+      "name": "Dashboard — Экран 'Задачи'",
+      "type": "ui_page",
+      "description": "Главная страница приложения '📋 Задачи'. Содержит заголовок с кнопкой '+ Новая задача', фильтры (Все / В работе / Завершённые) и пустое состояние при отсутствии задач.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js"
+      ],
+      "metadata": {
+        "header": "📋 Задачи",
+        "filters": "all, in_progress, done"
+      }
+    },
+    {
+      "id": "screenshot-intro_empty_state",
+      "name": "Empty State — 'Нет задач'",
+      "type": "ui_state",
+      "description": "Пустое состояние дашборда: иконка 📭, заголовок 'Нет задач', описание 'Создайте новую задачу вручную или через фабрику.', кнопки '+ Создать' (primary) и '🏭 Фабрика' (purple).",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js"
+      ],
+      "metadata": {
+        "icon": "📭",
+        "message": "Нет задач",
+        "actions": "Создать, Фабрика"
+      }
+    },
+    {
+      "id": "screenshot-intro_status_indicators",
+      "name": "Status Indicators — WS & AI",
+      "type": "ui_component",
+      "description": "Индикаторы состояния в подвале боковой панели: WebSocket статус (⚪ WS: не подключён / 🟢 WS: подключён / 🔴 WS: отключён) и AI статус (⚪ / 🟡 / 🟢 / 🔴 AI: ...) с кнопкой ручной проверки 'Проверить AI'.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "ws_states": "disconnected, connected, error",
+        "ai_check_endpoint": "/api/ai-test"
+      }
+    },
+    {
+      "id": "screenshot-intro_filter_tabs",
+      "name": "Filter Tabs — Все / В работе / Завершённые",
+      "type": "ui_component",
+      "description": "Фильтр-табы для сортировки задач: 'Все' (активна по умолчанию), 'В работе', 'Завершённые'. Размещены над списком задач на дашборде.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\dashboard.js"
+      ],
+      "metadata": {
+        "filters": "all, in_progress, done",
+        "active": "all"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-intro_sidebar_nav",
+      "to": "screenshot-intro_ui_panel",
+      "relation": "part_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+      "description": "Sidebar navigation is part of the UI Panel, shown on the intro screen"
+    },
+    {
+      "from": "screenshot-intro_dashboard_page",
+      "to": "screenshot-intro_ui_panel",
+      "relation": "part_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+      "description": "Dashboard page is the default content area of the UI Panel"
+    },
+    {
+      "from": "screenshot-intro_dashboard_page",
+      "to": "screenshot-intro_empty_state",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+      "description": "Dashboard shows empty state when no tasks exist (intro/welcome view)"
+    },
+    {
+      "from": "screenshot-intro_empty_state",
+      "to": "screenshot-intro_status_indicators",
+      "relation": "coexists_with",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+      "description": "Empty state in main panel and status indicators in sidebar footer coexist on the welcome screen"
+    },
+    {
+      "from": "screenshot-intro_dashboard_page",
+      "to": "screenshot-intro_filter_tabs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png",
+      "description": "Dashboard page contains filter tabs (Все / В работе / Завершённые)"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_welcome_screen",
+      "name": "Welcome/Intro Dashboard Screen",
+      "type": "ui_layout",
+      "description": "Экран приветствия kosmos-task UI: левая панель навигации (sidebar) + правая область с дашбордом 'Задачи'. Дашборд показывает пустое состояние 'Нет задач' с предложением создать новую задачу вручную или через фабрику. В sidebar — статусы WS и AI.",
+      "nodes": [
+        "screenshot-intro_ui_panel",
+        "screenshot-intro_sidebar_nav",
+        "screenshot-intro_dashboard_page",
+        "screenshot-intro_empty_state",
+        "screenshot-intro_status_indicators",
+        "screenshot-intro_filter_tabs"
+      ],
+      "relations": [
+        {
+          "description": "screenshot-intro_ui_panel contains screenshot-intro_sidebar_nav (left) and screenshot-intro_dashboard_page (right). screenshot-intro_dashboard_page contains screenshot-intro_empty_state (centered, icon + message + buttons) and screenshot-intro_filter_tabs (above). screenshot-intro_sidebar_nav footer shows screenshot-intro_status_indicators."
+        }
+      ],
+      "confidence_score": 1.0,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png"
+    },
+    {
+      "id": "he_nav_flow_from_intro",
+      "name": "Navigation Flow from Intro Screen",
+      "type": "user_flow",
+      "description": "С интро-экрана пользователь может: (1) нажать '+ Создать' для перехода в редактор, (2) нажать '🏭 Фабрика' для запуска фабрики задач, (3) выбрать любой пункт sidebar для навигации (Фабрика, Редактор, История).",
+      "nodes": [
+        "screenshot-intro_empty_state",
+        "screenshot-intro_sidebar_nav",
+        "screenshot-intro_dashboard_page"
+      ],
+      "relations": [
+        {
+          "description": "From screenshot-intro_empty_state: '+ Создать' navigates to editor, '🏭 Фабрика' navigates to factory. From screenshot-intro_sidebar_nav: all nav items accessible. screenshot-intro_dashboard_page is the default view."
+        }
+      ],
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png"
+    },
+    {
+      "id": "he_ui_status_system",
+      "name": "Real-time Status Monitoring UI",
+      "type": "ui_feature",
+      "description": "Система индикаторов состояния в sidebar footer: WebSocket показывает подключение к серверу (цветные круги + текст), AI показывает доступность LLM (проверка через /api/ai-test endpoint). Кнопка 'Проверить AI' для ручного триггера.",
+      "nodes": [
+        "screenshot-intro_status_indicators",
+        "screenshot-intro_sidebar_nav",
+        "screenshot-intro_ui_panel"
+      ],
+      "relations": [
+        {
+          "description": "screenshot-intro_status_indicators are embedded in screenshot-intro_sidebar_nav footer as part of screenshot-intro_ui_panel. WS status updates via WebSocket lifecycle events (onopen/onclose/onerror). AI checks via fetch to /api/ai-test."
+        }
+      ],
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-intro.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

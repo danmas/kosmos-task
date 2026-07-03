@@ -1,0 +1,399 @@
+{
+  "nodes": [
+    {
+      "id": "screenshot-edit-flow-1-modal-view_factory_page",
+      "label": "Фабрика задач (Task Factory Page)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Главная страница фабрики задач kosmos-task UI с открытой модалкой просмотра промпта"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_prompt_modal",
+      "label": "Prompt Modal",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Модальное окно просмотра/редактирования системного промпта, 780px шириной, поверх полупрозрачного оверлея"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_modal_overlay",
+      "label": "Modal Overlay",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Полупрозрачный тёмный фон, перекрывающий содержимое страницы при открытой модалке"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_modal_header",
+      "label": "Modal Header",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Заголовок модального окна с иконкой, названием промпта и именем файла"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_modal_title",
+      "label": "📄 Промпт: Уточняющие вопросы / Генерация .kosmos.md",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Заголовок модалки с иконкой 📄 и названием типа промпта; в скобках — имя файла слабым цветом"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_edit_button",
+      "label": "✏️ Редактировать Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Кнопка переключения в режим редактирования промпта (view mode → edit mode)"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_reset_button",
+      "label": "↺ Сбросить Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Кнопка сброса промпта к оригинальному содержимому с диска"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_close_button",
+      "label": "× Close Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Кнопка закрытия модального окна (×)"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_modal_body",
+      "label": "Modal Body (Prompt Content)",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Основная область модалки, содержащая текст промпта в режиме просмотра (div, не textarea)"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_prompt_content",
+      "label": "Prompt System Message",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Текст системного промпта LLM — инструкция для генерации уточняющих вопросов или .kosmos.md разметки"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_sidebar",
+      "label": "Sidebar Navigation",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Левая боковая панель навигации с пунктами: Задачи, Фабрика, Редактор, История"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal_view_flow_state",
+      "label": "Edit Flow — Step 1: Modal View",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Первый шаг в цепочке редактирования промпта: просмотр содержимого в read-only модалке"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_prompt_system_role",
+      "label": "LLM System Prompt Concept",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Концепция: системный промпт задаёт поведение LLM — модуль уточнения задач"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_factory_workflow",
+      "label": "Factory Workflow Concept",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Двухпроходная схема фабрики: LLM задаёт вопросы → LLM генерирует .kosmos.md"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_factory_tabs",
+      "label": "Factory Tabs: Вопросы / Генерация",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Два таба: '❓ Вопросы' (активный) и '🏭 Генерация' (disabled, счётчик вопросов)"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_goal_input",
+      "label": "Goal Input Field",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Текстовое поле ввода цели задачи с placeholder 'Например: Создать калькулятор Fibonacci с проверкой чётности'"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_form_group_task_count",
+      "label": "Подсказка: задач Select",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Выпадающий список для выбора количества задач (1/2/3)"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_form_group_steps_count",
+      "label": "Подсказка: шагов Select",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Выпадающий список для выбора количества шагов на задачу (1/2/3)"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_ask_questions_button",
+      "label": "❓ Задать вопросы Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Фиолетовая кнопка запуска генерации уточняющих вопросов через LLM"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_view_prompt_button",
+      "label": "📄 Посмотреть промпт Button",
+      "file_type": "image",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Вторичная кнопка, открывающая модалку просмотра/редактирования промпта"
+    },
+    {
+      "id": "screenshot-edit-flow-1-modal-view_kosmos_task_app",
+      "label": "kosmos-task Application",
+      "file_type": "concept",
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-edit-flow-1-modal-view.png",
+      "description": "Веб-приложение kosmos-task v2.0 — UI панель для управления задачами"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_modal_overlay_covers_factory",
+      "source_id": "screenshot-edit-flow-1-modal-view_modal_overlay",
+      "target_id": "screenshot-edit-flow-1-modal-view_factory_page",
+      "relation": "covers",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Оверлей затемняет страницу фабрики при открытой модалке"
+    },
+    {
+      "id": "e_modal_contains_overlay",
+      "source_id": "screenshot-edit-flow-1-modal-view_prompt_modal",
+      "target_id": "screenshot-edit-flow-1-modal-view_modal_overlay",
+      "relation": "displayed_on",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Модалка рендерится внутри overlay-контейнера"
+    },
+    {
+      "id": "e_modal_contains_header",
+      "source_id": "screenshot-edit-flow-1-modal-view_prompt_modal",
+      "target_id": "screenshot-edit-flow-1-modal-view_modal_header",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Хедер является частью модального окна"
+    },
+    {
+      "id": "e_modal_contains_body",
+      "source_id": "screenshot-edit-flow-1-modal-view_prompt_modal",
+      "target_id": "screenshot-edit-flow-1-modal-view_modal_body",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Body-секция является частью модального окна"
+    },
+    {
+      "id": "e_header_contains_title",
+      "source_id": "screenshot-edit-flow-1-modal-view_modal_header",
+      "target_id": "screenshot-edit-flow-1-modal-view_modal_title",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Заголовок расположен в хедере модалки"
+    },
+    {
+      "id": "e_header_contains_edit_button",
+      "source_id": "screenshot-edit-flow-1-modal-view_modal_header",
+      "target_id": "screenshot-edit-flow-1-modal-view_edit_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Кнопка редактирования в правой части хедера"
+    },
+    {
+      "id": "e_header_contains_reset_button",
+      "source_id": "screenshot-edit-flow-1-modal-view_modal_header",
+      "target_id": "screenshot-edit-flow-1-modal-view_reset_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Кнопка сброса в правой части хедера"
+    },
+    {
+      "id": "e_header_contains_close_button",
+      "source_id": "screenshot-edit-flow-1-modal-view_modal_header",
+      "target_id": "screenshot-edit-flow-1-modal-view_close_button",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Кнопка закрытия × в правой части хедера"
+    },
+    {
+      "id": "e_body_displays_prompt",
+      "source_id": "screenshot-edit-flow-1-modal-view_modal_body",
+      "target_id": "screenshot-edit-flow-1-modal-view_prompt_content",
+      "relation": "displays",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "metadata": "Body содержит read-only текст системного промпта"
+    },
+    {
+      "id": "e_view_prompt_triggers_modal",
+      "source_id": "screenshot-edit-flow-1-modal-view_view_prompt_button",
+      "target_id": "screenshot-edit-flow-1-modal-view_prompt_modal",
+      "relation": "opens",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "metadata": "Кнопка 'Посмотреть промпт' открывает данную модалку"
+    },
+    {
+      "id": "e_edit_button_opened_edit_mode",
+      "source_id": "screenshot-edit-flow-1-modal-view_edit_button",
+      "target_id": "screenshot-edit-flow-1-modal_view_flow_state",
+      "relation": "triggers_transition_to",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.85,
+      "metadata": "Нажатие 'Редактировать' переводит в следующий шаг flow (edit-mode)"
+    },
+    {
+      "id": "e_close_button_dismisses_modal",
+      "source_id": "screenshot-edit-flow-1-modal-view_close_button",
+      "target_id": "screenshot-edit-flow-1-modal-view_prompt_modal",
+      "relation": "closes",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.98,
+      "metadata": "Кнопка × закрывает модальное окно"
+    },
+    {
+      "id": "e_reset_button_restores_original",
+      "source_id": "screenshot-edit-flow-1-modal-view_reset_button",
+      "target_id": "screenshot-edit-flow-1-modal-view_prompt_content",
+      "relation": "resets_to_original",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "metadata": "Кнопка 'Сбросить' восстанавливает оригинальное содержимое промпта с диска"
+    },
+    {
+      "id": "e_page_is_factory",
+      "source_id": "screenshot-edit-flow-1-modal-view_factory_page",
+      "target_id": "screenshot-edit-flow-1-modal-view_factory_workflow",
+      "relation": "implements",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Страница фабрики реализует двухпроходную схему генерации задач"
+    },
+    {
+      "id": "e_factory_tabs_structured",
+      "source_id": "screenshot-edit-flow-1-modal-view_factory_page",
+      "target_id": "screenshot-edit-flow-1-modal-view_factory_tabs",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Страница фабрики содержит два таба: Вопросы и Генерация"
+    },
+    {
+      "id": "e_sidebar_contains_factory_nav",
+      "source_id": "screenshot-edit-flow-1-modal-view_sidebar",
+      "target_id": "screenshot-edit-flow-1-modal-view_factory_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Пункт навигации 'Фабрика' в сайдбаре ведёт на эту страницу"
+    },
+    {
+      "id": "e_prompt_is_system_message",
+      "source_id": "screenshot-edit-flow-1-modal-view_prompt_content",
+      "target_id": "screenshot-edit-flow-1-modal-view_prompt_system_role",
+      "relation": "represents",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.93,
+      "metadata": "Содержимое промпта — это системная инструкция для LLM"
+    },
+    {
+      "id": "e_goal_input_available",
+      "source_id": "screenshot-edit-flow-1-modal-view_factory_page",
+      "target_id": "screenshot-edit-flow-1-modal-view_goal_input",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "metadata": "Поле ввода цели задачи расположено на странице фабрики"
+    },
+    {
+      "id": "e_ask_questions_triggers_llm",
+      "source_id": "screenshot-edit-flow-1-modal-view_ask_questions_button",
+      "target_id": "screenshot-edit-flow-1-modal-view_prompt_system_role",
+      "relation": "uses_prompt",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.88,
+      "metadata": "Кнопка 'Задать вопросы' отправляет промпт в LLM для генерации вопросов"
+    },
+    {
+      "id": "e_flow_state_step_1",
+      "source_id": "screenshot-edit-flow-1-modal_view_flow_state",
+      "target_id": "screenshot-edit-flow-1-modal-view_prompt_modal",
+      "relation": "depicts",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Данный скриншот запечатлел первый шаг flow — просмотр промпта в модалке"
+    },
+    {
+      "id": "e_app_hosts_factory",
+      "source_id": "screenshot-edit-flow-1-modal-view_kosmos_task_app",
+      "target_id": "screenshot-edit-flow-1-modal-view_factory_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "metadata": "Приложение kosmos-task содержит страницу фабрики задач"
+    },
+    {
+      "id": "e_factory_tabs_badge_shows_count",
+      "source_id": "screenshot-edit-flow-1-modal-view_factory_tabs",
+      "target_id": "screenshot-edit-flow-1-modal-view_factory_workflow",
+      "relation": "indicates_progress",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.80,
+      "metadata": "Бейдж на табе 'Генерация' показывает количество полученных вопросов"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_edit_flow_modal_interaction",
+      "label": "Edit Flow — Modal Interaction Pattern",
+      "nodes": [
+        "screenshot-edit-flow-1-modal-view_view_prompt_button",
+        "screenshot-edit-flow-1-modal-view_prompt_modal",
+        "screenshot-edit-flow-1-modal-view_edit_button",
+        "screenshot-edit-flow-1-modal-view_close_button",
+        "screenshot-edit-flow-1-modal-view_reset_button",
+        "screenshot-edit-flow-1-modal-view_modal_body"
+      ],
+      "relation": "forms_interaction_loop",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.92,
+      "metadata": "Паттерн взаимодействия: кнопка → модалка → действия (edit/close/reset) → обратная связь"
+    },
+    {
+      "id": "he_factory_two_pass_pipeline",
+      "label": "Factory Two-Pass Pipeline",
+      "nodes": [
+        "screenshot-edit-flow-1-modal-view_goal_input",
+        "screenshot-edit-flow-1-modal-view_ask_questions_button",
+        "screenshot-edit-flow-1-modal-view_view_prompt_button",
+        "screenshot-edit-flow-1-modal-view_prompt_content",
+        "screenshot-edit-flow-1-modal-view_prompt_system_role"
+      ],
+      "relation": "forms_pipeline",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.90,
+      "metadata": "Пасс 1: цель → LLM (с промптом вопросов) → вопросы. Скриншот показывает точку настройки промпта."
+    },
+    {
+      "id": "he_screenshot_edit_flow_chain",
+      "label": "Screenshot Edit Flow Chain (4 steps)",
+      "nodes": [
+        "screenshot-edit-flow-1-modal-view_prompt_modal",
+        "screenshot-edit-flow-1-modal-view_edit_button",
+        "screenshot-edit-flow-1-modal_view_flow_state"
+      ],
+      "relation": "part_of_sequence",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.85,
+      "metadata": "Скриншот 1 из 4 в цепочке edit flow: view → edit → save → reset"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

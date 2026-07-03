@@ -1,0 +1,565 @@
+{
+  "chunk_num": 19,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+  "description": "Knowledge graph extracted from screenshot-test-3-edit-transition.png — Test UI в процессе перехода/анимации редактирования файла '3-data-report.kosmos.md' (Анализ данных и отчёт). Показывает динамическое состояние UI редактора kosmos-task SPA во время выполнения действия: валидация с анимацией спиннера, либо анимация перехода при сохранении, либо отображение результата валидации с анимацией появления (fade/slide).",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-test-3-edit-transition_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами с сайдбаром и страницами. На данном скриншоте — состояние UI в момент анимации/перехода при редактировании файла '3-data-report.kosmos.md' (Анализ данных и отчёт)",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_sidebar",
+      "name": "Sidebar Navigation",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи, 🏭 Фабрика, ✏️ Редактор (активен), 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI (⚪ AI: не проверен), кнопка 'Проверить AI'",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "editor (Редактор)"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_editor_nav_item",
+      "name": "Nav Item: ✏️ Редактор (активен)",
+      "type": "concept",
+      "description": "Пункт навигации 'Редактор' в сайдбаре — подсвечен как активный (data-page='editor'), так как пользователь находится в редакторе для редактирования файла '3-data-report.kosmos.md'",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_editor_page",
+      "name": "Editor Page — Transition State (3-data-report)",
+      "type": "page",
+      "description": "Страница редактора в момент анимации/перехода при редактировании файла '3-data-report.kosmos.md'. Показывает динамическое состояние UI: спиннер/индикатор загрузки при валидации, анимацию появления результата валидации, или анимацию сохранения/перенаправления. Содержит заголовок '✏️ Редактирование', панель инструментов (✓ Валидация, 💾 Сохранить), отображение имени файла '3-data-report.kosmos.md' и текстовый редактор с содержимым",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "mode": "edit",
+        "filename": "3-data-report.kosmos.md",
+        "trigger": "validate_or_save",
+        "state": "transition_animation"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_page_header",
+      "name": "Page Header «← ✏️ Редактирование»",
+      "type": "ui_element",
+      "description": "Заголовок страницы: кнопка назад (←) для возврата на дашборд (app.navigate('dashboard')) и текст '✏️ Редактирование'. Режим редактирования существующего файла (this.mode === 'edit')",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "header_text": "✏️ Редактирование",
+        "back_action": "app.navigate('dashboard')"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_validate_button",
+      "name": "Button: ✓ Валидация",
+      "type": "ui_element",
+      "description": "Вторичная кнопка '✓ Валидация' (btn-secondary) — запускает EditorPage.validate() для проверки структуры .kosmos.md файла (POST /files/validate). При нажатии может показывать состояние загрузки (disabled + спиннер) на время выполнения запроса",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "action": "EditorPage.validate()",
+        "endpoint": "POST /files/validate",
+        "button_style": "btn-secondary",
+        "transition_state": "loading_or_animating"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_save_button",
+      "name": "Button: 💾 Сохранить",
+      "type": "ui_element",
+      "description": "Основная кнопка '💾 Сохранить' (btn-primary, id='btnSave') — вызывает EditorPage.save(). В режиме edit отправляет PUT /files/:filename с обновлённым содержимым. При сохранении может показывать анимацию (спиннер, изменение текста кнопки на '⏳ Сохранение...')",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "action": "EditorPage.save()",
+        "http_method": "PUT",
+        "endpoint": "/files/:filename",
+        "transition_state": "saving_animation"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_validation_area",
+      "name": "Validation Result Area (с анимацией результата)",
+      "type": "ui_element",
+      "description": "Область отображения результата валидации (id='validationResult') — расположена под заголовком, над именем файла. На скриншоте может показывать анимацию появления результата: fadeIn/spinner во время проверки, затем плавное появление div.validation-ok (зелёный) или div.validation-err (красный) с иконкой ✓ или ✗",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\styles.css"
+      ],
+      "metadata": {
+        "animation": "fade_in_and_slide",
+        "success_style": "div.validation-ok (зелёный фон/текст)",
+        "error_style": "div.validation-err (красный фон/текст)",
+        "loading_indicator": "spinner_or_skeleton"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_file_name_display",
+      "name": "File Name Display: 3-data-report.kosmos.md",
+      "type": "ui_element",
+      "description": "Отображение имени редактируемого файла в режиме edit. Показывает 'Файл: <span class=\"file-name\">3-data-report.kosmos.md</span>'. Имя файла получено из параметра навигации (editFilename). В режиме create на этом месте отображается поле ввода (input) для нового имени",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "filename": "3-data-report.kosmos.md",
+        "mode": "edit",
+        "visible_in": "edit_mode_only"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_editor_textarea",
+      "name": "Editor Textarea (с содержимым 3-data-report.kosmos.md)",
+      "type": "ui_element",
+      "description": "Большое текстовое поле (textarea id='editorContent') с загруженным содержимым файла 3-data-report.kosmos.md — сценарий 'Анализ данных и отчёт' (3 задачи, 5 шагов). Содержимое получено через GET /files/:filename и активно для редактирования. В момент перехода (валидация/сохранение) текстареа может быть в состоянии readonly/disabled",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\3-data-report.kosmos.md"
+      ],
+      "metadata": {
+        "edit_mode": true,
+        "loaded_from": "GET /files/:filename",
+        "scenario": "3-data-report.kosmos.md (Анализ данных и отчёт)",
+        "tasks_count": 3,
+        "steps_count": 5,
+        "transition_state": "may_be_locked_during_operation"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_edit_mode_state",
+      "name": "Editor Edit Mode State (сценарий 3, transition)",
+      "type": "concept",
+      "description": "Режим редактирования существующего файла (this.mode === 'edit') для файла '3-data-report.kosmos.md'. На скриншоте показан в момент выполнения асинхронной операции (валидация POST /files/validate или сохранение PUT /files/:filename) с визуальной обратной связью — спиннером, анимацией или изменением состояния кнопок",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js"
+      ],
+      "metadata": {
+        "mode": "edit",
+        "filename": "3-data-report.kosmos.md",
+        "save_method": "PUT /files/:filename",
+        "load_method": "GET /files/:filename",
+        "current_operation": "validate_or_save",
+        "has_animation": true
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_validation_spinner",
+      "name": "Validation Loading Spinner/Indicator",
+      "type": "ui_element",
+      "description": "Анимированный индикатор загрузки (спиннер, skeleton или progress bar) в области validationResult, отображаемый во время выполнения async-запроса POST /files/validate. Показывает пользователю, что валидация выполняется. После завершения спиннер заменяется на результат (ok/err) с анимацией появления",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\styles.css"
+      ],
+      "metadata": {
+        "type": "css_spinner_or_skeleton",
+        "trigger": "EditorPage.validate() called",
+        "duration": "async_request_duration",
+        "replaced_by": "validation_ok_or_error_result"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_validation_result_ok",
+      "name": "Validation Result: OK (✓ Валидация пройдена)",
+      "type": "ui_element",
+      "description": "Результат успешной валидации .kosmos.md файла '3-data-report.kosmos.md'. Отображается в div.validation-ok с зелёным оформлением: ✓ Валидация пройдена (или ✓ Структура файла корректна). Появляется с анимацией fadeIn/slideDown после завершения POST /files/validate",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\styles.css"
+      ],
+      "metadata": {
+        "result_type": "success",
+        "css_class": "validation-ok",
+        "animation": "fadeIn_slideDown",
+        "icon": "✓"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_validation_result_err",
+      "name": "Validation Result: Error (✗ Ошибка валидации)",
+      "type": "ui_element",
+      "description": "Результат неуспешной валидации .kosmos.md файла с описанием ошибки. Отображается в div.validation-err с красным/оранжевым оформлением: ✗ <текст ошибки> (например, отсутствует секция, невалидный чекбокс, ошибка в формате). Появляется с анимацией fadeIn/slideDown",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\styles.css"
+      ],
+      "metadata": {
+        "result_type": "error",
+        "css_class": "validation-err",
+        "animation": "fadeIn_slideDown",
+        "icon": "✗"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_save_transition",
+      "name": "Save Operation Transition (Сохранение → Задача)",
+      "type": "concept",
+      "description": "Анимация/переход при сохранении отредактированного файла: нажатие '💾 Сохранить' → PUT /files/3-data-report.kosmos.md → спиннер на кнопке/тост 'Сохранение...' → успешное сохранение → перенаправление на страницу задачи (app.navigate('task', '3-data-report.kosmos.md')). Может включать анимацию затемнения/перехода между страницами",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\editor.js",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\app.js"
+      ],
+      "metadata": {
+        "operation": "save_file",
+        "http_method": "PUT",
+        "endpoint": "/files/:filename",
+        "post_save": "app.navigate('task', filename)",
+        "animation_type": "button_spinner_and_page_transition"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён — соединение не установлено (сервер не запущен или WebSocket не инициализирован)",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — проверка AI-сервиса через /api/ai-test ещё не выполнялась или не завершена",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_check_ai_button",
+      "name": "Button: Проверить AI",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через API endpoint /api/ai-test. CSS-класс btn-secondary, ширина 100%",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test"
+      }
+    },
+    {
+      "id": "screenshot-test-3-edit-transition_kosmos_scenario",
+      "name": "3-data-report.kosmos.md (Анализ данных и отчёт)",
+      "type": "document",
+      "description": "Сложный мульти-задачный сценарий формата .kosmos.md: 3 задачи (Генерация данных, Статистический анализ, Формирование отчёта) и 5 шагов. Демонстрирует генерацию датасета, валидацию, IQR-анализ аномалий и генерацию текстового отчёта. На скриншоте — файл открыт в редакторе в процессе анимации/перехода",
+      "file_type": "document",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\demo\\scenarios\\3-data-report.kosmos.md"
+      ],
+      "metadata": {
+        "complexity": "Сложный",
+        "tasks_count": 3,
+        "steps_count": 5,
+        "title": "Анализ данных и отчёт"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-3-edit-transition_app",
+      "to": "screenshot-test-3-edit-transition_editor_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Приложение kosmos-task содержит страницу редактора, показанную в момент анимации/перехода редактирования"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_sidebar",
+      "to": "screenshot-test-3-edit-transition_editor_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Пункт 'Редактор' в сайдбаре активен — пользователь находится на странице редактора"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_sidebar",
+      "to": "screenshot-test-3-edit-transition_editor_nav_item",
+      "relation": "has_active_item",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "В сайдбаре пункт 'Редактор' подсвечен как активный"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_page_header",
+      "relation": "has_header",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Страница редактора содержит заголовок с кнопкой назад и текстом '✏️ Редактирование'"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_validate_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Страница редактора включает кнопку '✓ Валидация' — на скриншоте может быть в состоянии анимации/загрузки"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_save_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Страница редактора включает кнопку '💾 Сохранить' — на скриншоте может быть в состоянии анимации сохранения"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_validation_area",
+      "relation": "contains_validation_result",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Страница редактора содержит область результата валидации, которая на скриншоте может показывать анимацию появления результата или спиннер загрузки"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_file_name_display",
+      "relation": "shows_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Страница редактора отображает имя редактируемого файла: '3-data-report.kosmos.md'"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_editor_textarea",
+      "relation": "contains_editor",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Страница редактора содержит текстовое поле (textarea) с загруженным содержимым файла '3-data-report.kosmos.md', которое может быть заблокировано во время операции"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_edit_mode_state",
+      "relation": "is_in_mode",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Страница редактора находится в режиме редактирования (this.mode === 'edit') для файла '3-data-report.kosmos.md'"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_edit_mode_state",
+      "to": "screenshot-test-3-edit-transition_validation_spinner",
+      "relation": "triggers_animation",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Асинхронная операция валидации/сохранения в режиме edit активирует анимацию спиннера/индикатора загрузки в UI"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_validation_spinner",
+      "to": "screenshot-test-3-edit-transition_validation_result_ok",
+      "relation": "transitions_to_on_success",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "После успешного завершения валидации спиннер заменяется на результат '✓ Валидация пройдена' с анимацией появления"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_validation_spinner",
+      "to": "screenshot-test-3-edit-transition_validation_result_err",
+      "relation": "transitions_to_on_error",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.90,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "При ошибке валидации спиннер заменяется на результат с описанием ошибки и анимацией появления"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_validate_button",
+      "to": "screenshot-test-3-edit-transition_validation_spinner",
+      "relation": "invokes",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Нажатие кнопки '✓ Валидация' запускает EditorPage.validate(), что отображает спиннер загрузки в области валидации"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_save_button",
+      "to": "screenshot-test-3-edit-transition_save_transition",
+      "relation": "invokes",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Нажатие кнопки '💾 Сохранить' запускает операцию сохранения (PUT /files/:filename) с анимацией"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_save_transition",
+      "to": "screenshot-test-3-edit-transition_editor_textarea",
+      "relation": "locks_editor",
+      "relation_type": "INFERRED",
+      "confidence_score": 0.88,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Во время сохранения текстовый редактор может быть заблокирован (disabled) для предотвращения изменений"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_textarea",
+      "to": "screenshot-test-3-edit-transition_kosmos_scenario",
+      "relation": "loads_file",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Текстовый редактор загрузил содержимое файла '3-data-report.kosmos.md' (сценарий 'Анализ данных и отчёт') для редактирования"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_validation_result_ok",
+      "relation": "may_show",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "На скриншоте может отображаться результат успешной валидации с зелёной анимацией появления"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_editor_page",
+      "to": "screenshot-test-3-edit-transition_validation_result_err",
+      "relation": "may_show",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "На скриншоте может отображаться результат ошибки валидации с красной анимацией появления"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_sidebar",
+      "to": "screenshot-test-3-edit-transition_ws_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Футер сайдбара показывает статус WebSocket: ⚪ не подключён"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_sidebar",
+      "to": "screenshot-test-3-edit-transition_ai_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Футер сайдбара показывает статус AI: ⚪ не проверен"
+    },
+    {
+      "from": "screenshot-test-3-edit-transition_sidebar",
+      "to": "screenshot-test-3-edit-transition_check_ai_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png",
+      "description": "Футер сайдбара содержит кнопку 'Проверить AI' для проверки AI-сервиса"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_edit_transition_validate_flow_3",
+      "type": "sequence",
+      "description": "Последовательность анимации/перехода при валидации файла '3-data-report.kosmos.md' в редакторе: пользователь нажимает '✓ Валидация' → кнопка переходит в состояние загрузки → validation area показывает спиннер (async POST /files/validate) → спиннер заменяется на результат (успех/ошибка) с анимацией fadeIn/slideDown → кнопка возвращается в активное состояние",
+      "nodes": [
+        "screenshot-test-3-edit-transition_validate_button",
+        "screenshot-test-3-edit-transition_validation_spinner",
+        "screenshot-test-3-edit-transition_validation_area",
+        "screenshot-test-3-edit-transition_validation_result_ok",
+        "screenshot-test-3-edit-transition_validation_result_err",
+        "screenshot-test-3-edit-transition_edit_mode_state"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png"
+    },
+    {
+      "id": "hyper_edit_transition_save_flow_3",
+      "type": "sequence",
+      "description": "Последовательность анимации/перехода при сохранении отредактированного файла '3-data-report.kosmos.md': пользователь нажимает '💾 Сохранить' → текст кнопки меняется на '⏳ Сохранение...' или показывается спиннер → editor textarea блокируется → async PUT /files/:filename → при успехе анимация перехода на страницу задачи app.navigate('task', filename) → при ошибке показывается сообщение об ошибке",
+      "nodes": [
+        "screenshot-test-3-edit-transition_save_button",
+        "screenshot-test-3-edit-transition_save_transition",
+        "screenshot-test-3-edit-transition_editor_textarea",
+        "screenshot-test-3-edit-transition_kosmos_scenario"
+      ],
+      "confidence_score": 0.91,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png"
+    },
+    {
+      "id": "hyper_edit_transition_sidebar_state_3",
+      "type": "composition",
+      "description": "Состав сайдбара UI Panel во время анимации редактирования сценария 3: навигация (Редактор активен), статус WS (отключён), статус AI (не проверен), кнопка проверки AI",
+      "nodes": [
+        "screenshot-test-3-edit-transition_sidebar",
+        "screenshot-test-3-edit-transition_editor_nav_item",
+        "screenshot-test-3-edit-transition_ws_status",
+        "screenshot-test-3-edit-transition_ai_status",
+        "screenshot-test-3-edit-transition_check_ai_button"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-3-edit-transition.png"
+    }
+  ]
+}

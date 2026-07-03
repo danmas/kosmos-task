@@ -1,0 +1,3925 @@
+{
+  "nodes": [
+    {
+      "id": "demo_serve",
+      "label": "serve.js",
+      "file_type": "code",
+      "source_file": "demo/serve.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "demo_serve_http",
+      "label": "http",
+      "file_type": "code",
+      "source_file": "demo/serve.js",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "demo_serve_fs",
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "demo/serve.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "demo_serve_path",
+      "label": "path",
+      "file_type": "code",
+      "source_file": "demo/serve.js",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "demo_serve_mime_types",
+      "label": "MIME_TYPES",
+      "file_type": "code",
+      "source_file": "demo/serve.js",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "demo_serve_server",
+      "label": "server",
+      "file_type": "code",
+      "source_file": "demo/serve.js",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli",
+      "label": "kosmos-runner-cli.js",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_fs",
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_vm",
+      "label": "vm",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_readline",
+      "label": "readline",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_args",
+      "label": "args",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_novalidate",
+      "label": "noValidate",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_filepath",
+      "label": "filePath",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_content",
+      "label": "content",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_validatekosmosfile",
+      "label": "validateKosmosFile()",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_parsesteps",
+      "label": "parseSteps()",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_steps",
+      "label": "steps",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L124",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_rl",
+      "label": "rl",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L134",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_processstep",
+      "label": "processStep()",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L141",
+      "_origin": "ast"
+    },
+    {
+      "id": "kosmos_runner_cli_updatefileandprogress",
+      "label": "updateFileAndProgress()",
+      "file_type": "code",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L249",
+      "_origin": "ast"
+    },
+    {
+      "id": "package",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_description",
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_main",
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_start",
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_server",
+      "label": "server",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_start_node",
+      "label": "start:node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_server_node",
+      "label": "server:node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_factory",
+      "label": "factory",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_keywords",
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_license",
+      "label": "license",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_cors",
+      "label": "cors",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_dotenv",
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_express",
+      "label": "express",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_ws",
+      "label": "ws",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index",
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_express",
+      "label": "express",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_cors",
+      "label": "cors",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_path",
+      "label": "path",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_http",
+      "label": "http",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_filesrouter",
+      "label": "filesRouter",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_executerouter",
+      "label": "executeRouter",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_llmrouter",
+      "label": "llmRouter",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_app",
+      "label": "app",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_server",
+      "label": "server",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L107",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_index_setupwebsocket",
+      "label": "{ setupWebSocket }",
+      "file_type": "code",
+      "source_file": "server/index.js",
+      "source_location": "L108",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_execute",
+      "label": "execute.js",
+      "file_type": "code",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_execute_express",
+      "label": "express",
+      "file_type": "code",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_execute_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_execute_fileutils",
+      "label": "fileUtils",
+      "file_type": "code",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_execute_parser",
+      "label": "parser",
+      "file_type": "code",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_execute_executor",
+      "label": "executor",
+      "file_type": "code",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_files",
+      "label": "files.js",
+      "file_type": "code",
+      "source_file": "server/routes/files.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_files_express",
+      "label": "express",
+      "file_type": "code",
+      "source_file": "server/routes/files.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_files_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "server/routes/files.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_files_fileutils",
+      "label": "fileUtils",
+      "file_type": "code",
+      "source_file": "server/routes/files.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_files_parser",
+      "label": "parser",
+      "file_type": "code",
+      "source_file": "server/routes/files.js",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_files_validator",
+      "label": "validator",
+      "file_type": "code",
+      "source_file": "server/routes/files.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm",
+      "label": "llm.js",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_express",
+      "label": "express",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_router",
+      "label": "router",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_fs",
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_path",
+      "label": "path",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_prompts_dir",
+      "label": "PROMPTS_DIR",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_prompt_files",
+      "label": "PROMPT_FILES",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_questions_prompt",
+      "label": "QUESTIONS_PROMPT",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_generator_prompt",
+      "label": "GENERATOR_PROMPT",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_reloadprompts",
+      "label": "reloadPrompts()",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_callllm",
+      "label": "callLLM()",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_parsequestions",
+      "label": "parseQuestions()",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L77",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_routes_llm_extractfilename",
+      "label": "extractFilename()",
+      "file_type": "code",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L90",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_executor",
+      "label": "executor.js",
+      "file_type": "code",
+      "source_file": "server/services/executor.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_executor_vm",
+      "label": "vm",
+      "file_type": "code",
+      "source_file": "server/services/executor.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_executor_executecode",
+      "label": "executeCode()",
+      "file_type": "code",
+      "source_file": "server/services/executor.js",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_executor_isexecutablelanguage",
+      "label": "isExecutableLanguage()",
+      "file_type": "code",
+      "source_file": "server/services/executor.js",
+      "source_location": "L71",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_parser",
+      "label": "parser.js",
+      "file_type": "code",
+      "source_file": "server/services/parser.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_parser_parsemetadata",
+      "label": "parseMetadata()",
+      "file_type": "code",
+      "source_file": "server/services/parser.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_parser_parsegoal",
+      "label": "parseGoal()",
+      "file_type": "code",
+      "source_file": "server/services/parser.js",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_parser_parsetasks",
+      "label": "parseTasks()",
+      "file_type": "code",
+      "source_file": "server/services/parser.js",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_parser_parsesteps",
+      "label": "parseSteps()",
+      "file_type": "code",
+      "source_file": "server/services/parser.js",
+      "source_location": "L71",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_parser_parseprogress",
+      "label": "parseProgress()",
+      "file_type": "code",
+      "source_file": "server/services/parser.js",
+      "source_location": "L135",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_parser_parsekosmosfile",
+      "label": "parseKosmosFile()",
+      "file_type": "code",
+      "source_file": "server/services/parser.js",
+      "source_location": "L152",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_validator",
+      "label": "validator.js",
+      "file_type": "code",
+      "source_file": "server/services/validator.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_services_validator_validatekosmosfile",
+      "label": "validateKosmosFile()",
+      "file_type": "code",
+      "source_file": "server/services/validator.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils",
+      "label": "file-utils.js",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_fs",
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_path",
+      "label": "path",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_getdatadir",
+      "label": "getDataDir()",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_listkosmosfiles",
+      "label": "listKosmosFiles()",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_readfile",
+      "label": "readFile()",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L44",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_writefile",
+      "label": "writeFile()",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L57",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_deletefile",
+      "label": "deleteFile()",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L72",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_fileexists",
+      "label": "fileExists()",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L86",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_utils_file_utils_createbackup",
+      "label": "createBackup()",
+      "file_type": "code",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L94",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler",
+      "label": "ws-handler.js",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_websocketserver",
+      "label": "{ WebSocketServer }",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_parser",
+      "label": "parser",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_executor",
+      "label": "executor",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_fileutils",
+      "label": "fileUtils",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_setupwebsocket",
+      "label": "setupWebSocket()",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_handleexecutestep",
+      "label": "handleExecuteStep()",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L49",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_handlerunall",
+      "label": "handleRunAll()",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L80",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_handlerun",
+      "label": "handleRun()",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L162",
+      "_origin": "ast"
+    },
+    {
+      "id": "server_ws_handler_updatestepinfile",
+      "label": "updateStepInFile()",
+      "file_type": "code",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L169",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_env",
+      "label": "env.ts",
+      "file_type": "code",
+      "source_file": "src/env.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory",
+      "label": "factory.ts",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_agents_dir",
+      "label": "AGENTS_DIR",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_prompts_dir",
+      "label": "PROMPTS_DIR",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_logs_dir",
+      "label": "LOGS_DIR",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_clean",
+      "label": "clean()",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_savedebuglog",
+      "label": "saveDebugLog()",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L44",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_questions",
+      "label": "QUESTIONS",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L86",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_answers",
+      "label": "answers",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L103",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_norm",
+      "label": "norm()",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L111",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_filesfilter",
+      "label": "filesFilter",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L112",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_loggerpath",
+      "label": "loggerPath",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L113",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_extra",
+      "label": "extra",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L116",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_questionsdata",
+      "label": "questionsData",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L119",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_stage1messages",
+      "label": "stage1Messages",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L124",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_debuglog",
+      "label": "debugLog",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L137",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_agentpath",
+      "label": "agentPath",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L152",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_confirm",
+      "label": "confirm",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L157",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_logpath",
+      "label": "logPath",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L163",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_factory_randomword",
+      "label": "randomWord()",
+      "file_type": "code",
+      "source_file": "src/factory.ts",
+      "source_location": "L169",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm",
+      "label": "llm.ts",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_message",
+      "label": "Message",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_historyentry",
+      "label": "HistoryEntry",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_history_file",
+      "label": "HISTORY_FILE",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_loadhistory",
+      "label": "loadHistory()",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_savehistory",
+      "label": "saveHistory()",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_callllm",
+      "label": "callLLM()",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_llm_getmockresponse",
+      "label": "getMockResponse()",
+      "file_type": "code",
+      "source_file": "src/llm.ts",
+      "source_location": "L103",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory",
+      "label": "task-factory.ts",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_dirname",
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_prompts_dir",
+      "label": "PROMPTS_DIR",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_logs_dir",
+      "label": "LOGS_DIR",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_output_dir",
+      "label": "OUTPUT_DIR",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_clean",
+      "label": "clean()",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_savedebuglog",
+      "label": "saveDebugLog()",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_parsequestions",
+      "label": "parseQuestions()",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L84",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_stage1messages",
+      "label": "stage1Messages",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L117",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_questions",
+      "label": "questions",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L123",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_answersdata",
+      "label": "answersData",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L132",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_stage2messages",
+      "label": "stage2Messages",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L158",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_titlematch",
+      "label": "titleMatch",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L167",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_outputpath",
+      "label": "outputPath",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L172",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_debuglog",
+      "label": "debugLog",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L178",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_task_factory_runnow",
+      "label": "runNow",
+      "file_type": "code",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L201",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger",
+      "label": "logger.ts",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_loglevel",
+      "label": "LogLevel",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_loggeroptions",
+      "label": "LoggerOptions",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_level_priority",
+      "label": "LEVEL_PRIORITY",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_level_colors",
+      "label": "LEVEL_COLORS",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger",
+      "label": "Logger",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_constructor",
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_shouldlog",
+      "label": ".shouldLog()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_formatmessage",
+      "label": ".formatMessage()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L40",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_debug",
+      "label": ".debug()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L51",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_info",
+      "label": ".info()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L57",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_warn",
+      "label": ".warn()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L63",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_error",
+      "label": ".error()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L69",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_setlevel",
+      "label": ".setLevel()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_utils_logger_logger_child",
+      "label": ".child()",
+      "file_type": "code",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L79",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_app",
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "ui/app.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_app_app",
+      "label": "app",
+      "file_type": "code",
+      "source_file": "ui/app.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_dashboard",
+      "label": "dashboard.js",
+      "file_type": "code",
+      "source_file": "ui/pages/dashboard.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_dashboard_dashboardpage",
+      "label": "DashboardPage",
+      "file_type": "code",
+      "source_file": "ui/pages/dashboard.js",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_editor",
+      "label": "editor.js",
+      "file_type": "code",
+      "source_file": "ui/pages/editor.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_editor_editorpage",
+      "label": "EditorPage",
+      "file_type": "code",
+      "source_file": "ui/pages/editor.js",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_factory",
+      "label": "factory.js",
+      "file_type": "code",
+      "source_file": "ui/pages/factory.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_factory_factorypage",
+      "label": "FactoryPage",
+      "file_type": "code",
+      "source_file": "ui/pages/factory.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_history",
+      "label": "history.js",
+      "file_type": "code",
+      "source_file": "ui/pages/history.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_history_historypage",
+      "label": "HistoryPage",
+      "file_type": "code",
+      "source_file": "ui/pages/history.js",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_task",
+      "label": "task.js",
+      "file_type": "code",
+      "source_file": "ui/pages/task.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "ui_pages_task_taskpage",
+      "label": "TaskPage",
+      "file_type": "code",
+      "source_file": "ui/pages/task.js",
+      "source_location": "L5",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "demo_serve",
+      "target": "http",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "demo_serve",
+      "target": "demo_serve_http",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "demo_serve",
+      "target": "fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "demo_serve",
+      "target": "demo_serve_fs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "demo_serve",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "demo_serve",
+      "target": "demo_serve_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "demo_serve",
+      "target": "demo_serve_mime_types",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "demo_serve",
+      "target": "demo_serve_server",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "demo/serve.js",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_fs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "vm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_vm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "readline",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_readline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_args",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_novalidate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_filepath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_content",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_validatekosmosfile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_parsesteps",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_steps",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_rl",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_processstep",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli",
+      "target": "kosmos_runner_cli_updatefileandprogress",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "kosmos_runner_cli_processstep",
+      "target": "kosmos_runner_cli_updatefileandprogress",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "kosmos-runner-cli.js",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_description",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_server",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_start_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_server_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_factory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_keywords",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "package_keywords",
+      "target": "ref_kosmos",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_keywords",
+      "target": "ref_task",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_keywords",
+      "target": "ref_executable",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_keywords",
+      "target": "ref_research",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_keywords",
+      "target": "ref_markdown",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package",
+      "target": "package_license",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_cors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_cors",
+      "target": "cors",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_dotenv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_dotenv",
+      "target": "dotenv",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_express",
+      "target": "express",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_ws",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_ws",
+      "target": "ws",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "server_index",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "cors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_cors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "http",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_http",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_routes_files",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_filesrouter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_routes_execute",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_executerouter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_routes_llm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_llmrouter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_server",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_ws_handler",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_ws_handler_setupwebsocket",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "server_index",
+      "target": "server_index_setupwebsocket",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_routes_execute_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_routes_execute_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_utils_file_utils",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_routes_execute_fileutils",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_services_parser",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_routes_execute_parser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_services_executor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_execute",
+      "target": "server_routes_execute_executor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/execute.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_routes_files_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_routes_files_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_utils_file_utils",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_routes_files_fileutils",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_services_parser",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_routes_files_parser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_services_validator",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_files",
+      "target": "server_routes_files_validator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/files.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "express",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_express",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_fs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_prompts_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_prompt_files",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_questions_prompt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_generator_prompt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_reloadprompts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_callllm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_parsequestions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_routes_llm_extractfilename",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "server_routes_llm",
+      "target": "server_utils_file_utils",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/llm.js",
+      "source_location": "L304",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_executor",
+      "target": "vm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/executor.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_executor",
+      "target": "server_services_executor_vm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/executor.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_executor",
+      "target": "server_services_executor_executecode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/executor.js",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_executor",
+      "target": "server_services_executor_isexecutablelanguage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/executor.js",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_executor",
+      "target": "server_services_executor_executecode",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/executor.js",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_executor",
+      "target": "server_services_executor_isexecutablelanguage",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/executor.js",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsemetadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsegoal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsetasks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsesteps",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parseprogress",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsekosmosfile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser_parsekosmosfile",
+      "target": "server_services_parser_parsemetadata",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser_parsekosmosfile",
+      "target": "server_services_parser_parsegoal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser_parsekosmosfile",
+      "target": "server_services_parser_parsetasks",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser_parsekosmosfile",
+      "target": "server_services_parser_parsesteps",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser_parsekosmosfile",
+      "target": "server_services_parser_parseprogress",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsemetadata",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsegoal",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsetasks",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsesteps",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parseprogress",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_parser",
+      "target": "server_services_parser_parsekosmosfile",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/parser.js",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_validator",
+      "target": "server_services_validator_validatekosmosfile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/validator.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_services_validator",
+      "target": "server_services_validator_validatekosmosfile",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/services/validator.js",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_fs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_listkosmosfiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_readfile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_writefile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_deletefile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_fileexists",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_createbackup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils_listkosmosfiles",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils_readfile",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils_writefile",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils_deletefile",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils_fileexists",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils_createbackup",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_getdatadir",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_listkosmosfiles",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_readfile",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_writefile",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_deletefile",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_fileexists",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "server_utils_file_utils",
+      "target": "server_utils_file_utils_createbackup",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/utils/file-utils.js",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "ws",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_websocketserver",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_services_parser",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_parser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_services_executor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_executor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_utils_file_utils",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_fileutils",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_setupwebsocket",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_handleexecutestep",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_handlerunall",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_handlerun",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_updatestepinfile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler_handlerunall",
+      "target": "server_ws_handler_updatestepinfile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler_handlerun",
+      "target": "server_ws_handler_handlerunall",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "server_ws_handler",
+      "target": "server_ws_handler_setupwebsocket",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "source_file": "server/ws-handler.js",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "c_erv_projects_ex_kosmos_task_llm_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "c_erv_projects_ex_kosmos_task_llm_callllm",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "bun",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_agents_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_prompts_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_logs_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_clean",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_savedebuglog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_questions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_answers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_norm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_filesfilter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_loggerpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_extra",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_questionsdata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_stage1messages",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_debuglog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_agentpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_confirm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_logpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory",
+      "target": "src_factory_randomword",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory_savedebuglog",
+      "target": "src_factory_clean",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/factory.ts",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_env",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "c_erv_projects_ex_kosmos_task_src_env_llm_base_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "c_erv_projects_ex_kosmos_task_src_env_llm_api_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "c_erv_projects_ex_kosmos_task_src_env_llm_model",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_message",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_historyentry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_history_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_loadhistory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_savehistory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_callllm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm",
+      "target": "src_llm_getmockresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_savehistory",
+      "target": "src_llm_loadhistory",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_callllm",
+      "target": "src_llm_getmockresponse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "src_llm_callllm",
+      "target": "src_llm_savehistory",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/llm.ts",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_llm",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_llm_callllm",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_env",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "c_erv_projects_ex_kosmos_task_src_env_data_dir",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "url",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_dirname",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_prompts_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_logs_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_output_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_clean",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_savedebuglog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_parsequestions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_stage1messages",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_questions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_answersdata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_stage2messages",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_titlematch",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_outputpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_debuglog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory",
+      "target": "src_task_factory_runnow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory_savedebuglog",
+      "target": "src_task_factory_clean",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/task-factory.ts",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger",
+      "target": "src_utils_logger_loglevel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger",
+      "target": "src_utils_logger_loggeroptions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger",
+      "target": "src_utils_logger_level_priority",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger",
+      "target": "src_utils_logger_level_colors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger",
+      "target": "src_utils_logger_logger",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_constructor",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_shouldlog",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_formatmessage",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_debug",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_info",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_warn",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_setlevel",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger",
+      "target": "src_utils_logger_logger_child",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger",
+      "target": "src_utils_logger_logger",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_debug",
+      "target": "src_utils_logger_logger_shouldlog",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_debug",
+      "target": "src_utils_logger_logger_formatmessage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_info",
+      "target": "src_utils_logger_logger_shouldlog",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_info",
+      "target": "src_utils_logger_logger_formatmessage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_warn",
+      "target": "src_utils_logger_logger_shouldlog",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_warn",
+      "target": "src_utils_logger_logger_formatmessage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_error",
+      "target": "src_utils_logger_logger_shouldlog",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "src_utils_logger_logger_error",
+      "target": "src_utils_logger_logger_formatmessage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/logger.ts",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_app",
+      "target": "ui_app_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui/app.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_pages_dashboard",
+      "target": "ui_pages_dashboard_dashboardpage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui/pages/dashboard.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_pages_editor",
+      "target": "ui_pages_editor_editorpage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui/pages/editor.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_pages_factory",
+      "target": "ui_pages_factory_factorypage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui/pages/factory.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_pages_history",
+      "target": "ui_pages_history_historypage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui/pages/history.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_pages_task",
+      "target": "ui_pages_task_taskpage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui/pages/task.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_factory_savedebuglog",
+      "target": "server_utils_file_utils_writefile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/factory.ts",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "src_task_factory_savedebuglog",
+      "target": "server_utils_file_utils_writefile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/task-factory.ts",
+      "source_location": "L55",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

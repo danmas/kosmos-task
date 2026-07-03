@@ -5,6 +5,7 @@
 const DashboardPage = {
     files: [],
     filter: 'all', // all | in progress | done
+    dataDir: '',
 
     async render(container) {
         container.innerHTML = `
@@ -13,6 +14,12 @@ const DashboardPage = {
                 <div class="btn-group">
                     <button class="btn btn-primary" onclick="app.navigate('editor')">+ Новая задача</button>
                 </div>
+            </div>
+            <div class="data-dir-panel" id="dataDirPanel" style="padding:8px 16px;background:var(--bg2, #1e1e2e);border-bottom:1px solid var(--border, #333);display:flex;align-items:center;gap:8px;font-size:13px;">
+                <span style="color:var(--text2, #aaa);white-space:nowrap;">📁 Папка данных:</span>
+                <input id="dataDirInput" type="text" value=""
+                    style="flex:1;background:var(--bg3, #2a2a3a);border:1px solid var(--border, #444);border-radius:4px;padding:4px 8px;color:var(--text, #eee);font-size:13px;font-family:monospace;">
+                <button class="btn btn-secondary" id="dataDirSaveBtn" onclick="DashboardPage.saveDataDir()" style="padding:4px 12px;font-size:12px;white-space:nowrap;">💾 Сохранить</button>
             </div>
             <div class="page-body">
                 <div class="filter-tabs" id="filterTabs">
@@ -24,7 +31,39 @@ const DashboardPage = {
             </div>
         `;
 
-        await this.loadFiles();
+        await Promise.all([this.loadDataDir(), this.loadFiles()]);
+    },
+
+    async loadDataDir() {
+        try {
+            const res = await app.api('/config/data-dir');
+            if (res.success) {
+                this.dataDir = res.dataDir;
+                const input = document.getElementById('dataDirInput');
+                if (input) input.value = res.dataDir;
+            }
+        } catch {}
+    },
+
+    async saveDataDir() {
+        const input = document.getElementById('dataDirInput');
+        const newPath = input ? input.value.trim() : '';
+        if (!newPath) return;
+
+        const res = await app.api('/config/data-dir', {
+            method: 'PUT',
+            body: { dataDir: newPath }
+        });
+
+        if (res.success) {
+            this.dataDir = res.dataDir;
+            if (input) input.value = res.dataDir;
+            app.toast('Путь сохранён: ' + res.dataDir, 'success');
+            // Перезагружаем список файлов из новой папки
+            await this.loadFiles();
+        } else {
+            app.toast('Ошибка: ' + res.error, 'error');
+        }
     },
 
     async loadFiles() {

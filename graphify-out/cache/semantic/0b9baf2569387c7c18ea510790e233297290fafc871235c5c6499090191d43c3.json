@@ -1,0 +1,1 @@
+{"nodes": [], "edges": [{"from": "fmt_test_example_kosmos", "to": "tech_kosmos_runner_cli", "relation": "validates", "relation_type": "EXTRACTED", "confidence_score": 1.0, "source_file": "README_progress.md", "description": "test-example.kosmos.md validates the runner (2/2 passed)"}], "hyperedges": []}

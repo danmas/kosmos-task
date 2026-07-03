@@ -1,0 +1,444 @@
+{
+  "chunk_num": 25,
+  "total_chunks": 27,
+  "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+  "description": "Knowledge graph extracted from screenshot-test-7-reset-confirm.png — Test 7: модальное окно подтверждения сброса (Reset Confirm Dialog) на странице задачи (TaskPage) kosmos-task SPA UI. Показывает интерфейс задачи с наложенным модальным диалогом подтверждения сброса: сообщение 'Вы уверены, что хотите сбросить прогресс выполнения всех шагов? Это действие нельзя отменить.' и кнопки 'Да, сбросить' (подтверждение) и 'Отмена' (закрыть диалог). Фон (оверлей) затемнён. Панель выполнения под диалогом показывает текущий прогресс до сброса.",
+  "file_type": "image",
+  "nodes": [
+    {
+      "id": "screenshot-test-7-reset-confirm_app",
+      "name": "kosmos-task Application",
+      "type": "concept",
+      "description": "Веб-приложение kosmos-task v2.0 — SPA UI панель для управления .kosmos.md задачами. На данном скриншоте — страница просмотра задачи (TaskPage) с открытым модальным окном подтверждения сброса (Reset Confirm Dialog). Отображает двухпанельный layout и сайдбар с навигацией под затемнённым оверлеем.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_sidebar",
+      "name": "Sidebar Navigation (под оверлеем)",
+      "type": "concept",
+      "description": "Левая боковая панель навигации с логотипом 'kosmos-task' (blue accent), версией 'v2.0 • UI Panel' и пунктами: 📋 Задачи (активен), 🏭 Фабрика, ✏️ Редактор, 📦 История. Внизу: статус WebSocket (⚪ WS: не подключён), статус AI (⚪ AI: не проверен), кнопка 'Проверить AI'. Панель видна сквозь затемнённый оверлей модального окна.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "nav_items": "dashboard, factory, editor, history",
+        "active_item": "dashboard (Задачи)",
+        "overlay_state": "visible_under_modal"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_task_page",
+      "name": "TaskPage — просмотр задачи с диалогом подтверждения сброса",
+      "type": "page",
+      "description": "Страница просмотра задачи (.kosmos.md файла) с открытым модальным диалогом подтверждения сброса. Двухпанельный layout: слева отрендеренный markdown-документ задачи, справа панель выполнения. Поверх контента — затемняющий оверлей и модальное окно подтверждения сброса.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "route": "#task/<filename>",
+        "panels": "task-file (left), task-exec (right)",
+        "state": "pre_reset_confirm",
+        "dialog": "reset_confirm_modal_open"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_modal_overlay",
+      "name": "Модальный оверлей (затемнение фона)",
+      "type": "ui_element",
+      "description": "Полупрозрачный затемняющий оверлей (полупрозрачный чёрный фон, сlass modal-overlay), который накладывается поверх всего интерфейса страницы при открытии модального окна подтверждения сброса. Оверлей блокирует взаимодействие с элементами под ним. При клике на оверлей обычно происходит закрытие модального окна (отмена сброса).",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "overlay_opacity": "~50%",
+        "click_action": "close_modal / cancel_reset",
+        "z_index": "above_content"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_modal_dialog",
+      "name": "Modal Dialog — подтверждение сброса (Reset Confirm)",
+      "type": "ui_element",
+      "description": "Модальное диалоговое окно подтверждения операции сброса (Reset) на панели выполнения задачи. Содержит заголовок '↺ Подтверждение сброса' (или 'Сброс шагов'), иконку предупреждения ⚠, текст-предупреждение: 'Вы уверены, что хотите сбросить прогресс выполнения всех шагов? Это действие нельзя отменить. Все результаты выполнения будут удалены.' и две кнопки: 'Да, сбросить' (btn-danger/btn-warning) и 'Отмена' (btn-secondary).",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "modal_title": "↺ Подтверждение сброса",
+        "confirm_button_text": "Да, сбросить",
+        "cancel_button_text": "Отмена",
+        "modal_type": "confirm_dialog",
+        "icon": "⚠",
+        "action": "confirm_reset",
+        "alternative_action": "cancel / close"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_confirm_button",
+      "name": "Button: Да, сбросить (btn-danger)",
+      "type": "ui_element",
+      "description": "Кнопка подтверждения сброса внутри модального диалога. Стиль btn-danger (красная) или btn-warning (оранжевая). При нажатии запускает функцию сброса: вызывает resetTaskExecution(), которая очищает результаты выполнения всех шагов, сбрасывает прогресс до 0%, возвращает чекбоксы в неотмеченное состояние и закрывает модальное окно.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "action": "resetTaskExecution()",
+        "button_style": "btn-danger",
+        "state": "enabled",
+        "post_click_state": "page_transitions_to_post_reset"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_cancel_button",
+      "name": "Button: Отмена (btn-secondary)",
+      "type": "ui_element",
+      "description": "Кнопка отмены сброса внутри модального диалога. Стиль btn-secondary (серая). При нажатии закрывает модальное окно без выполнения сброса — панель выполнения остаётся в текущем состоянии с сохранёнными результатами шагов.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "action": "closeModal() / cancelReset()",
+        "button_style": "btn-secondary",
+        "state": "enabled",
+        "result": "no_change_to_execution_state"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_file_panel",
+      "name": "Левая панель — rendered markdown задачи (под оверлеем)",
+      "type": "ui_element",
+      "description": "Левая панель страницы просмотра задачи. Отображает отрендеренный .kosmos.md документ: заголовок '#...', статус задачи, прогресс-бар, раздел цели, задачи с шагами, executable-блоки JS и секции результата/верификации. Панель видна сквозь затемняющий оверлей модального окна подтверждения сброса.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-file",
+        "visibility": "behind_modal_overlay",
+        "state": "unchanged"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_exec_panel",
+      "name": "Правая панель — выполнение шагов (до сброса, под оверлеем)",
+      "type": "ui_element",
+      "description": "Правая панель выполнения шагов, видимая сквозь затемняющий оверлей модального окна. До сброса панель показывает текущий прогресс выполнения (какой-то процент >0%), выполненные шаги с зелёными индикаторами и результатами. Кнопки управления ('▶ Запустить все', '↺ Сброс') заблокированы оверлеем. Содержимое панели сохраняется до момента подтверждения сброса.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "class": "task-exec",
+        "visibility": "behind_modal_overlay",
+        "state": "pre_reset_execution_state_preserved"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_reset_state_before",
+      "name": "Pre-Reset State (Test 7 — диалог подтверждения открыт)",
+      "type": "concept",
+      "description": "Состояние UI при открытом модальном окне подтверждения сброса (Reset Confirm). Пользователь нажал на кнопку '↺ Сброс' на панели выполнения, после чего появился диалог с вопросом 'Вы уверены?'. Это состояние ПЕРЕД фактическим сбросом: результаты шагов и прогресс сохранены. Пользователь может либо подтвердить сброс (→ переход в post-reset состояние, Test 6), либо отменить (→ возврат к обычному режиму просмотра задачи).",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\pages\\task.js"
+      ],
+      "metadata": {
+        "trigger": "reset_button_click_on_exec_panel",
+        "state": "pre_reset_confirm_modal_open",
+        "dialog_type": "confirmation",
+        "next_possible_states": "post_reset (if confirmed) OR task_view (if canceled)",
+        "execution_state": "preserved_until_confirmation"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_dashboard_nav_active",
+      "name": "Nav Item: 📋 Задачи (активен, под оверлеем)",
+      "type": "concept",
+      "description": "Пункт навигации 'Задачи' в сайдбаре — подсвечен как активный (data-page='dashboard'), так как пользователь просматривает страницу задачи (TaskPage), которая относится к разделу задач. Пункт виден сквозь затемняющий оверлей.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_ws_status",
+      "name": "WS Status Indicator (⚪ не подключён, под оверлеем)",
+      "type": "ui_element",
+      "description": "Индикатор состояния WebSocket-соединения в футере сайдбара. Отображает ⚪ WS: не подключён — соединение не установлено. Виден сквозь затемняющий оверлей.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "disconnected",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_ai_status",
+      "name": "AI Status Indicator (⚪ не проверен, под оверлеем)",
+      "type": "ui_element",
+      "description": "Индикатор состояния AI-сервиса в футере сайдбара. Отображает ⚪ AI: не проверен — проверка AI-сервиса через /api/ai-test ещё не выполнялась или не завершена. Виден сквозь затемняющий оверлей.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "state": "unchecked",
+        "icon": "⚪"
+      }
+    },
+    {
+      "id": "screenshot-test-7-reset-confirm_check_ai_button",
+      "name": "Button: Проверить AI (под оверлеем)",
+      "type": "ui_element",
+      "description": "Кнопка 'Проверить AI' в футере сайдбара — вызывает app.checkAiHealth() для проверки доступности AI-сервиса через API endpoint /api/ai-test. Кнопка находится под затемняющим оверлеем, но визуально доступна.",
+      "file_type": "image",
+      "source_files": [
+        "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+        "C:\\ERV\\projects-ex\\kosmos-task\\ui\\index.html"
+      ],
+      "metadata": {
+        "action": "app.checkAiHealth()",
+        "endpoint": "/api/ai-test",
+        "visibility": "behind_modal_overlay"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "screenshot-test-7-reset-confirm_app",
+      "to": "screenshot-test-7-reset-confirm_task_page",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Приложение kosmos-task содержит страницу просмотра задачи с открытым диалогом подтверждения сброса."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_sidebar",
+      "to": "screenshot-test-7-reset-confirm_task_page",
+      "relation": "navigates_to",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Пункт '📋 Задачи' в сайдбаре активен — пользователь находится на странице просмотра задачи."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_task_page",
+      "to": "screenshot-test-7-reset-confirm_file_panel",
+      "relation": "has_left_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Страница просмотра задачи содержит левую панель с отрендеренным markdown-документом."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_task_page",
+      "to": "screenshot-test-7-reset-confirm_exec_panel",
+      "relation": "has_right_panel",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Страница просмотра задачи содержит правую панель выполнения шагов (видна под диалогом)."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_task_page",
+      "to": "screenshot-test-7-reset-confirm_modal_overlay",
+      "relation": "shows_overlay",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Поверх страницы задачи отображается затемняющий оверлей модального окна подтверждения сброса."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_modal_overlay",
+      "to": "screenshot-test-7-reset-confirm_modal_dialog",
+      "relation": "contains",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Оверлей содержит модальное диалоговое окно подтверждения сброса."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_modal_dialog",
+      "to": "screenshot-test-7-reset-confirm_confirm_button",
+      "relation": "has_confirm_button",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Модальный диалог содержит кнопку 'Да, сбросить' для подтверждения сброса."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_modal_dialog",
+      "to": "screenshot-test-7-reset-confirm_cancel_button",
+      "relation": "has_cancel_button",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Модальный диалог содержит кнопку 'Отмена' для закрытия диалога без сброса."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_confirm_button",
+      "to": "screenshot-test-7-reset-confirm_reset_state_before",
+      "relation": "triggers_reset_on_click",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Нажатие кнопки 'Да, сбросить' подтверждает сброс — запускает очистку результатов шагов и перевод панели выполнения в post-reset состояние (Test 6)."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_cancel_button",
+      "to": "screenshot-test-7-reset-confirm_reset_state_before",
+      "relation": "cancels_on_click",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Нажатие кнопки 'Отмена' закрывает модальное окно без выполнения сброса — панель выполнения остаётся в текущем состоянии."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_reset_state_before",
+      "to": "screenshot-test-7-reset-confirm_task_page",
+      "relation": "defines_state_of",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Состояние 'pre-reset confirm modal open' определяет текущий вид страницы — task page с открытым модальным окном подтверждения."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_reset_state_before",
+      "to": "screenshot-test-7-reset-confirm_modal_dialog",
+      "relation": "opens_dialog",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "В состоянии подтверждения сброса открыт модальный диалог с вопросом 'Вы уверены?' и двумя кнопками."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_sidebar",
+      "to": "screenshot-test-7-reset-confirm_dashboard_nav_active",
+      "relation": "has_active_item",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "В сайдбаре пункт 'Задачи' подсвечен как активный (виден под оверлеем)."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_sidebar",
+      "to": "screenshot-test-7-reset-confirm_ws_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Футер сайдбара показывает статус WebSocket: ⚪ не подключён (под оверлеем)."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_sidebar",
+      "to": "screenshot-test-7-reset-confirm_ai_status",
+      "relation": "shows_indicator",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Футер сайдбара показывает статус AI: ⚪ не проверен (под оверлеем)."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_sidebar",
+      "to": "screenshot-test-7-reset-confirm_check_ai_button",
+      "relation": "has_control",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Футер сайдбара содержит кнопку 'Проверить AI' (под оверлеем)."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_modal_overlay",
+      "to": "screenshot-test-7-reset-confirm_file_panel",
+      "relation": "covers",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Оверлей затемняет левую панель с markdown-документом."
+    },
+    {
+      "from": "screenshot-test-7-reset-confirm_modal_overlay",
+      "to": "screenshot-test-7-reset-confirm_exec_panel",
+      "relation": "covers",
+      "relation_type": "EXTRACTED",
+      "confidence_score": 0.96,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png",
+      "description": "Оверлей затемняет правую панель выполнения, блокируя взаимодействие."
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyper_test7_reset_confirm_layout",
+      "type": "composition",
+      "description": "Состав UI страницы просмотра задачи с открытым модальным окном подтверждения сброса (Test 7): затемняющий оверлей поверх всего интерфейса, модальный диалог с заголовком 'Подтверждение сброса', текстом-предупреждением и кнопками 'Да, сбросить' и 'Отмена', под оверлеем — двухпанельный layout (rendered markdown слева, панель выполнения с текущим прогрессом справа), сайдбар с навигацией и индикаторами статуса.",
+      "nodes": [
+        "screenshot-test-7-reset-confirm_task_page",
+        "screenshot-test-7-reset-confirm_modal_overlay",
+        "screenshot-test-7-reset-confirm_modal_dialog",
+        "screenshot-test-7-reset-confirm_confirm_button",
+        "screenshot-test-7-reset-confirm_cancel_button",
+        "screenshot-test-7-reset-confirm_file_panel",
+        "screenshot-test-7-reset-confirm_exec_panel",
+        "screenshot-test-7-reset-confirm_sidebar",
+        "screenshot-test-7-reset-confirm_ws_status",
+        "screenshot-test-7-reset-confirm_ai_status"
+      ],
+      "confidence_score": 0.93,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png"
+    },
+    {
+      "id": "hyper_test7_reset_confirm_flow",
+      "type": "sequence",
+      "description": "Последовательность операции сброса с подтверждением (Test 7 → Test 6): пользователь на странице задачи с выполненными шагами → нажатие '↺ Сброс' на панели выполнения → открытие модального окна подтверждения сброса (ТЕКУЩЕЕ СОСТОЯНИЕ, Test 7) → выбор пользователя: (A) 'Да, сбросить' → очистка результатов, сброс прогресса до 0%, возврат чекбоксов → переход в post-reset состояние (Test 6); (B) 'Отмена' → закрытие диалога, возврат к обычному просмотру задачи без изменений.",
+      "nodes": [
+        "screenshot-test-7-reset-confirm_reset_state_before",
+        "screenshot-test-7-reset-confirm_modal_dialog",
+        "screenshot-test-7-reset-confirm_confirm_button",
+        "screenshot-test-7-reset-confirm_cancel_button",
+        "screenshot-test-7-reset-confirm_exec_panel"
+      ],
+      "confidence_score": 0.92,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png"
+    },
+    {
+      "id": "hyper_test7_sidebar_under_overlay",
+      "type": "composition",
+      "description": "Состав сайдбара при открытом модальном окне подтверждения сброса (Test 7): навигация (Задачи активны) под затемняющим оверлеем, статус WS (отключён), статус AI (не проверен), кнопка проверки AI — все элементы визуально приглушены оверлеем.",
+      "nodes": [
+        "screenshot-test-7-reset-confirm_sidebar",
+        "screenshot-test-7-reset-confirm_dashboard_nav_active",
+        "screenshot-test-7-reset-confirm_ws_status",
+        "screenshot-test-7-reset-confirm_ai_status",
+        "screenshot-test-7-reset-confirm_check_ai_button"
+      ],
+      "confidence_score": 0.94,
+      "source_file": "C:\\ERV\\projects-ex\\kosmos-task\\screenshot-test-7-reset-confirm.png"
+    }
+  ]
+}

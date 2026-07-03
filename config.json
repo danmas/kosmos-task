@@ -3,5 +3,6 @@
   "MCP_ROOT": "C:\\ERV\\projects-ex",
   "LLM_MODEL": "FAST",
   "LOG_LEVEL": "info",
-  "PATH_TO_PANDOC": "C:\\ERV\\pandoc-3.8.2.1\\pandoc.exe"
+  "PATH_TO_PANDOC": "C:\\ERV\\pandoc-3.8.2.1\\pandoc.exe",
+  "DATA_DIR": "./data"
 }

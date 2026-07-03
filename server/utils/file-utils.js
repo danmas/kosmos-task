@@ -6,12 +6,25 @@
 const fs = require('fs');
 const path = require('path');
 
+// Путь к корню проекта (server/utils/../../)
+const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
+const CONFIG_PATH = path.join(PROJECT_ROOT, 'config.json');
+
 /**
- * Получить путь к директории данных из MYDATA
+ * Прочитать config.json и вернуть DATA_DIR (резолвится относительно корня проекта)
  */
 function getDataDir() {
-    const dataDir = process.env.MYDATA || './data';
-    return path.resolve(dataDir);
+    try {
+        const raw = fs.readFileSync(CONFIG_PATH, 'utf-8');
+        const config = JSON.parse(raw);
+        if (config.DATA_DIR) {
+            return path.resolve(PROJECT_ROOT, config.DATA_DIR);
+        }
+    } catch (e) {
+        // Если config.json отсутствует или битый — fallback
+        console.warn('[file-utils] config.json недоступен, используется ./data');
+    }
+    return path.resolve(PROJECT_ROOT, 'data');
 }
 
 /**
